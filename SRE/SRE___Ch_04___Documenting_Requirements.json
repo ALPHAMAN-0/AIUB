@@ -1,0 +1,5412 @@
+{
+  "schema": {
+    "decks[]": "one entry per PPTX file, in chapter order",
+    "decks[].core_properties": "PowerPoint document metadata (author, dates, revision)",
+    "decks[].slides[]": "one entry per slide, in presentation order",
+    "slides[].title": "text of the title placeholder (null if none)",
+    "slides[].all_text": "every text string on the slide joined with newlines - convenient flat field",
+    "slides[].layout": "name of the slide layout used",
+    "slides[].speaker_notes": "notes-pane text (null if the slide has no notes slide)",
+    "slides[].shapes[]": "every shape on the slide in z-order ('order' field)",
+    "shapes[].text": "full text of the shape",
+    "shapes[].paragraphs[]": "paragraph-by-paragraph text with bullet indent 'level' (0 = top level)",
+    "shapes[].paragraphs[].runs[]": "run-level text with bold/italic/underline/size_pt/hyperlink when set",
+    "shapes[].paragraphs[].fields[]": "auto-fields such as slide numbers, with their cached value",
+    "shapes[].table": "n_rows, n_cols and full 'rows' grid; merged cells appear as empty strings",
+    "shapes[].image": "filename, content_type, size_bytes, pixel dimensions",
+    "shapes[].image.ocr_text_lines": "text recovered by OCR from figures that are raster images with no text layer - may contain recognition errors",
+    "shapes[].position_inches": "left/top/width/height on the slide, in inches",
+    "shapes[].placeholder": "placeholder type and index, for placeholder shapes"
+  },
+  "source_file": "SRE_-_Ch_04_-_Documenting_Requirements.pptx",
+  "slide_width_inches": 13.333,
+  "slide_height_inches": 7.5,
+  "slide_count": 36,
+  "core_properties": {
+    "title": "1. SOFTWARE REQUIREMENTS: WHAT, WHY, & WHO 1.1 The Essential software requirement",
+    "author": "Syed Ishteaque Ahmed",
+    "subject": "",
+    "keywords": "",
+    "comments": "",
+    "last_modified_by": "student",
+    "created": "2015-08-31T11:09:01",
+    "modified": "2017-02-22T03:10:53",
+    "revision": 261
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "layout": "Title Slide",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "CENTER_TITLE (3)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 1.116,
+            "width": 12.023,
+            "height": 1.613
+          },
+          "text": "2. REQUIREMENTS DEVELOPMENT\nCh.04 - Documenting Requirements",
+          "paragraphs": [
+            {
+              "text": "2. REQUIREMENTS DEVELOPMENT\nCh.04 - Documenting Requirements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "2. REQUIREMENTS DEVELOPMENT"
+                },
+                {
+                  "text": "Ch.04 - Documenting Requirements",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Subtitle 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "SUBTITLE (4)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.729,
+            "width": 12.023,
+            "height": 0.646
+          },
+          "text": "Software requirement engineering (Undergraduate)",
+          "paragraphs": [
+            {
+              "text": "Software requirement engineering (Undergraduate)",
+              "level": 0
+            }
+          ]
+        }
+      ],
+      "title": "2. REQUIREMENTS DEVELOPMENT\nCh.04 - Documenting Requirements",
+      "all_text": "2. REQUIREMENTS DEVELOPMENT\nCh.04 - Documenting Requirements\nSoftware requirement engineering (Undergraduate)",
+      "speaker_notes": ""
+    },
+    {
+      "slide_number": 2,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Influence of Business Rules",
+          "paragraphs": [
+            {
+              "text": "Influence of Business Rules",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 5,
+          "name": "Picture 4",
+          "type": "PICTURE (13)",
+          "position_inches": {
+            "left": 1.014,
+            "top": 2.186,
+            "width": 10.532,
+            "height": 4.99
+          },
+          "image": {
+            "filename": "image.emf",
+            "content_type": "image/x-wmf",
+            "size_bytes": 1669888,
+            "px": [
+              939,
+              444
+            ],
+            "ocr_text_lines": [
+              "TABLE 9-1 How business rules can influence various types of software requirements",
+              "Functional Company policy is that all vendors must be If an invoice is received from an unregistered",
+              "requirement registered and approved before an invoice vendor, the Supplier System shall email the",
+              "will be paid. vendor editable PDF versions of the supplier",
+              "intake form and the W-9 form.",
+              "Quality attribute Regulations from government agencies, The system must maintain safety training",
+              "such as OSHA and EPA, can dictate safety records, which it must check to ensure that users",
+              "requirements, which must be enforced are properly trained before they can request a",
+              "through system functionality. hazardous chemical.",
+              "Illustration of business rules’ influence Example",
+              "Business Government regulations can lead to The Chemical Tracking System must enable",
+              "requirement necessary business objectives for a project. compliance with all federal and state chemical",
+              "usage and disposal reporting regulations within",
+              "five months.",
+              "User requirement Privacy policies dictate which users can Only laboratory managers are allowed to",
+              "and cannot perform certain tasks with the generate chemical exposure reports for anyone",
+              "system. other than themselves."
+            ],
+            "ocr_note": "Diagram/figure is a raster image with no text layer; text below recovered by OCR and may contain recognition errors."
+          }
+        },
+        {
+          "order": 3,
+          "shape_id": 6,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.265,
+            "height": 0.75
+          },
+          "text": "Slide-2",
+          "paragraphs": [
+            {
+              "text": "Slide-2",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "2"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Influence of Business Rules",
+      "all_text": "Influence of Business Rules\nSlide-2",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 3,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "A business rules taxonomy",
+          "paragraphs": [
+            {
+              "text": "A business rules taxonomy",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 5,
+          "name": "Picture 4",
+          "type": "PICTURE (13)",
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.385,
+            "width": 12.062,
+            "height": 2.784
+          },
+          "image": {
+            "filename": "image.emf",
+            "content_type": "image/x-wmf",
+            "size_bytes": 1188680,
+            "px": [
+              1135,
+              261
+            ],
+            "ocr_text_lines": [
+              "FIGURE 9-1 A simple business rule taxonomy."
+            ],
+            "ocr_note": "Diagram/figure is a raster image with no text layer; text below recovered by OCR and may contain recognition errors."
+          }
+        },
+        {
+          "order": 3,
+          "shape_id": 6,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.265,
+            "height": 0.75
+          },
+          "text": "Slide-3",
+          "paragraphs": [
+            {
+              "text": "Slide-3",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "3"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "A business rules taxonomy",
+      "all_text": "A business rules taxonomy\nSlide-3",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 4,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Facts",
+          "paragraphs": [
+            {
+              "text": "Facts",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.299,
+            "width": 12.062,
+            "height": 4.687
+          },
+          "text": "Facts are simply statements that are true about the business at a specified point in time.\nA fact describes associations or relationships between important business terms. \nFacts about data entities that are important to the system might appear in data models.\n\nExamples of facts include the following:\nEvery chemical container has a unique bar code identifier.\nEvery order has a shipping charge.\nNon-refundable airline tickets incur a fee when the purchaser changes the route.\nBooks taller than 16 inches are shelved in the library’s Oversize section.",
+          "paragraphs": [
+            {
+              "text": "Facts are simply statements that are true about the business at a specified point in time.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Facts are simply statements that are true about the business at a specified point in time.",
+                  "bold": true,
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "A fact describes associations or relationships between important business terms. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "A fact describes associations or relationships between important business terms. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Facts about data entities that are important to the system might appear in data models.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Facts about data entities that are important to the system might appear in data models.",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "",
+              "level": 0
+            },
+            {
+              "text": "Examples of facts include the following:",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Examples of facts include the following:",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Every chemical container has a unique bar code identifier.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Every chemical container has a unique bar code identifier.",
+                  "size_pt": 18.0
+                }
+              ]
+            },
+            {
+              "text": "Every order has a shipping charge.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Every order has a shipping charge.",
+                  "size_pt": 18.0
+                }
+              ]
+            },
+            {
+              "text": "Non-refundable airline tickets incur a fee when the purchaser changes the route.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Non-refundable airline tickets incur a fee when the purchaser changes the route.",
+                  "size_pt": 18.0
+                }
+              ]
+            },
+            {
+              "text": "Books taller than 16 inches are shelved in the library’s Oversize section.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Books taller than 16 inches are shelved in the library’s Oversize section.",
+                  "size_pt": 18.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.265,
+            "height": 0.75
+          },
+          "text": "Slide-4",
+          "paragraphs": [
+            {
+              "text": "Slide-4",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "4"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Facts",
+      "all_text": "Facts\nFacts are simply statements that are true about the business at a specified point in time.\nA fact describes associations or relationships between important business terms. \nFacts about data entities that are important to the system might appear in data models.\n\nExamples of facts include the following:\nEvery chemical container has a unique bar code identifier.\nEvery order has a shipping charge.\nNon-refundable airline tickets incur a fee when the purchaser changes the route.\nBooks taller than 16 inches are shelved in the library’s Oversize section.\nSlide-4",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 5,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Constraints",
+          "paragraphs": [
+            {
+              "text": "Constraints",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.487,
+            "top": 2.156,
+            "width": 12.847,
+            "height": 5.058
+          },
+          "text": "A constraint is a statement that restricts the actions that the system or its users\n are allowed to perform. \nSomeone describing a constraining business rule might say that certain actions must or must not or\nmay not be performed, or that only certain people or roles can perform particular actions. \nFollowing are some examples of constraints with various origins.\nOrganizational policies\nA loan applicant who is less than 18 years old must have a parent or a legal guardian as co-signer on the loan.\nGovernment regulations\nAll software applications must comply with government regulations for usage by visually impaired persons.\nIndustry standards\nMortgage loan applicants must satisfy the Federal Housing Authority qualification standards.\n",
+          "paragraphs": [
+            {
+              "text": "A constraint is a statement that restricts the actions that the system or its users\n are allowed to perform. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "A constraint is a statement that restricts the actions that the system or its users",
+                  "bold": true,
+                  "size_pt": 20.0
+                },
+                {
+                  "text": " are allowed to perform. ",
+                  "bold": true,
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Someone describing a constraining business rule might say that certain actions must or must not or\nmay not be performed, or that only certain people or roles can perform particular actions. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Someone describing a constraining business rule might say that certain actions must or must not or",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "may not be performed, or that only certain people or roles can perform particular actions. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Following are some examples of constraints with various origins.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Following are some examples of constraints with various origins.",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Organizational policies",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Organizational policies",
+                  "bold": true,
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "A loan applicant who is less than 18 years old must have a parent or a legal guardian as co-signer on the loan.",
+              "level": 2,
+              "runs": [
+                {
+                  "text": "A loan applicant who is less than 18 years old must have a parent or a legal guardian as co-signer on the loan.",
+                  "size_pt": 19.0
+                }
+              ]
+            },
+            {
+              "text": "Government regulations",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Government regulations",
+                  "bold": true,
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "All software applications must comply with government regulations for usage by visually impaired persons.",
+              "level": 2,
+              "runs": [
+                {
+                  "text": "All software applications must comply with government regulations for usage by visually impaired persons.",
+                  "size_pt": 19.0
+                }
+              ]
+            },
+            {
+              "text": "Industry standards",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Industry standards",
+                  "bold": true,
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Mortgage loan applicants must satisfy the Federal Housing Authority qualification standards.",
+              "level": 2,
+              "runs": [
+                {
+                  "text": "Mortgage loan applicants must satisfy the Federal Housing Authority qualification standards.",
+                  "size_pt": 19.0
+                }
+              ]
+            },
+            {
+              "text": "",
+              "level": 2
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.265,
+            "height": 0.75
+          },
+          "text": "Slide-5",
+          "paragraphs": [
+            {
+              "text": "Slide-5",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "5"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Constraints",
+      "all_text": "Constraints\nA constraint is a statement that restricts the actions that the system or its users\n are allowed to perform. \nSomeone describing a constraining business rule might say that certain actions must or must not or\nmay not be performed, or that only certain people or roles can perform particular actions. \nFollowing are some examples of constraints with various origins.\nOrganizational policies\nA loan applicant who is less than 18 years old must have a parent or a legal guardian as co-signer on the loan.\nGovernment regulations\nAll software applications must comply with government regulations for usage by visually impaired persons.\nIndustry standards\nMortgage loan applicants must satisfy the Federal Housing Authority qualification standards.\n\nSlide-5",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 6,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Action enablers",
+          "paragraphs": [
+            {
+              "text": "Action enablers",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.385,
+            "width": 12.062,
+            "height": 4.023
+          },
+          "text": " A rule that triggers some activity if specific conditions are true is an action enabler.\n Following are some examples of action-enabling business rules:\nIf the customer ordered a book by an author who has written multiple books, then offer the author’s other books to the customer before completing the order.\nAfter a customer places a book into the shopping cart, display related books that other customers also bought when they bought this one.",
+          "paragraphs": [
+            {
+              "text": " A rule that triggers some activity if specific conditions are true is an action enabler.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": " ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "A rule that triggers some activity if specific conditions are true is an action enabler.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": " Following are some examples of action-enabling business rules:",
+              "level": 0,
+              "runs": [
+                {
+                  "text": " Following are some examples of action-enabling business rules:",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "If the customer ordered a book by an author who has written multiple books, then offer the author’s other books to the customer before completing the order.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "If the customer ordered a book by an author who has written multiple books, then offer the author’s other books to the customer before completing the order.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "After a customer places a book into the shopping cart, display related books that other customers also bought when they bought this one.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "After a customer places a book into the shopping cart, display related books that other customers also bought when they bought this one.",
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.265,
+            "height": 0.75
+          },
+          "text": "Slide-6",
+          "paragraphs": [
+            {
+              "text": "Slide-6",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "6"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Action enablers",
+      "all_text": "Action enablers\n A rule that triggers some activity if specific conditions are true is an action enabler.\n Following are some examples of action-enabling business rules:\nIf the customer ordered a book by an author who has written multiple books, then offer the author’s other books to the customer before completing the order.\nAfter a customer places a book into the shopping cart, display related books that other customers also bought when they bought this one.\nSlide-6",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 7,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Inferences",
+          "paragraphs": [
+            {
+              "text": "Inferences",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.55,
+            "top": 2.327,
+            "width": 12.236,
+            "height": 4.773
+          },
+          "text": "Sometimes called inferred knowledge or a derived fact, an inference creates a new fact from other facts.\nInferences are often written in the “if/then” pattern also found in action-enabling business rules, but the “then” clause of an inference simply provides a piece of knowledge, not an\naction to be taken. \nSome examples of inferences are:\nIf a payment is not received within 30 calendar days after it is due, then the account is inactive.\nIf the vendor cannot ship an ordered item within five days of receiving the order, then the item is considered back-ordered.",
+          "paragraphs": [
+            {
+              "text": "Sometimes called inferred knowledge or a derived fact, an inference creates a new fact from other facts.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Sometimes called inferred knowledge or a derived fact, an inference creates a new fact from other facts.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Inferences are often written in the “if/then” pattern also found in action-enabling business rules, but the “then” clause of an inference simply provides a piece of knowledge, not an\naction to be taken. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Inferences are often written in the “if/then” pattern also found in action-enabling business rules, but the “then” clause of an inference simply provides a piece of knowledge, not an",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "action to be taken. ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Some examples of inferences are:",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Some examples of inferences are:",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "If a payment is not received within 30 calendar days after it is due, then the account is inactive.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "If a payment is not received within 30 calendar days after it is due, then the account is inactive.",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "If the vendor cannot ship an ordered item within five days of receiving the order, then the item is considered back-ordered.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "If the vendor cannot ship an ordered item within five days of receiving the order, then the item is considered back-ordered.",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.265,
+            "height": 0.75
+          },
+          "text": "Slide-7",
+          "paragraphs": [
+            {
+              "text": "Slide-7",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "7"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Inferences",
+      "all_text": "Inferences\nSometimes called inferred knowledge or a derived fact, an inference creates a new fact from other facts.\nInferences are often written in the “if/then” pattern also found in action-enabling business rules, but the “then” clause of an inference simply provides a piece of knowledge, not an\naction to be taken. \nSome examples of inferences are:\nIf a payment is not received within 30 calendar days after it is due, then the account is inactive.\nIf the vendor cannot ship an ordered item within five days of receiving the order, then the item is considered back-ordered.\nSlide-7",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 8,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Computations",
+          "paragraphs": [
+            {
+              "text": "Computations",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.385,
+            "width": 12.062,
+            "height": 4.023
+          },
+          "text": "Computations transform existing data into new data by using specific mathematical formulas or algorithms. \nMany computations follow rules that are external to the enterprise, such as income tax\n withholding formulas. \nFollowing are a few examples of computational business rules written in text form:\nThe total price for an order is the sum of the price of the items ordered, less any volume discounts, plus state and county sales taxes for the location to which the order is being shipped, plus the shipping charge, plus an optional insurance charge.",
+          "paragraphs": [
+            {
+              "text": "Computations transform existing data into new data by using specific mathematical formulas or algorithms. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Computations transform existing data into new data by using specific mathematical formulas or algorithms. ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Many computations follow rules that are external to the enterprise, such as income tax\n withholding formulas. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Many computations follow rules that are external to the enterprise, such as income tax",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": " withholding formulas. ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Following are a few examples of computational business rules written in text form:",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Following are a few examples of computational business rules written in text form:",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "The total price for an order is the sum of the price of the items ordered, less any volume discounts, plus state and county sales taxes for the location to which the order is being shipped, plus the shipping charge, plus an optional insurance charge.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "The total price for an order is the sum of the price of the items ordered, less any volume discounts, plus state and county sales taxes for the location to which the order is being shipped, plus the shipping charge, plus an optional insurance charge.",
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.265,
+            "height": 0.75
+          },
+          "text": "Slide-8",
+          "paragraphs": [
+            {
+              "text": "Slide-8",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "8"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Computations",
+      "all_text": "Computations\nComputations transform existing data into new data by using specific mathematical formulas or algorithms. \nMany computations follow rules that are external to the enterprise, such as income tax\n withholding formulas. \nFollowing are a few examples of computational business rules written in text form:\nThe total price for an order is the sum of the price of the items ordered, less any volume discounts, plus state and county sales taxes for the location to which the order is being shipped, plus the shipping charge, plus an optional insurance charge.\nSlide-8",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 9,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Documenting business rules",
+          "paragraphs": [
+            {
+              "text": "Documenting business rules",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 5,
+          "name": "Picture 4",
+          "type": "PICTURE (13)",
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.385,
+            "width": 10.767,
+            "height": 4.035
+          },
+          "image": {
+            "filename": "image.emf",
+            "content_type": "image/x-wmf",
+            "size_bytes": 1608120,
+            "px": [
+              1035,
+              387
+            ],
+            "ocr_text_lines": [
+              "TABLE 9-3 Some atomic business rules for a library",
+              "ID Rule",
+              "Video.Media.Types DVD discs and Blu-ray Discs are video items.",
+              "Video.Checkout.Duration Video items may be checked out for one week at a time.",
+              "Renewal.Video.Times Video items may be renewed up to two times.",
+              "Renewal.Video.Duration Renewing a checked-out video item extends the due date by three",
+              "days.",
+              "A patron may not renew an item that another patron has on hold."
+            ],
+            "ocr_note": "Diagram/figure is a raster image with no text layer; text below recovered by OCR and may contain recognition errors."
+          }
+        },
+        {
+          "order": 3,
+          "shape_id": 6,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.265,
+            "height": 0.75
+          },
+          "text": "Slide-9",
+          "paragraphs": [
+            {
+              "text": "Slide-9",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "9"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Documenting business rules",
+      "all_text": "Documenting business rules\nSlide-9",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 10,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Documenting business rules",
+          "paragraphs": [
+            {
+              "text": "Documenting business rules",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 5,
+          "name": "Picture 4",
+          "type": "PICTURE (13)",
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.375,
+            "width": 11.864,
+            "height": 4.682
+          },
+          "image": {
+            "filename": "image.emf",
+            "content_type": "image/x-wmf",
+            "size_bytes": 1338824,
+            "px": [
+              947,
+              352
+            ],
+            "ocr_text_lines": [
+              "TABLE 9-4 Some sample business rules catalog entries",
+              "ID Rule definition Type of rule Static or Source",
+              "dynamic",
+              "ORDER-5 If the customer ordered a book by an author Action enabler Static Marketing policy XX",
+              "who has written multiple books, then offer the",
+              "author's other books to the customer before",
+              "completing the order.",
+              "ACCESS-8 All website images must include alternative Constraint Static ADA Standards for",
+              "text to be used by electronic reading devices Accessible Design",
+              "to meet accessibility requirements for visually",
+              "impaired users.",
+              "DISCOUNT-13 A discount is calculated based on the size of the Computation Dynamic Corporate pricing",
+              "current order, as defined in Table BR-060. policy XX"
+            ],
+            "ocr_note": "Diagram/figure is a raster image with no text layer; text below recovered by OCR and may contain recognition errors."
+          }
+        },
+        {
+          "order": 3,
+          "shape_id": 6,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-10",
+          "paragraphs": [
+            {
+              "text": "Slide-10",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "10"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "shape_id": 7,
+          "name": "TextBox 6",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 10.043,
+            "top": 5.429,
+            "width": 3.29,
+            "height": 0.404
+          },
+          "text": "American with Disability Act. ",
+          "paragraphs": [
+            {
+              "text": "American with Disability Act. ",
+              "level": 0
+            }
+          ]
+        }
+      ],
+      "title": "Documenting business rules",
+      "all_text": "Documenting business rules\nSlide-10\nAmerican with Disability Act. ",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 11,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Discovering business rules/practice",
+          "paragraphs": [
+            {
+              "text": "Discovering business rules/practice",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 6,
+          "name": "Picture 5",
+          "type": "PICTURE (13)",
+          "position_inches": {
+            "left": 2.399,
+            "top": 2.044,
+            "width": 7.392,
+            "height": 5.288
+          },
+          "image": {
+            "filename": "image.emf",
+            "content_type": "image/x-wmf",
+            "size_bytes": 3533228,
+            "px": [
+              1111,
+              794
+            ],
+            "ocr_text_lines": [
+              "Regulations Why do we have to",
+              "What must",
+              "What causes a happen? What",
+              "change in the How does the cannot happen?",
+              "object's system know",
+              "what to do next?",
+              "Object",
+              "Life Cycles",
+              "System",
+              "Decisions",
+              "FIGURE 9-3 Discovering business rules by asking questions from different perspectives.",
+              "do it like that?",
+              "What does the are",
+              "government require?",
+              "How lis Business Whatis a user User",
+              "Computations number allowed",
+              "Rules to do next?"
+            ],
+            "ocr_note": "Diagram/figure is a raster image with no text layer; text below recovered by OCR and may contain recognition errors."
+          }
+        },
+        {
+          "order": 3,
+          "shape_id": 7,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-11",
+          "paragraphs": [
+            {
+              "text": "Slide-11",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "11"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Discovering business rules/practice",
+      "all_text": "Discovering business rules/practice\nSlide-11",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 12,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "The Software Requirements Specification [SRS]",
+          "paragraphs": [
+            {
+              "text": "The Software Requirements Specification [SRS]",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.385,
+            "width": 12.062,
+            "height": 4.023
+          },
+          "text": "Sometimes also called \nBusiness requirements document (BRD)\nFunctional specification \nProduct specification\nSystem specification\nRequirements document",
+          "paragraphs": [
+            {
+              "text": "Sometimes also called ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Sometimes also called ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Business requirements document (BRD)",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Business requirements document (BRD)",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Functional specification ",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Functional specification ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Product specification",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Product specification",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "System specification",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "System specification",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Requirements document",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Requirements document",
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-12",
+          "paragraphs": [
+            {
+              "text": "Slide-12",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "12"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "The Software Requirements Specification [SRS]",
+      "all_text": "The Software Requirements Specification [SRS]\nSometimes also called \nBusiness requirements document (BRD)\nFunctional specification \nProduct specification\nSystem specification\nRequirements document\nSlide-12",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 13,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "SRS",
+          "paragraphs": [
+            {
+              "text": "SRS",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.529,
+            "top": 2.157,
+            "width": 12.329,
+            "height": 4.957
+          },
+          "text": "The SRS states \nthe functions and capabilities that a software system must provide\nits characteristics\nthe constraints that it must respect\nIt should describe as completely as necessary the system’s behaviours under various conditions, \nas well as desired system qualities such as performance, security, usability, etc. \nThe SRS is the basis for subsequent project planning, design, and coding, as well as the foundation for system testing and user documentation. \nIt should not contain design, construction, testing, or project management details other than known design and implementation constraints.",
+          "paragraphs": [
+            {
+              "text": "The SRS states ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "The SRS states ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "the functions and capabilities that a software system must provide",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "the functions and capabilities that a software system must provide",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "its characteristics",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "its characteristics",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "the constraints that it must respect",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "the constraints that it must respect",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "It should describe as completely as necessary the system’s behaviours under various conditions, \nas well as desired system qualities such as performance, security, usability, etc. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "It should describe as completely as necessary the system’s behaviours under various conditions, ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "as well as desired system qualities such as performance, security, usability, etc. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "The SRS is the basis for subsequent project planning, design, and coding, as well as the foundation for system testing and user documentation. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "The SRS is the basis for subsequent project planning, design, and coding, as well as the foundation for system testing and user documentation. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "It should not contain design, construction, testing, or project management details other than known design and implementation constraints.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "It should not contain design, construction, testing, or project management details other than known design and implementation constraints.",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-13",
+          "paragraphs": [
+            {
+              "text": "Slide-13",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "13"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "SRS",
+      "all_text": "SRS\nThe SRS states \nthe functions and capabilities that a software system must provide\nits characteristics\nthe constraints that it must respect\nIt should describe as completely as necessary the system’s behaviours under various conditions, \nas well as desired system qualities such as performance, security, usability, etc. \nThe SRS is the basis for subsequent project planning, design, and coding, as well as the foundation for system testing and user documentation. \nIt should not contain design, construction, testing, or project management details other than known design and implementation constraints.\nSlide-13",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 14,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Audience",
+          "paragraphs": [
+            {
+              "text": "Audience",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.129,
+            "width": 12.062,
+            "height": 5.2
+          },
+          "text": "Customers, the marketing department, and sales staff need to know what product they can expect\n to be delivered.\nProject managers base their estimates of schedule, effort, and resources on the requirements.\nSoftware development teams need to know what to build.\nTesters use it to develop requirements-based tests, test plans, and test procedures.\nMaintenance and support staff use it to understand what each part of the product is supposed to do.\nDocumentation writers base user manuals and help screens on the SRS and the user interface design.\nTraining personnel use the SRS and user documentation to develop educational materials.\nLegal staff ensures that the requirements comply with applicable laws and regulations.\nSubcontractors base their work on—and can be legally held to—the specified requirements.",
+          "paragraphs": [
+            {
+              "text": "Customers, the marketing department, and sales staff need to know what product they can expect\n to be delivered.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Customers",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": ", the marketing department, and sales staff need to know what product they can expect",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": " to be delivered.",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Project managers base their estimates of schedule, effort, and resources on the requirements.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Project managers ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "base their estimates of schedule, effort, and resources on the requirements.",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Software development teams need to know what to build.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Software development teams",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": " need to know what to build.",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Testers use it to develop requirements-based tests, test plans, and test procedures.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Testers ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "use it to develop requirements-based tests, test plans, and test procedures.",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Maintenance and support staff use it to understand what each part of the product is supposed to do.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Maintenance and support staff ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "use it to understand what each part of the product is supposed to do.",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Documentation writers base user manuals and help screens on the SRS and the user interface design.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Documentation writers ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "base user manuals and help screens on the SRS and the user interface design.",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Training personnel use the SRS and user documentation to develop educational materials.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Training personnel ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "use the SRS and user documentation to develop educational materials.",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Legal staff ensures that the requirements comply with applicable laws and regulations.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Legal staff ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "ensures that the requirements comply with applicable laws and regulations.",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Subcontractors base their work on—and can be legally held to—the specified requirements.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Subcontractors",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": " base their work on—and can be legally held to—the specified requirements.",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-14",
+          "paragraphs": [
+            {
+              "text": "Slide-14",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "14"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Audience",
+      "all_text": "Audience\nCustomers, the marketing department, and sales staff need to know what product they can expect\n to be delivered.\nProject managers base their estimates of schedule, effort, and resources on the requirements.\nSoftware development teams need to know what to build.\nTesters use it to develop requirements-based tests, test plans, and test procedures.\nMaintenance and support staff use it to understand what each part of the product is supposed to do.\nDocumentation writers base user manuals and help screens on the SRS and the user interface design.\nTraining personnel use the SRS and user documentation to develop educational materials.\nLegal staff ensures that the requirements comply with applicable laws and regulations.\nSubcontractors base their work on—and can be legally held to—the specified requirements.\nSlide-14",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 15,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Readability Suggestions",
+          "paragraphs": [
+            {
+              "text": "Readability Suggestions",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.472,
+            "top": 2.125,
+            "width": 12.361,
+            "height": 4.941
+          },
+          "text": "Use an appropriate template to organize all the necessary information.\nLabel and style sections, subsections, and individual requirements consistently.\nUse visual emphasis (bold, underline, italics, colour, and fonts) consistently and judiciously. Remember that colour highlighting might not be visible to people with colour blindness or when printed in grayscale.\nCreate a table of contents to help readers find the information they need.\nNumber all figures and tables, give them captions, and refer to them by number.\nIf you are storing requirements in a document, define your word processor’s cross-reference facility rather than hard-coded page or section numbers to refer to other locations within a document.\nIf you are using documents, define hyperlinks to let the reader jump to related sections in the SRS or in other files.\nIf you are storing requirements in a tool, use links to let the reader navigate to related information.\nInclude visual representations of information when possible to facilitate understanding.\nEnlist a skilled editor to make sure the document is coherent and uses a consistent vocabulary and layout.",
+          "paragraphs": [
+            {
+              "text": "Use an appropriate template to organize all the necessary information.",
+              "level": 0
+            },
+            {
+              "text": "Label and style sections, subsections, and individual requirements consistently.",
+              "level": 0
+            },
+            {
+              "text": "Use visual emphasis (bold, underline, italics, colour, and fonts) consistently and judiciously. Remember that colour highlighting might not be visible to people with colour blindness or when printed in grayscale.",
+              "level": 0
+            },
+            {
+              "text": "Create a table of contents to help readers find the information they need.",
+              "level": 0
+            },
+            {
+              "text": "Number all figures and tables, give them captions, and refer to them by number.",
+              "level": 0
+            },
+            {
+              "text": "If you are storing requirements in a document, define your word processor’s cross-reference facility rather than hard-coded page or section numbers to refer to other locations within a document.",
+              "level": 0
+            },
+            {
+              "text": "If you are using documents, define hyperlinks to let the reader jump to related sections in the SRS or in other files.",
+              "level": 0
+            },
+            {
+              "text": "If you are storing requirements in a tool, use links to let the reader navigate to related information.",
+              "level": 0
+            },
+            {
+              "text": "Include visual representations of information when possible to facilitate understanding.",
+              "level": 0
+            },
+            {
+              "text": "Enlist a skilled editor to make sure the document is coherent and uses a consistent vocabulary and layout.",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-15",
+          "paragraphs": [
+            {
+              "text": "Slide-15",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "15"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Readability Suggestions",
+      "all_text": "Readability Suggestions\nUse an appropriate template to organize all the necessary information.\nLabel and style sections, subsections, and individual requirements consistently.\nUse visual emphasis (bold, underline, italics, colour, and fonts) consistently and judiciously. Remember that colour highlighting might not be visible to people with colour blindness or when printed in grayscale.\nCreate a table of contents to help readers find the information they need.\nNumber all figures and tables, give them captions, and refer to them by number.\nIf you are storing requirements in a document, define your word processor’s cross-reference facility rather than hard-coded page or section numbers to refer to other locations within a document.\nIf you are using documents, define hyperlinks to let the reader jump to related sections in the SRS or in other files.\nIf you are storing requirements in a tool, use links to let the reader navigate to related information.\nInclude visual representations of information when possible to facilitate understanding.\nEnlist a skilled editor to make sure the document is coherent and uses a consistent vocabulary and layout.\nSlide-15",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 16,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Labelling requirements",
+          "paragraphs": [
+            {
+              "text": "Labelling requirements",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.385,
+            "width": 12.062,
+            "height": 4.023
+          },
+          "text": "Every requirement needs a unique and persistent identifier. \nallows to refer to specific requirements in a change request, modification history, cross-reference, or requirements traceability matrix. \nenables reusing the requirements in multiple projects. \nUniquely identified requirements facilitate collaboration between team members when they’re discussing requirements, as in a peer review meeting. \nSimple numbered or bulleted lists aren’t adequate for these purposes.",
+          "paragraphs": [
+            {
+              "text": "Every requirement needs a unique and persistent identifier. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Every requirement needs a unique and persistent identifier. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "allows to refer to specific requirements in a change request, modification history, cross-reference, or requirements traceability matrix. ",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "allows to refer to specific requirements in a change request, modification history, cross-reference, or requirements traceability matrix. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "enables reusing the requirements in multiple projects. ",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "enables reusing the requirements in multiple projects. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Uniquely identified requirements facilitate collaboration between team members when they’re discussing requirements, as in a peer review meeting. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Uniquely identified requirements facilitate collaboration between team members when they’re discussing requirements, as in a peer review meeting. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Simple numbered or bulleted lists aren’t adequate for these purposes.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Simple numbered or bulleted lists aren’t adequate for these purposes.",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-16",
+          "paragraphs": [
+            {
+              "text": "Slide-16",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "16"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Labelling requirements",
+      "all_text": "Labelling requirements\nEvery requirement needs a unique and persistent identifier. \nallows to refer to specific requirements in a change request, modification history, cross-reference, or requirements traceability matrix. \nenables reusing the requirements in multiple projects. \nUniquely identified requirements facilitate collaboration between team members when they’re discussing requirements, as in a peer review meeting. \nSimple numbered or bulleted lists aren’t adequate for these purposes.\nSlide-16",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 17,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Label :  Sequence number",
+          "paragraphs": [
+            {
+              "text": "Label :  Sequence number",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Label :  "
+                },
+                {
+                  "text": "Sequence number",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.385,
+            "width": 12.062,
+            "height": 4.023
+          },
+          "text": "The simplest approach gives every requirement a unique sequence number, such as UC-9 or FR-26. \nMake it easy to retain a unique identifier if you move requirements around in a document. <Pros]\nA number is not reused if a requirement is deleted. <Cons]\nDoesn’t provide any logical or hierarchical grouping of related requirements. <Cons]\nDoesn’t imply any kind of ordering. <Cons]\nGives no clue as to what each requirement is about. <Cons]",
+          "paragraphs": [
+            {
+              "text": "The simplest approach gives every requirement a unique sequence number, such as UC-9 or FR-26. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "The simplest approach gives every requirement a unique sequence number, such as UC-9 or FR-26. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Make it easy to retain a unique identifier if you move requirements around in a document. <Pros]",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Make it easy to retain a unique identifier if you move requirements around in a document. ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "<Pros]",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "A number is not reused if a requirement is deleted. <Cons]",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "A number is not reused if a requirement is deleted. ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "<Cons]",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Doesn’t provide any logical or hierarchical grouping of related requirements. <Cons]",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Doesn’t provide any logical or hierarchical grouping of related requirements. ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "<Cons]",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Doesn’t imply any kind of ordering. <Cons]",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Doesn’t imply any kind of ordering. ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "<Cons]",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Gives no clue as to what each requirement is about. <Cons]",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Gives no clue as to what each requirement is about. ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "<Cons]",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-17",
+          "paragraphs": [
+            {
+              "text": "Slide-17",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "17"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Label :  Sequence number",
+      "all_text": "Label :  Sequence number\nThe simplest approach gives every requirement a unique sequence number, such as UC-9 or FR-26. \nMake it easy to retain a unique identifier if you move requirements around in a document. <Pros]\nA number is not reused if a requirement is deleted. <Cons]\nDoesn’t provide any logical or hierarchical grouping of related requirements. <Cons]\nDoesn’t imply any kind of ordering. <Cons]\nGives no clue as to what each requirement is about. <Cons]\nSlide-17",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 18,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Label :  Hierarchical numbering",
+          "paragraphs": [
+            {
+              "text": "Label :  Hierarchical numbering",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Label :  "
+                },
+                {
+                  "text": "Hierarchical numbering",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.385,
+            "width": 12.062,
+            "height": 4.528
+          },
+          "text": "Most commonly used convention. \nIf the functional requirements appear in section 3.2 of your SRS, they will all have labels that\n begin with 3.2. \nMore digits indicate a more detailed, lower-level requirement.\n3.2.4.3 is a child requirement of 3.2.4. \nThis method is simple, compact, and familiar. <Pros]\nThe labels can grow to many digits in even a medium-sized SRS. <Cons]\nNumeric labels tell you nothing about the intent of a requirement. <Cons]\nDelete, insert, merge, or move whole sections, and a lot of labels change. <Cons]\nThese changes disrupt any references to those requirements elsewhere in the system.",
+          "paragraphs": [
+            {
+              "text": "Most commonly used convention. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Most commonly used convention. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "If the functional requirements appear in section 3.2 of your SRS, they will all have labels that\n begin with 3.2. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "If the functional requirements appear in section 3.2 of your SRS, they will all have labels that",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": " begin with 3.2. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "More digits indicate a more detailed, lower-level requirement.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "More digits indicate a more detailed, lower-level requirement.",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "3.2.4.3 is a child requirement of 3.2.4. ",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "3.2.4.3 is a child requirement of 3.2.4. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "This method is simple, compact, and familiar. <Pros]",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "This method is simple, compact, and familiar. ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "<Pros]",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "The labels can grow to many digits in even a medium-sized SRS. <Cons]",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "The labels can grow to many digits in even a medium-sized SRS. ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "<Cons]",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Numeric labels tell you nothing about the intent of a requirement. <Cons]",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Numeric labels tell you nothing about the intent of a requirement. ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "<Cons]",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Delete, insert, merge, or move whole sections, and a lot of labels change. <Cons]",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Delete, insert, merge, or move whole sections, and a lot of labels change. ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "<Cons]",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "These changes disrupt any references to those requirements elsewhere in the system.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "These changes disrupt any references to those requirements elsewhere in the system.",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-18",
+          "paragraphs": [
+            {
+              "text": "Slide-18",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "18"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Label :  Hierarchical numbering",
+      "all_text": "Label :  Hierarchical numbering\nMost commonly used convention. \nIf the functional requirements appear in section 3.2 of your SRS, they will all have labels that\n begin with 3.2. \nMore digits indicate a more detailed, lower-level requirement.\n3.2.4.3 is a child requirement of 3.2.4. \nThis method is simple, compact, and familiar. <Pros]\nThe labels can grow to many digits in even a medium-sized SRS. <Cons]\nNumeric labels tell you nothing about the intent of a requirement. <Cons]\nDelete, insert, merge, or move whole sections, and a lot of labels change. <Cons]\nThese changes disrupt any references to those requirements elsewhere in the system.\nSlide-18",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 19,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Label :  Hierarchical Textual Tags",
+          "paragraphs": [
+            {
+              "text": "Label :  Hierarchical Textual Tags",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Label :  "
+                },
+                {
+                  "text": "Hierarchical Textual Tags",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.385,
+            "width": 12.062,
+            "height": 4.858
+          },
+          "text": "Example:\n\n\n\n\n\nCan simplify the scheme by combining the hierarchical naming technique with a sequence number suffix for small sets of requirements: Product.Cart.01, Product.Cart.02, and so on. <Pros]\nTags are longer and you do have to think of meaningful names for them. <Cons]",
+          "paragraphs": [
+            {
+              "text": "Example:",
+              "level": 0
+            },
+            {
+              "text": "",
+              "level": 0
+            },
+            {
+              "text": "",
+              "level": 0
+            },
+            {
+              "text": "",
+              "level": 0
+            },
+            {
+              "text": "",
+              "level": 0
+            },
+            {
+              "text": "",
+              "level": 0
+            },
+            {
+              "text": "Can simplify the scheme by combining the hierarchical naming technique with a sequence number suffix for small sets of requirements: Product.Cart.01, Product.Cart.02, and so on. <Pros]",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Can simplify the scheme by combining the hierarchical naming technique with a sequence number suffix for small sets of requirements: Product.Cart.01, Product.Cart.02, and so on. ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "<Pros]",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Tags are longer and you do have to think of meaningful names for them. <Cons]",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Tags are longer and you do have to think of meaningful names for them. ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "<Cons]",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Picture 4",
+          "type": "PICTURE (13)",
+          "position_inches": {
+            "left": 2.432,
+            "top": 2.276,
+            "width": 7.182,
+            "height": 2.538
+          },
+          "image": {
+            "filename": "image.emf",
+            "content_type": "image/x-wmf",
+            "size_bytes": 3699944,
+            "px": [
+              1619,
+              571
+            ],
+            "ocr_text_lines": [
+              "Product: Ordering products from the website",
+              "The website shall use a shopping cart to contain products a Customer",
+              "selects to purchase.",
+              "The shopping cart shall provide one discount code field. Each discount",
+              "code provides either a specific discount percentage or a fixed dollar",
+              "discount amount on specific items in the cart.",
+              ".Error If the Customer enters an invalid discount code, the website shall",
+              "display an error message.",
+              "Shipping The shopping cart shall add a shipping charge if a Customer orders a",
+              "physical product that must be mailed."
+            ],
+            "ocr_note": "Diagram/figure is a raster image with no text layer; text below recovered by OCR and may contain recognition errors."
+          }
+        },
+        {
+          "order": 4,
+          "shape_id": 6,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-19",
+          "paragraphs": [
+            {
+              "text": "Slide-19",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "19"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Label :  Hierarchical Textual Tags",
+      "all_text": "Label :  Hierarchical Textual Tags\nExample:\n\n\n\n\n\nCan simplify the scheme by combining the hierarchical naming technique with a sequence number suffix for small sets of requirements: Product.Cart.01, Product.Cart.02, and so on. <Pros]\nTags are longer and you do have to think of meaningful names for them. <Cons]\nSlide-19",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 20,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Dealing with incompleteness",
+          "paragraphs": [
+            {
+              "text": "Dealing with incompleteness",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.385,
+            "width": 12.062,
+            "height": 4.023
+          },
+          "text": "Sometimes you may lack a piece of information about a specific requirement. \nUse the notation TBD (to be determined) to flag these knowledge gaps. \nPlan to resolve all TBDs before implementing a set of requirements. \nAny uncertainties that remain increase the risk of a developer or a tester making errors and having to perform rework.",
+          "paragraphs": [
+            {
+              "text": "Sometimes you may lack a piece of information about a specific requirement. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Sometimes you may lack a piece of information about a specific requirement. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Use the notation TBD (to be determined) to flag these knowledge gaps. ",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Use the notation TBD (to be determined) to flag these knowledge gaps. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Plan to resolve all TBDs before implementing a set of requirements. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Plan to resolve all TBDs before implementing a set of requirements. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Any uncertainties that remain increase the risk of a developer or a tester making errors and having to perform rework.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Any uncertainties that remain increase the risk of a developer or a tester making errors and having to perform rework.",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-20",
+          "paragraphs": [
+            {
+              "text": "Slide-20",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "20"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Dealing with incompleteness",
+      "all_text": "Dealing with incompleteness\nSometimes you may lack a piece of information about a specific requirement. \nUse the notation TBD (to be determined) to flag these knowledge gaps. \nPlan to resolve all TBDs before implementing a set of requirements. \nAny uncertainties that remain increase the risk of a developer or a tester making errors and having to perform rework.\nSlide-20",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 21,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Conceptual User Interfaces (sketches)",
+          "paragraphs": [
+            {
+              "text": "Conceptual User Interfaces (sketches)",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 5,
+          "name": "Picture 4",
+          "type": "PICTURE (13)",
+          "position_inches": {
+            "left": 2.963,
+            "top": 1.998,
+            "width": 7.408,
+            "height": 5.222
+          },
+          "image": {
+            "filename": "image.emf",
+            "content_type": "image/x-wmf",
+            "size_bytes": 2060096,
+            "px": [
+              855,
+              602
+            ],
+            "ocr_text_lines": [
+              "Pe arls Sand",
+              "Reviews Amazon",
+              "Free B+N",
+              "Cop",
+              "FIGURE 10-1 Example of a user interface “sketch” suitable for inclusion in a requirements document.",
+              "Home Blog Contact",
+              "How Small Lead to Powerful Léssuns",
+              "Cover Video",
+              "CMon Vids>",
+              "Sample Chapters Buy the"
+            ],
+            "ocr_note": "Diagram/figure is a raster image with no text layer; text below recovered by OCR and may contain recognition errors."
+          }
+        },
+        {
+          "order": 3,
+          "shape_id": 6,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-21",
+          "paragraphs": [
+            {
+              "text": "Slide-21",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "21"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Conceptual User Interfaces (sketches)",
+      "all_text": "Conceptual User Interfaces (sketches)\nSlide-21",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 22,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "User Interfaces & The SRS",
+          "paragraphs": [
+            {
+              "text": "User Interfaces & The SRS",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.529,
+            "top": 2.227,
+            "width": 12.305,
+            "height": 4.904
+          },
+          "text": "PROS:\nExploring possible user interfaces (product’s look and feel) with paper prototypes, working mock-ups, wireframes, or simulation tools makes the requirements tangible to both users and developers. \n\nCONS:\nDelaying baselining of the SRS until the UI design is complete can slow down development\nIncluding UI design in the requirements can result in the visual design driving the requirements,\nwhich often leads to functional gaps. \nScreen layouts don’t replace written user and functional requirements. Don’t expect developers to deduce the underlying functionality and data relationships from screen shots. \n",
+          "paragraphs": [
+            {
+              "text": "PROS:",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "PROS:",
+                  "bold": true,
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Exploring possible user interfaces (product’s look and feel) with paper prototypes, working mock-ups, wireframes, or simulation tools makes the requirements tangible to both users and developers. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Exploring possible user interfaces (product’s look and feel) with paper prototypes, working mock-ups, wireframes, or simulation tools makes the requirements tangible to both users and developers. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "",
+              "level": 0
+            },
+            {
+              "text": "CONS:",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "CONS:",
+                  "bold": true,
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Delaying baselining of the SRS until the UI design is complete can slow down development",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Delaying baselining of the SRS until the UI design is complete can slow down development",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Including UI design in the requirements can result in the visual design driving the requirements,\nwhich often leads to functional gaps. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Including UI design in the requirements can result in the visual design driving the requirements,",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "which often leads to functional gaps. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Screen layouts don’t replace written user and functional requirements. Don’t expect developers to deduce the underlying functionality and data relationships from screen shots. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Screen layouts don’t replace written user and functional requirements. Don’t expect developers to deduce the underlying functionality and data relationships from screen shots. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "",
+              "level": 2
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-22",
+          "paragraphs": [
+            {
+              "text": "Slide-22",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "22"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "User Interfaces & The SRS",
+      "all_text": "User Interfaces & The SRS\nPROS:\nExploring possible user interfaces (product’s look and feel) with paper prototypes, working mock-ups, wireframes, or simulation tools makes the requirements tangible to both users and developers. \n\nCONS:\nDelaying baselining of the SRS until the UI design is complete can slow down development\nIncluding UI design in the requirements can result in the visual design driving the requirements,\nwhich often leads to functional gaps. \nScreen layouts don’t replace written user and functional requirements. Don’t expect developers to deduce the underlying functionality and data relationships from screen shots. \n\nSlide-22",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 23,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "SRS Template",
+          "paragraphs": [
+            {
+              "text": "SRS Template",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 4,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-23",
+          "paragraphs": [
+            {
+              "text": "Slide-23",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "23"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 7,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.518,
+            "top": 2.327,
+            "width": 12.35,
+            "height": 4.787
+          },
+          "text": "1. Introduction\n\t1.1  Purpose – identify the product whose requirements are specified in this document, and its readers\n\t1.2  Document Convention – meaning of specific formatted text, style, highlighting, or notations\n\t1.3  Project Scope – a short description of the software being specified\n\t1.4  References – list any documents or other resources to which this SRS refers\n2. Overall Description\n\t2.1  Productive perspective – describe the product’s context and origin\n\t2.2  User classes and characteristics – various users classes who use this product\n\t2.3  Operating Environment – describe the environment (h/w, OS, versions, organization, geographical \n             location) in which the software will operate\n\t2.4  Design and implementation constraints – certain PL must be used\n",
+          "paragraphs": [
+            {
+              "text": "1. Introduction",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "1. Introduction",
+                  "bold": true,
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "\t1.1  Purpose – identify the product whose requirements are specified in this document, and its readers",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t1.1 ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": " Purpose ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "– identify the product whose requirements are specified in this document, and its readers",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "\t1.2  Document Convention – meaning of specific formatted text, style, highlighting, or notations",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t1.2  ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "Document Convention ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "– meaning of specific formatted text, style, highlighting, or notations",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "\t1.3  Project Scope – a short description of the software being specified",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t1.3  ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "Project Scope ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "– a short description of the software being specified",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "\t1.4  References – list any documents or other resources to which this SRS refers",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t1.4  ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "References",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": " – list any documents or other resources to which this SRS refers",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "2. Overall Description",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "2. Overall Description",
+                  "bold": true,
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "\t2.1  Productive perspective – describe the product’s context and origin",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t2.1  ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "Productive perspective ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "– describe the product’s context and origin",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "\t2.2  User classes and characteristics – various users classes who use this product",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t2.2  ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "User classes and characteristics ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "– various users classes who use this product",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "\t2.3  Operating Environment – describe the environment (h/w, OS, versions, organization, geographical \n             location) in which the software will operate",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t2.3  ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "Operating Environment ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "– describe the environment (h/w, OS, versions, organization, geographical ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "             location) in which the software will operate",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "\t2.4  Design and implementation constraints – certain PL must be used",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t2.4  ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "Design and implementation constraints ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "– certain PL must be used",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "",
+              "level": 0
+            }
+          ]
+        }
+      ],
+      "title": "SRS Template",
+      "all_text": "SRS Template\nSlide-23\n1. Introduction\n\t1.1  Purpose – identify the product whose requirements are specified in this document, and its readers\n\t1.2  Document Convention – meaning of specific formatted text, style, highlighting, or notations\n\t1.3  Project Scope – a short description of the software being specified\n\t1.4  References – list any documents or other resources to which this SRS refers\n2. Overall Description\n\t2.1  Productive perspective – describe the product’s context and origin\n\t2.2  User classes and characteristics – various users classes who use this product\n\t2.3  Operating Environment – describe the environment (h/w, OS, versions, organization, geographical \n             location) in which the software will operate\n\t2.4  Design and implementation constraints – certain PL must be used\n",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 24,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "SRS Template",
+          "paragraphs": [
+            {
+              "text": "SRS Template",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 4,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-24",
+          "paragraphs": [
+            {
+              "text": "Slide-24",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "24"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 7,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.285,
+            "width": 10.064,
+            "height": 4.787
+          },
+          "text": "3. System Features\n\t3.1  Description of feature\n       3.2  Functional requirements\n\t3.3  Cross-reference\n4. External Interface Requirements\n\t4.1  User interface\n\t4.2  Software interface\n\t4.3  Hardware interface\n\t4.4  Communication interface\n\t4.5  Cross-reference\n",
+          "paragraphs": [
+            {
+              "text": "3. System Features",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "3. System Features",
+                  "bold": true,
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "\t3.1  Description of feature",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t3.1  Description of feature",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "       3.2  Functional requirements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "       3.2  Functional requirements",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "\t3.3  Cross-reference",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t3.3  Cross-reference",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "4. External Interface Requirements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "4. External Interface Requirements",
+                  "bold": true,
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "\t4.1  User interface",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t4.1  User interface",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "\t4.2  Software interface",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t4.2  Software interface",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "\t4.3  Hardware interface",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t4.3  Hardware interface",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "\t4.4  Communication interface",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t4.4  Communication interface",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "\t4.5  Cross-reference",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t4.5  Cross-reference",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "",
+              "level": 0
+            }
+          ]
+        }
+      ],
+      "title": "SRS Template",
+      "all_text": "SRS Template\nSlide-24\n3. System Features\n\t3.1  Description of feature\n       3.2  Functional requirements\n\t3.3  Cross-reference\n4. External Interface Requirements\n\t4.1  User interface\n\t4.2  Software interface\n\t4.3  Hardware interface\n\t4.4  Communication interface\n\t4.5  Cross-reference\n",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 25,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "SRS Template",
+          "paragraphs": [
+            {
+              "text": "SRS Template",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 4,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-25",
+          "paragraphs": [
+            {
+              "text": "Slide-25",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "25"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 7,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.285,
+            "width": 12.232,
+            "height": 4.787
+          },
+          "text": "5. Quality Attributes\n\t5.1  Usability\n\t5.2  Performance\n\t5.4  [others]\n\t5.5 Cross-references\n6. Data Requirements\n\t6.1 Logical data model – UML diagrams\n\t6.2  Data dictionary - data type, length, format, and allowed values fro data elements\nAppendix A: Glossary",
+          "paragraphs": [
+            {
+              "text": "5. Quality Attributes",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "5. Quality Attributes",
+                  "bold": true,
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "\t5.1  Usability",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t5.1  Usability",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "\t5.2  Performance",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t5.2  Performance",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "\t5.4  [others]",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t5.4  [others]",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "\t5.5 Cross-references",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t5.5 Cross-references",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "6. Data Requirements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "6. Data Requirements",
+                  "bold": true,
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "\t6.1 Logical data model – UML diagrams",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t6.1 Logical data model – UML diagrams",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "\t6.2  Data dictionary - data type, length, format, and allowed values fro data elements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t6.2  Data dictionary - data type, length, format, and allowed values fro data elements",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Appendix A: Glossary",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Appendix A: Glossary",
+                  "bold": true,
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "SRS Template",
+      "all_text": "SRS Template\nSlide-25\n5. Quality Attributes\n\t5.1  Usability\n\t5.2  Performance\n\t5.4  [others]\n\t5.5 Cross-references\n6. Data Requirements\n\t6.1 Logical data model – UML diagrams\n\t6.2  Data dictionary - data type, length, format, and allowed values fro data elements\nAppendix A: Glossary",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 26,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Characteristics of requirement statements",
+          "paragraphs": [
+            {
+              "text": "Characteristics of requirement statements",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.385,
+            "width": 12.062,
+            "height": 4.023
+          },
+          "text": "Complete \nCorrect \nFeasible \nNecessary \nPrioritized \nUnambiguous \nVerifiable ",
+          "paragraphs": [
+            {
+              "text": "Complete ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Complete ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Correct ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Correct ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Feasible ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Feasible ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Necessary ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Necessary ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Prioritized ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Prioritized ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Unambiguous ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Unambiguous ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Verifiable ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Verifiable ",
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-26",
+          "paragraphs": [
+            {
+              "text": "Slide-26",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "26"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Characteristics of requirement statements",
+      "all_text": "Characteristics of requirement statements\nComplete \nCorrect \nFeasible \nNecessary \nPrioritized \nUnambiguous \nVerifiable \nSlide-26",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 27,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Guidelines for writing requirements",
+          "paragraphs": [
+            {
+              "text": "Guidelines for writing requirements",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.564,
+            "top": 2.199,
+            "width": 12.062,
+            "height": 4.801
+          },
+          "text": "Two important goals of writing requirements are that:\nAnyone who reads the requirement comes to the same interpretation as any other reader.\nEach reader’s interpretation matches what the author intended to communicate.\nSystem or user perspective\nYou can write functional requirements from the perspective of either something the system does or something the user can do.\nState requirements in a consistent fashion, such as “The system shall” or “The user shall,” followed by an action verb, followed by the observable result. \nSpecify the trigger action or condition that causes the system to perform the specified behavior. \nA generic template for a requirement written from the system’s perspective is:\n[optional precondition] [optional trigger event] the system shall [expected system response].",
+          "paragraphs": [
+            {
+              "text": "Two important goals of writing requirements are that:",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Two important goals of writing requirements are that:",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Anyone who reads the requirement comes to the same interpretation as any other reader.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Anyone who reads the requirement comes to the same interpretation as any other reader.",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Each reader’s interpretation matches what the author intended to communicate.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Each reader’s interpretation matches what the author intended to communicate.",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "System or user perspective",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "System or user perspective",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "You can write functional requirements from the perspective of either something the system does or something the user can do.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "You can write functional requirements from the perspective of either something the system does or something the user can do.",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "State requirements in a consistent fashion, such as “The system shall” or “The user shall,” followed by an action verb, followed by the observable result. ",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "State requirements in a consistent fashion, such as “The system shall” or “The user shall,” followed by an action verb, followed by the observable result. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Specify the trigger action or condition that causes the system to perform the specified behavior. ",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Specify the trigger action or condition that causes the system to perform the specified behavior. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "A generic template for a requirement written from the system’s perspective is:",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "A generic template for a requirement written from the system’s perspective is:",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "[optional precondition] [optional trigger event] the system shall [expected system response].",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "[",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "optional",
+                  "italic": true,
+                  "size_pt": 20.0
+                },
+                {
+                  "text": " precondition] [",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "optional ",
+                  "italic": true,
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "trigger event] the system shall [expected system response].",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-27",
+          "paragraphs": [
+            {
+              "text": "Slide-27",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "27"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Guidelines for writing requirements",
+      "all_text": "Guidelines for writing requirements\nTwo important goals of writing requirements are that:\nAnyone who reads the requirement comes to the same interpretation as any other reader.\nEach reader’s interpretation matches what the author intended to communicate.\nSystem or user perspective\nYou can write functional requirements from the perspective of either something the system does or something the user can do.\nState requirements in a consistent fashion, such as “The system shall” or “The user shall,” followed by an action verb, followed by the observable result. \nSpecify the trigger action or condition that causes the system to perform the specified behavior. \nA generic template for a requirement written from the system’s perspective is:\n[optional precondition] [optional trigger event] the system shall [expected system response].\nSlide-27",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 28,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Guidelines for writing requirements",
+          "paragraphs": [
+            {
+              "text": "Guidelines for writing requirements",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.385,
+            "width": 12.062,
+            "height": 4.023
+          },
+          "text": "Writing style\nClarity and conciseness\nThe keyword “shall”\nActive voice\nIndividual requirements",
+          "paragraphs": [
+            {
+              "text": "Writing style",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Writing style",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Clarity and conciseness",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Clarity and conciseness",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "The keyword “shall”",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "The keyword “shall”",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Active voice",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Active voice",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Individual requirements",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Individual requirements",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-28",
+          "paragraphs": [
+            {
+              "text": "Slide-28",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "28"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Guidelines for writing requirements",
+      "all_text": "Guidelines for writing requirements\nWriting style\nClarity and conciseness\nThe keyword “shall”\nActive voice\nIndividual requirements\nSlide-28",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 29,
+      "layout": "Two Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.798,
+            "width": 12.062,
+            "height": 1.081
+          },
+          "text": "Guidelines for writing requirements",
+          "paragraphs": [
+            {
+              "text": "Guidelines for writing requirements",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.514,
+            "top": 2.3,
+            "width": 6.543,
+            "height": 4.271
+          },
+          "text": "Level of detail :  Appropriate detail\nYou should include more detail when:\nThe work is being done for an external client\nDevelopment or testing will be outsourced\nProject team members are geographically dispersed\nSystem testing will be based on requirements\nAccurate estimates are needed\nRequirements traceability is needed",
+          "paragraphs": [
+            {
+              "text": "Level of detail :  Appropriate detail",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Level of detail :  ",
+                  "bold": true,
+                  "underline": true
+                },
+                {
+                  "text": "Appropriate detail",
+                  "bold": true,
+                  "underline": true,
+                  "size_pt": 18.0
+                }
+              ]
+            },
+            {
+              "text": "You should include more detail when:",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "You should include more detail when:",
+                  "bold": true,
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "The work is being done for an external client",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "The work is being done for an external client",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Development or testing will be outsourced",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Development or testing will be outsourced",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Project team members are geographically dispersed",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Project team members are geographically dispersed",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "System testing will be based on requirements",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "System testing will be based on requirements",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Accurate estimates are needed",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Accurate estimates are needed",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Requirements traceability is needed",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Requirements traceability is needed",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Content Placeholder 4",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 2
+          },
+          "position_inches": {
+            "left": 6.667,
+            "top": 2.737,
+            "width": 5.93,
+            "height": 4.763
+          },
+          "text": "It’s safe to include less detail when:\nThe work is being done internally for your company\nCustomers are extensively involved\nDevelopers have considerable domain experience\nPatterns are available, as when a previous application is being replaced\nA package solution will be used",
+          "paragraphs": [
+            {
+              "text": "It’s safe to include less detail when:",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "It’s safe to include less detail when:",
+                  "bold": true,
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "The work is being done internally for your company",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "The work is being done internally for your company",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Customers are extensively involved",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Customers are extensively involved",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Developers have considerable domain experience",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Developers have considerable domain experience",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Patterns are available, as when a previous application is being replaced",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Patterns are available, as when a previous application is being replaced",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "A package solution will be used",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "A package solution will be used",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "shape_id": 6,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-29",
+          "paragraphs": [
+            {
+              "text": "Slide-29",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "29"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Guidelines for writing requirements",
+      "all_text": "Guidelines for writing requirements\nLevel of detail :  Appropriate detail\nYou should include more detail when:\nThe work is being done for an external client\nDevelopment or testing will be outsourced\nProject team members are geographically dispersed\nSystem testing will be based on requirements\nAccurate estimates are needed\nRequirements traceability is needed\nIt’s safe to include less detail when:\nThe work is being done internally for your company\nCustomers are extensively involved\nDevelopers have considerable domain experience\nPatterns are available, as when a previous application is being replaced\nA package solution will be used\nSlide-29",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 30,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Representation techniques",
+          "paragraphs": [
+            {
+              "text": "Representation techniques",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.551,
+            "top": 2.428,
+            "width": 12.232,
+            "height": 4.023
+          },
+          "text": "Some alternatives to the natural language requirements that we’re used to are lists, tables, visual analysis models, charts, mathematical formulas, photographs, sound clips, and video clips.\nThese won’t suffice as substitutes for written requirements in many cases, but they serve as excellent supplemental information to enhance the reader’s understanding.",
+          "paragraphs": [
+            {
+              "text": "Some alternatives to the natural language requirements that we’re used to are lists, tables, visual analysis models, charts, mathematical formulas, photographs, sound clips, and video clips.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Some alternatives to the natural language requirements that we’re used to are lists, tables, visual analysis models, charts, mathematical formulas, photographs, sound clips, and video clips.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "These won’t suffice as substitutes for written requirements in many cases, but they serve as excellent supplemental information to enhance the reader’s understanding.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "These won’t suffice as substitutes for written requirements in many cases, but they serve as excellent supplemental information to enhance the reader’s understanding.",
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-30",
+          "paragraphs": [
+            {
+              "text": "Slide-30",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "30"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Representation techniques",
+      "all_text": "Representation techniques\nSome alternatives to the natural language requirements that we’re used to are lists, tables, visual analysis models, charts, mathematical formulas, photographs, sound clips, and video clips.\nThese won’t suffice as substitutes for written requirements in many cases, but they serve as excellent supplemental information to enhance the reader’s understanding.\nSlide-30",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 31,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Avoiding ambiguity",
+          "paragraphs": [
+            {
+              "text": "Avoiding ambiguity",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.607,
+            "top": 2.227,
+            "width": 12.062,
+            "height": 4.673
+          },
+          "text": "Fuzzy words – vague words\nThe A/B construct (related or synonymous, opposite terms)\nBoundary values\nVacation requests of up to 5 days do not require approval. Vacation requests of 5 to 10 days require supervisor approval. Vacation requests of 10 days or longer require management approval.\n\tThis phrasing makes it unclear as to which category vacation requests of exactly 5 days and exactly 10 days belong. \nNegative requirements\n\tPrevent the user from activating the contract if the contract is not in balance.\n\tConsider rephrasing this double negative (“prevent” and “not in balance”) as a positive statement:\n\tThe system shall allow the user to activate the contract only if the contract is in balance.",
+          "paragraphs": [
+            {
+              "text": "Fuzzy words – vague words",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Fuzzy words – ",
+                  "bold": true,
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "vague words",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "The A/B construct (related or synonymous, opposite terms)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "The A/B construct ",
+                  "bold": true,
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "(related or synonymous, opposite terms)",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Boundary values\nVacation requests of up to 5 days do not require approval. Vacation requests of 5 to 10 days require supervisor approval. Vacation requests of 10 days or longer require management approval.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Boundary values",
+                  "bold": true,
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "Vacation requests of up to 5 days do not require approval. Vacation requests of 5 to 10 days require supervisor approval. Vacation requests of 10 days or longer require management approval.",
+                  "italic": true,
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "\tThis phrasing makes it unclear as to which category vacation requests of exactly 5 days and exactly 10 days belong. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t",
+                  "italic": true,
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "This phrasing makes it unclear as to which category vacation requests of exactly 5 days and exactly 10 days belong. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Negative requirements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Negative requirements",
+                  "bold": true,
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "\tPrevent the user from activating the contract if the contract is not in balance.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t",
+                  "italic": true
+                },
+                {
+                  "text": "Prevent",
+                  "italic": true,
+                  "size_pt": 20.0
+                },
+                {
+                  "text": " the user from activating the contract if the contract is ",
+                  "italic": true,
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "not",
+                  "italic": true,
+                  "size_pt": 20.0
+                },
+                {
+                  "text": " in balance.",
+                  "italic": true,
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "\tConsider rephrasing this double negative (“prevent” and “not in balance”) as a positive statement:",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\tConsider rephrasing this double negative (“prevent” and “not in balance”) as a positive statement:",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "\tThe system shall allow the user to activate the contract only if the contract is in balance.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\tThe system shall allow the user to activate the contract only if the contract is in balance.",
+                  "italic": true,
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-31",
+          "paragraphs": [
+            {
+              "text": "Slide-31",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "31"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Avoiding ambiguity",
+      "all_text": "Avoiding ambiguity\nFuzzy words – vague words\nThe A/B construct (related or synonymous, opposite terms)\nBoundary values\nVacation requests of up to 5 days do not require approval. Vacation requests of 5 to 10 days require supervisor approval. Vacation requests of 10 days or longer require management approval.\n\tThis phrasing makes it unclear as to which category vacation requests of exactly 5 days and exactly 10 days belong. \nNegative requirements\n\tPrevent the user from activating the contract if the contract is not in balance.\n\tConsider rephrasing this double negative (“prevent” and “not in balance”) as a positive statement:\n\tThe system shall allow the user to activate the contract only if the contract is in balance.\nSlide-31",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 32,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Avoiding incompleteness",
+          "paragraphs": [
+            {
+              "text": "Avoiding incompleteness",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.213,
+            "width": 12.35,
+            "height": 4.873
+          },
+          "text": "Complex logic – possible alternative options are missing\nIf the Premium plan is not selected and proof of insurance is not provided, the customer should automatically default in the Basic plan. [Premium plan is selected and proof of insurance is not provided]\nSymmetry – “save the information in the document” but retrieval part is missing if didn’t save it\nMissing exceptions\n\tIf the user is working in an existing file and chooses to save the file, the system shall save it with the same name\n\tThis requirement alone does not indicate what the system should do if it’s unable to save the file with the same name. An appropriate second requirement to go with the first might be:\n\tIf the system is unable to save a file using a specific name, the system shall give the user the option to save it with a different name or to cancel the save operation.",
+          "paragraphs": [
+            {
+              "text": "Complex logic – possible alternative options are missing\nIf the Premium plan is not selected and proof of insurance is not provided, the customer should automatically default in the Basic plan. [Premium plan is selected and proof of insurance is not provided]",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Complex logic ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "– possible alternative options are missing",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "If the Premium plan is not selected and proof of insurance is not provided, the customer should automatically default in the Basic plan. [Premium plan is selected and proof of insurance is not provided]",
+                  "italic": true,
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Symmetry – “save the information in the document” but retrieval part is missing if didn’t save it",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Symmetry",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": " – “",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "save the information in the document” ",
+                  "italic": true,
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "but retrieval part is missing if didn’t save it",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Missing exceptions",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Missing exceptions",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "\tIf the user is working in an existing file and chooses to save the file, the system shall save it with the same name",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\tIf the user is working in an existing file and chooses to save the file, the system shall save it with the same name",
+                  "italic": true,
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "\tThis requirement alone does not indicate what the system should do if it’s unable to save the file with the same name. An appropriate second requirement to go with the first might be:",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\tThis requirement alone does not indicate what the system should do if it’s unable to save the file with the same name. An appropriate second requirement to go with the first might be:",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "\tIf the system is unable to save a file using a specific name, the system shall give the user the option to save it with a different name or to cancel the save operation.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\tIf the system is unable to save a file using a specific name, the system shall give the user the option to save it with a different name or to cancel the save operation.",
+                  "italic": true,
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-32",
+          "paragraphs": [
+            {
+              "text": "Slide-32",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "32"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Avoiding incompleteness",
+      "all_text": "Avoiding incompleteness\nComplex logic – possible alternative options are missing\nIf the Premium plan is not selected and proof of insurance is not provided, the customer should automatically default in the Basic plan. [Premium plan is selected and proof of insurance is not provided]\nSymmetry – “save the information in the document” but retrieval part is missing if didn’t save it\nMissing exceptions\n\tIf the user is working in an existing file and chooses to save the file, the system shall save it with the same name\n\tThis requirement alone does not indicate what the system should do if it’s unable to save the file with the same name. An appropriate second requirement to go with the first might be:\n\tIf the system is unable to save a file using a specific name, the system shall give the user the option to save it with a different name or to cancel the save operation.\nSlide-32",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 33,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Modeling The Requirements",
+          "paragraphs": [
+            {
+              "text": "Modeling The Requirements",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.621,
+            "top": 2.142,
+            "width": 12.062,
+            "height": 4.915
+          },
+          "text": "Data flow diagram (DFD)\nProcess flow diagram such as Swimlane diagram\nState-transition diagram (STD) and state tables\nDialog map\nDecision table and decision tree\nEvent-response table\nFeature tree\nUse case diagram\nActivity diagram\nEntity-relationship diagram (ERD), Class Diagram",
+          "paragraphs": [
+            {
+              "text": "Data flow diagram (DFD)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Data flow diagram (DFD)",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Process flow diagram such as Swimlane diagram",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Process flow diagram such as ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "Swimlane",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": " diagram",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "State-transition diagram (STD) and state tables",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "State-transition diagram (STD) and state tables",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Dialog map",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Dialog map",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Decision table and decision tree",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Decision table and decision tree",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Event-response table",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Event-response table",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Feature tree",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Feature tree",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Use case diagram",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Use case diagram",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Activity diagram",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Activity diagram",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Entity-relationship diagram (ERD), Class Diagram",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Entity-relationship diagram (ERD), Class Diagram",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-33",
+          "paragraphs": [
+            {
+              "text": "Slide-33",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "33"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Modeling The Requirements",
+      "all_text": "Modeling The Requirements\nData flow diagram (DFD)\nProcess flow diagram such as Swimlane diagram\nState-transition diagram (STD) and state tables\nDialog map\nDecision table and decision tree\nEvent-response table\nFeature tree\nUse case diagram\nActivity diagram\nEntity-relationship diagram (ERD), Class Diagram\nSlide-33",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 34,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Data dictionary",
+          "paragraphs": [
+            {
+              "text": "Data dictionary",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.272,
+            "width": 12.062,
+            "height": 3.771
+          },
+          "text": "A set of information describing the contents, format, and structure of a database and the relationship between its elements, used to control access to and manipulation of the database",
+          "paragraphs": [
+            {
+              "text": "A set of information describing the contents, format, and structure of a database and the relationship between its elements, used to control access to and manipulation of the database",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "A set of information describing the contents, format, and structure of a database and the relationship between its elements, used to control access to and manipulation of the database",
+                  "size_pt": 21.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-34",
+          "paragraphs": [
+            {
+              "text": "Slide-34",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "34"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "shape_id": 6,
+          "name": "Picture 5",
+          "type": "PICTURE (13)",
+          "position_inches": {
+            "left": 1.551,
+            "top": 3.364,
+            "width": 9.464,
+            "height": 3.317
+          },
+          "image": {
+            "filename": "image.emf",
+            "content_type": "image/x-wmf",
+            "size_bytes": 444132,
+            "px": [
+              583,
+              190
+            ],
+            "ocr_text_lines": [
+              "Forename Required",
+              "[Pupil Sumame Text Required",
+              "[Pupil Valid",
+              "Required",
+              "Room",
+              "[Teacher"
+            ],
+            "ocr_note": "Diagram/figure is a raster image with no text layer; text below recovered by OCR and may contain recognition errors."
+          }
+        }
+      ],
+      "title": "Data dictionary",
+      "all_text": "Data dictionary\nA set of information describing the contents, format, and structure of a database and the relationship between its elements, used to control access to and manipulation of the database\nSlide-34",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 35,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Specifying reports",
+          "paragraphs": [
+            {
+              "text": "Specifying reports",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.385,
+            "width": 12.062,
+            "height": 4.023
+          },
+          "text": "\nA dashboard is a screen display or printed report that uses multiple textual and/or graphical representations of data to provide a consolidated, multidimensional view of what is going on in an organization or a process.",
+          "paragraphs": [
+            {
+              "text": "",
+              "level": 0
+            },
+            {
+              "text": "A dashboard is a screen display or printed report that uses multiple textual and/or graphical representations of data to provide a consolidated, multidimensional view of what is going on in an organization or a process.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "A dashboard ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "is a screen display or printed report that uses multiple textual and/or graphical representations of data to provide a consolidated, multidimensional view of what is going on in an organization or a process.",
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.261,
+            "height": 1.11
+          },
+          "text": "Slide-35",
+          "paragraphs": [
+            {
+              "text": "Slide-35",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "35"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Specifying reports",
+      "all_text": "Specifying reports\n\nA dashboard is a screen display or printed report that uses multiple textual and/or graphical representations of data to provide a consolidated, multidimensional view of what is going on in an organization or a process.\nSlide-35",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 36,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "references",
+          "paragraphs": [
+            {
+              "text": "references",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 1.057,
+            "top": 2.47,
+            "width": 11.641,
+            "height": 4.023
+          },
+          "text": "Wiegers, K., & Beatty, J. (2013). Software requirements. Pearson Education",
+          "paragraphs": [
+            {
+              "text": "Wiegers, K., & Beatty, J. (2013). Software requirements. Pearson Education",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Wiegers",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": ", K., & Beatty, J. (2013). ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "Software requirements",
+                  "italic": true,
+                  "size_pt": 20.0
+                },
+                {
+                  "text": ". Pearson Education",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.868,
+            "top": 0.662,
+            "width": 0.275,
+            "height": 0.981
+          },
+          "text": "Slide-36",
+          "paragraphs": [
+            {
+              "text": "Slide-36",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "36"
+                }
+              ],
+              "runs": [
+                {
+                  "text": "Slide-",
+                  "bold": true,
+                  "size_pt": 14.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "references",
+      "all_text": "references\nWiegers, K., & Beatty, J. (2013). Software requirements. Pearson Education\nSlide-36",
+      "speaker_notes": null
+    }
+  ]
+}

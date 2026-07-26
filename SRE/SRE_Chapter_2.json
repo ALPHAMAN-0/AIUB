@@ -1,0 +1,2109 @@
+{
+  "schema": {
+    "decks[]": "one entry per PPTX file, in chapter order",
+    "decks[].core_properties": "PowerPoint document metadata (author, dates, revision)",
+    "decks[].slides[]": "one entry per slide, in presentation order",
+    "slides[].title": "text of the title placeholder (null if none)",
+    "slides[].all_text": "every text string on the slide joined with newlines - convenient flat field",
+    "slides[].layout": "name of the slide layout used",
+    "slides[].speaker_notes": "notes-pane text (null if the slide has no notes slide)",
+    "slides[].shapes[]": "every shape on the slide in z-order ('order' field)",
+    "shapes[].text": "full text of the shape",
+    "shapes[].paragraphs[]": "paragraph-by-paragraph text with bullet indent 'level' (0 = top level)",
+    "shapes[].paragraphs[].runs[]": "run-level text with bold/italic/underline/size_pt/hyperlink when set",
+    "shapes[].paragraphs[].fields[]": "auto-fields such as slide numbers, with their cached value",
+    "shapes[].table": "n_rows, n_cols and full 'rows' grid; merged cells appear as empty strings",
+    "shapes[].image": "filename, content_type, size_bytes, pixel dimensions",
+    "shapes[].image.ocr_text_lines": "text recovered by OCR from figures that are raster images with no text layer - may contain recognition errors",
+    "shapes[].position_inches": "left/top/width/height on the slide, in inches",
+    "shapes[].placeholder": "placeholder type and index, for placeholder shapes"
+  },
+  "source_file": "SRE_Chapter_2.pptx",
+  "slide_width_inches": 13.333,
+  "slide_height_inches": 7.5,
+  "slide_count": 14,
+  "core_properties": {
+    "title": "1. SOFTWARE REQUIREMENTS: WHAT, WHY, & WHO 1.1 The Essential software requirement",
+    "author": "Syed Ishteaque Ahmed",
+    "subject": "",
+    "keywords": "",
+    "comments": "",
+    "last_modified_by": "student",
+    "created": "2015-08-31T11:09:01",
+    "modified": "2016-10-02T07:47:56",
+    "revision": 86
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "layout": "Title Slide",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "CENTER_TITLE (3)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.859,
+            "width": 12.023,
+            "height": 1.67
+          },
+          "text": "1. SOFTWARE REQUIREMENTS: WHAT, WHY, & WHO\n1.2 Requirements from customer’s, Practice, \n       and business analyst perspective",
+          "paragraphs": [
+            {
+              "text": "1. SOFTWARE REQUIREMENTS: WHAT, WHY, & WHO\n1.2 Requirements from customer’s, Practice, \n       and business analyst perspective",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "1. SOFTWARE REQUIREMENTS: WHAT, WHY, & WHO"
+                },
+                {
+                  "text": "1.2 ",
+                  "bold": true
+                },
+                {
+                  "text": "Requirements from customer’s, Practice, ",
+                  "bold": true,
+                  "size_pt": 31.0
+                },
+                {
+                  "text": "       and business analyst perspective",
+                  "bold": true,
+                  "size_pt": 31.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Subtitle 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "SUBTITLE (4)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.621,
+            "top": 2.9,
+            "width": 12.023,
+            "height": 0.646
+          },
+          "text": "Software requirement engineering (Undergraduate)",
+          "paragraphs": [
+            {
+              "text": "Software requirement engineering (Undergraduate)",
+              "level": 0
+            }
+          ]
+        }
+      ],
+      "title": "1. SOFTWARE REQUIREMENTS: WHAT, WHY, & WHO\n1.2 Requirements from customer’s, Practice, \n       and business analyst perspective",
+      "all_text": "1. SOFTWARE REQUIREMENTS: WHAT, WHY, & WHO\n1.2 Requirements from customer’s, Practice, \n       and business analyst perspective\nSoftware requirement engineering (Undergraduate)",
+      "speaker_notes": ""
+    },
+    {
+      "slide_number": 2,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "The expectation  gap",
+          "paragraphs": [
+            {
+              "text": "The expectation  gap",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 5,
+          "name": "Picture 4",
+          "type": "PICTURE (13)",
+          "position_inches": {
+            "left": 2.694,
+            "top": 2.024,
+            "width": 7.945,
+            "height": 5.323
+          },
+          "image": {
+            "filename": "image.emf",
+            "content_type": "image/x-wmf",
+            "size_bytes": 2208504,
+            "px": [
+              907,
+              607
+            ],
+            "ocr_text_lines": [
+              "Expectation",
+              "the",
+              "builes",
+              "Customer contact points",
+              "Time",
+              "FIGURE 2-1 Frequent customer engagement reduces the expectation gap.",
+              "eeds",
+              "gap with",
+              "what the customer",
+              "engagement Expectation",
+              "gap without",
+              "customer",
+              "engagement",
+              "What"
+            ],
+            "ocr_note": "Diagram/figure is a raster image with no text layer; text below recovered by OCR and may contain recognition errors."
+          }
+        },
+        {
+          "order": 3,
+          "shape_id": 6,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 2",
+          "paragraphs": [
+            {
+              "text": "Slide - 2",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 2",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "The expectation  gap",
+      "all_text": "The expectation  gap\nSlide - 2",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 3,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Stakeholder",
+          "paragraphs": [
+            {
+              "text": "Stakeholder",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.385,
+            "width": 5.104,
+            "height": 3.543
+          },
+          "text": "A stakeholder is a person, group, or organization that is actively involved in a project, is affected by its process or outcome, or can influence its process or outcome. \nStakeholders can be internal or external to the project team and to the developing organization.",
+          "paragraphs": [
+            {
+              "text": "A stakeholder is a person, group, or organization that is actively involved in a project, is affected by its process or outcome, or can influence its process or outcome. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "A stakeholder is a person, group, or organization that is actively involved in a project, is affected by its process or outcome, or can influence its process or outcome. ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Stakeholders can be internal or external to the project team and to the developing organization.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Stakeholders can be internal or external to the project team and to the developing organization.",
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 3",
+          "paragraphs": [
+            {
+              "text": "Slide - 3",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 3",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "shape_id": 7,
+          "name": "Picture 6",
+          "type": "PICTURE (13)",
+          "position_inches": {
+            "left": 5.864,
+            "top": 2.093,
+            "width": 6.834,
+            "height": 5.285
+          },
+          "image": {
+            "filename": "image.emf",
+            "content_type": "image/x-wmf",
+            "size_bytes": 2613884,
+            "px": [
+              919,
+              710
+            ],
+            "ocr_text_lines": [
+              "Outside the Developing Organization",
+              "Development manager Sales staff Executive sponsor",
+              "Marketing Installer Project management office",
+              "Operational support staff Maintainer Manufacturing",
+              "Legal staff Program manager Training staff",
+              "Information architect Usability expert Portfolio architect",
+              "Company owner Subject matter expert Infrastructure support staff",
+              "Project Team",
+              "Project manager Tester",
+              "Business analyst Product manager",
+              "Application architect Quality assurance staff",
+              "Direct user Business management Consultant",
+              "Designer Documentation writer",
+              "Developer Database administrator",
+              "Product owner Hardware engineer",
+              "Data modeler Infrastructure analyst",
+              "Process analyst Business solutions architect",
+              "FIGURE 2-2 Potential stakeholders within the project team, within the developing organization, and outside the",
+              "organization.",
+              "Indirect user Contracting officer Compliance auditor",
+              "Acquirer Government agency Certifier",
+              "Procurement staff Subject matter expert Regulatory body",
+              "Legal staff Program manager Software supplier",
+              "Contractor Beta tester Materials supplier",
+              "Subcontractor General public Venture capitalist",
+              "Developing Organization"
+            ],
+            "ocr_note": "Diagram/figure is a raster image with no text layer; text below recovered by OCR and may contain recognition errors."
+          }
+        }
+      ],
+      "title": "Stakeholder",
+      "all_text": "Stakeholder\nA stakeholder is a person, group, or organization that is actively involved in a project, is affected by its process or outcome, or can influence its process or outcome. \nStakeholders can be internal or external to the project team and to the developing organization.\nSlide - 3",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 4,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Who  is  the  customer?",
+          "paragraphs": [
+            {
+              "text": "Who  is  the  customer?",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.1,
+            "width": 12.062,
+            "height": 5.186
+          },
+          "text": "Customers are a subset of stakeholders. \nA customer is an individual or organization that derives either direct or indirect benefit from a product. \nSoftware customers could request, pay for, select, specify, use, or receive the output generated by a software product. \nUser requirements should come from people who will actually use the product, either directly or indirectly. These users (often called end users) are a subset of customers. \nDirect users will operate the product hands-on. \nIndirect users might receive outputs from the system without touching it themselves, such as a warehouse manager who receives an automatic report of daily warehouse activities by email. \nUsers can describe the tasks they need to perform with the product, the outputs they need, and the quality characteristics they expect the product to exhibit.",
+          "paragraphs": [
+            {
+              "text": "Customers are a subset of stakeholders. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Customers are a subset of stakeholders. ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "A customer is an individual or organization that derives either direct or indirect benefit from a product. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "A customer is an individual or organization that derives either direct or indirect benefit from a product. ",
+                  "bold": true,
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Software customers could request, pay for, select, specify, use, or receive the output generated by a software product. ",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Software customers could request, pay for, select, specify, use, or receive the output generated by a software product. ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "User requirements should come from people who will actually use the product, either directly or indirectly. These users (often called end users) are a subset of customers. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "User requirements should come from people who will actually use the product, either directly or indirectly. These users (often called end users) are a subset of customers. ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Direct users will operate the product hands-on. ",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Direct users will operate the product hands-on. ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Indirect users might receive outputs from the system without touching it themselves, such as a warehouse manager who receives an automatic report of daily warehouse activities by email. ",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Indirect users might receive outputs from the system without touching it themselves, such as a warehouse manager who receives an automatic report of daily warehouse activities by email. ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Users can describe the tasks they need to perform with the product, the outputs they need, and the quality characteristics they expect the product to exhibit.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Users can describe the tasks they need to perform with the product, the outputs they need, and the quality characteristics they expect the product to exhibit.",
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 5",
+          "paragraphs": [
+            {
+              "text": "Slide - 5",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 5",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Who  is  the  customer?",
+      "all_text": "Who  is  the  customer?\nCustomers are a subset of stakeholders. \nA customer is an individual or organization that derives either direct or indirect benefit from a product. \nSoftware customers could request, pay for, select, specify, use, or receive the output generated by a software product. \nUser requirements should come from people who will actually use the product, either directly or indirectly. These users (often called end users) are a subset of customers. \nDirect users will operate the product hands-on. \nIndirect users might receive outputs from the system without touching it themselves, such as a warehouse manager who receives an automatic report of daily warehouse activities by email. \nUsers can describe the tasks they need to perform with the product, the outputs they need, and the quality characteristics they expect the product to exhibit.\nSlide - 5",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 5,
+      "layout": "Comparison",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.798,
+            "width": 12.062,
+            "height": 1.081
+          },
+          "text": "The  customer-development  partnership",
+          "paragraphs": [
+            {
+              "text": "The  customer-development  partnership",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 5,
+          "name": "Text Placeholder 4",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "BODY (2)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.486,
+            "top": 2.054,
+            "width": 12.085,
+            "height": 0.791
+          },
+          "text": "Rights: expectations that customers can legitimately hold regarding their interactions with BAs and \n            developers during the project’s requirements engineering activities (BA responsibility, obligation)",
+          "paragraphs": [
+            {
+              "text": "Rights: expectations that customers can legitimately hold regarding their interactions with BAs and \n            developers during the project’s requirements engineering activities (BA responsibility, obligation)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Rights: ",
+                  "bold": true,
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "expectations that customers can legitimately hold regarding their interactions with BAs and ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "            developers during the project’s requirements engineering activities (BA responsibility, obligation)",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 6,
+          "name": "Content Placeholder 5",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 2
+          },
+          "position_inches": {
+            "left": 1.109,
+            "top": 2.845,
+            "width": 11.805,
+            "height": 4.292
+          },
+          "text": "Expect BAs to speak your language\nExpect BAs to learn about your business and your objectives\nReceive explanations of requirements practices and deliverables\nChange your requirements\nExpect an environment of mutual respect\nHear ideas and alternatives for your requirements and for their solution\nDescribe characteristics that will make the product easy to use\nHear about ways to adjust requirements to accelerate development through reuse (early exp.)\nReceive a system that meets your functional needs and quality expectations",
+          "paragraphs": [
+            {
+              "text": "Expect BAs to speak your language",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Expect BAs to speak your language",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Expect BAs to learn about your business and your objectives",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Expect BAs to learn about your business and your objectives",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Receive explanations of requirements practices and deliverables",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Receive explanations of requirements practices and deliverables",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Change your requirements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Change your requirements",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Expect an environment of mutual respect",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Expect an environment of mutual respect",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Hear ideas and alternatives for your requirements and for their solution",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Hear ideas and alternatives for your requirements and for their solution",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Describe characteristics that will make the product easy to use",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Describe characteristics that will make the product easy to use",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Hear about ways to adjust requirements to accelerate development through reuse (early exp.)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Hear about ways to adjust requirements to accelerate development through reuse (early exp.)",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Receive a system that meets your functional needs and quality expectations",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Receive a system that meets your functional needs and quality expectations",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "shape_id": 7,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 6",
+          "paragraphs": [
+            {
+              "text": "Slide - 6",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 6",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "The  customer-development  partnership",
+      "all_text": "The  customer-development  partnership\nRights: expectations that customers can legitimately hold regarding their interactions with BAs and \n            developers during the project’s requirements engineering activities (BA responsibility, obligation)\nExpect BAs to speak your language\nExpect BAs to learn about your business and your objectives\nReceive explanations of requirements practices and deliverables\nChange your requirements\nExpect an environment of mutual respect\nHear ideas and alternatives for your requirements and for their solution\nDescribe characteristics that will make the product easy to use\nHear about ways to adjust requirements to accelerate development through reuse (early exp.)\nReceive a system that meets your functional needs and quality expectations\nSlide - 6",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 6,
+      "layout": "Comparison",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.798,
+            "width": 12.062,
+            "height": 1.081
+          },
+          "text": "The  customer-development  partnership",
+          "paragraphs": [
+            {
+              "text": "The  customer-development  partnership",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 7,
+          "name": "Text Placeholder 6",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "BODY (2)",
+            "idx": 3
+          },
+          "position_inches": {
+            "left": 0.507,
+            "top": 2.112,
+            "width": 12.319,
+            "height": 0.76
+          },
+          "text": "Responsibilities: responsibilities that the customer has to BAs and developers during the requirements \n                            process (BA rights)",
+          "paragraphs": [
+            {
+              "text": "Responsibilities: responsibilities that the customer has to BAs and developers during the requirements \n                            process (BA rights)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Responsibilities: ",
+                  "bold": true,
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "responsibilities that the customer has to BAs and developers during the requirements ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "                            process (BA rights)",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 8,
+          "name": "Content Placeholder 7",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 4
+          },
+          "position_inches": {
+            "left": 1.15,
+            "top": 2.873,
+            "width": 11.676,
+            "height": 4.323
+          },
+          "text": "Educate BAs and developers about your business\nDedicate the time that it takes to provide and clarify requirements\nBe specific and precise when providing input about requirements\nMake timely decisions about requirements when asked (user-friendliness, security)\nRespect a developer’s assessment of the cost and feasibility of requirements\nSet realistic requirement priorities in collaboration with developers\nReview requirements and evaluate prototypes (after iteration)\nEstablish acceptance criteria; promptly communicate changes to the requirements\nRespect the requirements development process (SDLC)",
+          "paragraphs": [
+            {
+              "text": "Educate BAs and developers about your business",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Educate BAs and developers about your business",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Dedicate the time that it takes to provide and clarify requirements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Dedicate the time that it takes to provide and clarify requirements",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Be specific and precise when providing input about requirements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Be specific and precise when providing input about requirements",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Make timely decisions about requirements when asked (user-friendliness, security)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Make timely decisions about requirements when asked (user-friendliness, security)",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Respect a developer’s assessment of the cost and feasibility of requirements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Respect a developer’s assessment of the cost and feasibility of requirements",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Set realistic requirement priorities in collaboration with developers",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Set realistic requirement priorities in collaboration with developers",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Review requirements and evaluate prototypes (after iteration)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Review requirements and evaluate prototypes (after iteration)",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Establish acceptance criteria; promptly communicate changes to the requirements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Establish acceptance criteria; promptly communicate changes to the requirements",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Respect the requirements development process (SDLC)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Respect the requirements development process (SDLC)",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "shape_id": 6,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 7",
+          "paragraphs": [
+            {
+              "text": "Slide - 7",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 7",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "The  customer-development  partnership",
+      "all_text": "The  customer-development  partnership\nResponsibilities: responsibilities that the customer has to BAs and developers during the requirements \n                            process (BA rights)\nEducate BAs and developers about your business\nDedicate the time that it takes to provide and clarify requirements\nBe specific and precise when providing input about requirements\nMake timely decisions about requirements when asked (user-friendliness, security)\nRespect a developer’s assessment of the cost and feasibility of requirements\nSet realistic requirement priorities in collaboration with developers\nReview requirements and evaluate prototypes (after iteration)\nEstablish acceptance criteria; promptly communicate changes to the requirements\nRespect the requirements development process (SDLC)\nSlide - 7",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 7,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Identifying  Decision  Makers",
+          "paragraphs": [
+            {
+              "text": "Identifying  Decision  Makers",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 8,
+          "name": "Content Placeholder 7",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.65,
+            "top": 2.085,
+            "width": 12.062,
+            "height": 5.13
+          },
+          "text": "The decision leader makes the choice, either with or without discussion with others.\nThe group votes and the majority rules.\nThe group votes, but the result must be unanimous (agreed) to approve the decision.\nThe group discusses and negotiates to reach a consensus. Everyone can live with the decision and commits to supporting it.\nReaching  Agreement  on  requirements\nCustomers agree that the requirements address their needs.\nDevelopers agree that they understand the requirements and that they are feasible.\nTesters agree that the requirements are verifiable.\nManagement agrees that the requirements will achieve their business objectives.",
+          "paragraphs": [
+            {
+              "text": "The decision leader makes the choice, either with or without discussion with others.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "The decision leader makes the choice, either with or without discussion with others.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "The group votes and the majority rules.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "The group votes and the majority rules.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "The group votes, but the result must be unanimous (agreed) to approve the decision.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "The group votes, but the result must be unanimous (agreed) to approve the decision.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "The group discusses and negotiates to reach a consensus. Everyone can live with the decision and commits to supporting it.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "The group discusses and negotiates to reach a consensus. Everyone can live with the decision and commits to supporting it.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Reaching  Agreement  on  requirements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Reaching  Agreement  on  requirements",
+                  "underline": true,
+                  "size_pt": 24.0
+                }
+              ]
+            },
+            {
+              "text": "Customers agree that the requirements address their needs.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Customers agree that the requirements address their needs.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Developers agree that they understand the requirements and that they are feasible.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Developers agree that they understand the requirements and that they are feasible.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Testers agree that the requirements are verifiable.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Testers agree that the requirements are verifiable.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Management agrees that the requirements will achieve their business objectives.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Management agrees that the requirements will achieve their business objectives.",
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 8",
+          "paragraphs": [
+            {
+              "text": "Slide - 8",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 8",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Identifying  Decision  Makers",
+      "all_text": "Identifying  Decision  Makers\nThe decision leader makes the choice, either with or without discussion with others.\nThe group votes and the majority rules.\nThe group votes, but the result must be unanimous (agreed) to approve the decision.\nThe group discusses and negotiates to reach a consensus. Everyone can live with the decision and commits to supporting it.\nReaching  Agreement  on  requirements\nCustomers agree that the requirements address their needs.\nDevelopers agree that they understand the requirements and that they are feasible.\nTesters agree that the requirements are verifiable.\nManagement agrees that the requirements will achieve their business objectives.\nSlide - 8",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 8,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "The  Requirements  Baseline",
+          "paragraphs": [
+            {
+              "text": "The  Requirements  Baseline",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.129,
+            "width": 12.062,
+            "height": 5.129
+          },
+          "text": "A requirements baseline is a set of requirements that has been reviewed and agreed upon and serves as the basis for further development.\nA meaningful baselining process gives all the major stakeholders confidence in the following ways:\nCustomer management or marketing is confident that the project scope won’t explode out of control, because customers manage the scope change decisions.\nUser representatives have confidence that the development team will work with them to deliver the right solution, even if they didn’t think of every requirement before construction began.\nDevelopment management has confidence because the development team has a business partner who will keep the project focused on achieving its objectives and will work with development to balance schedule, \ncost, functionality, and quality.\nBusiness analysts and project managers are confident that they can manage changes to the project in a way that will keep chaos to a minimum.\nQuality assurance and test teams can confidently develop their test scripts and be fully prepared for their project activities.",
+          "paragraphs": [
+            {
+              "text": "A requirements baseline is a set of requirements that has been reviewed and agreed upon and serves as the basis for further development.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "A requirements baseline is a set of requirements that has been reviewed and agreed upon and serves as the basis for further development.",
+                  "bold": true
+                }
+              ]
+            },
+            {
+              "text": "A meaningful baselining process gives all the major stakeholders confidence in the following ways:",
+              "level": 0
+            },
+            {
+              "text": "Customer management or marketing is confident that the project scope won’t explode out of control, because customers manage the scope change decisions.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Customer management or marketing ",
+                  "size_pt": 18.0
+                },
+                {
+                  "text": "is confident that the project scope won’t explode out of control, because customers manage the scope change decisions.",
+                  "size_pt": 18.0
+                }
+              ]
+            },
+            {
+              "text": "User representatives have confidence that the development team will work with them to deliver the right solution, even if they didn’t think of every requirement before construction began.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "User representatives ",
+                  "size_pt": 18.0
+                },
+                {
+                  "text": "have confidence that the development team will work with them to deliver the right solution, even if they didn’t think of every requirement before construction began.",
+                  "size_pt": 18.0
+                }
+              ]
+            },
+            {
+              "text": "Development management has confidence because the development team has a business partner who will keep the project focused on achieving its objectives and will work with development to balance schedule, \ncost, functionality, and quality.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Development management ",
+                  "size_pt": 18.0
+                },
+                {
+                  "text": "has confidence because the development team has a business partner who will keep the project focused on achieving its objectives and will work with development to balance schedule, ",
+                  "size_pt": 18.0
+                },
+                {
+                  "text": "cost, functionality, and quality.",
+                  "size_pt": 18.0
+                }
+              ]
+            },
+            {
+              "text": "Business analysts and project managers are confident that they can manage changes to the project in a way that will keep chaos to a minimum.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Business analysts and project managers ",
+                  "size_pt": 18.0
+                },
+                {
+                  "text": "are confident that they can manage changes to the project in a way that will keep chaos to a minimum.",
+                  "size_pt": 18.0
+                }
+              ]
+            },
+            {
+              "text": "Quality assurance and test teams can confidently develop their test scripts and be fully prepared for their project activities.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Quality assurance and test teams ",
+                  "size_pt": 18.0
+                },
+                {
+                  "text": "can confidently develop their test scripts and be fully prepared for their project activities.",
+                  "size_pt": 18.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 9",
+          "paragraphs": [
+            {
+              "text": "Slide - 9",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 9",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "The  Requirements  Baseline",
+      "all_text": "The  Requirements  Baseline\nA requirements baseline is a set of requirements that has been reviewed and agreed upon and serves as the basis for further development.\nA meaningful baselining process gives all the major stakeholders confidence in the following ways:\nCustomer management or marketing is confident that the project scope won’t explode out of control, because customers manage the scope change decisions.\nUser representatives have confidence that the development team will work with them to deliver the right solution, even if they didn’t think of every requirement before construction began.\nDevelopment management has confidence because the development team has a business partner who will keep the project focused on achieving its objectives and will work with development to balance schedule, \ncost, functionality, and quality.\nBusiness analysts and project managers are confident that they can manage changes to the project in a way that will keep chaos to a minimum.\nQuality assurance and test teams can confidently develop their test scripts and be fully prepared for their project activities.\nSlide - 9",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 9,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "The Business Analyst Role",
+          "paragraphs": [
+            {
+              "text": "The Business Analyst Role",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 5,
+          "name": "Picture 4",
+          "type": "PICTURE (13)",
+          "position_inches": {
+            "left": 1.37,
+            "top": 2.133,
+            "width": 10.594,
+            "height": 5.011
+          },
+          "image": {
+            "filename": "image.emf",
+            "content_type": "image/x-wmf",
+            "size_bytes": 1583296,
+            "px": [
+              915,
+              432
+            ],
+            "ocr_text_lines": [
+              "Project Sponsor Project Management",
+              "functional and",
+              "Busi nonfunctional",
+              "requirements",
+              "Analyst",
+              "expectations",
+              "and constraints",
+              "functional and",
+              "nonfunctional",
+              "Other Stakeholders requirements",
+              "FIGURE 4-1 The business analyst bridges communication between customer and development stakeholders.",
+              "business",
+              "size and complexity",
+              "requirements",
+              "information,",
+              "é requirements status",
+              "user",
+              "requirements",
+              "User Representatives Development"
+            ],
+            "ocr_note": "Diagram/figure is a raster image with no text layer; text below recovered by OCR and may contain recognition errors."
+          }
+        },
+        {
+          "order": 3,
+          "shape_id": 6,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 10",
+          "paragraphs": [
+            {
+              "text": "Slide - 10",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 10",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "The Business Analyst Role",
+      "all_text": "The Business Analyst Role\nSlide - 10",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 10,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "The business analyst’s tasks",
+          "paragraphs": [
+            {
+              "text": "The business analyst’s tasks",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.807,
+            "top": 2.086,
+            "width": 10.664,
+            "height": 5.057
+          },
+          "text": "Define business requirements\nPlan the requirements approach\nIdentify project stakeholders and user classes\nElicit requirements\nAnalyse requirements\nDocument requirements\nCommunicate requirements\nLead requirements validation\nFacilitate requirements prioritization\nManage requirements",
+          "paragraphs": [
+            {
+              "text": "Define business requirements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Define business requirements",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Plan the requirements approach",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Plan the requirements approach",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Identify project stakeholders and user classes",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Identify project stakeholders and user classes",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Elicit requirements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Elicit requirements",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Analyse requirements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Analyse requirements",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Document requirements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Document requirements",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Communicate requirements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Communicate requirements",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Lead requirements validation",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Lead requirements validation",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Facilitate requirements prioritization",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Facilitate requirements prioritization",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Manage requirements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Manage requirements",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 11",
+          "paragraphs": [
+            {
+              "text": "Slide - 11",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 11",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "The business analyst’s tasks",
+      "all_text": "The business analyst’s tasks\nDefine business requirements\nPlan the requirements approach\nIdentify project stakeholders and user classes\nElicit requirements\nAnalyse requirements\nDocument requirements\nCommunicate requirements\nLead requirements validation\nFacilitate requirements prioritization\nManage requirements\nSlide - 11",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 11,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Essential analyst skills",
+          "paragraphs": [
+            {
+              "text": "Essential analyst skills",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 1.114,
+            "top": 2.212,
+            "width": 5.114,
+            "height": 4.553
+          },
+          "text": "Listening skills\nInterviewing and questioning skills\nThinking on your feet\nAnalytical skills\nSystems thinking skills\nLearning skills\nFacilitation / Simplification skills",
+          "paragraphs": [
+            {
+              "text": "Listening skills",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Listening skills",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Interviewing and questioning skills",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Interviewing and questioning skills",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Thinking on your feet",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Thinking on your feet",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Analytical skills",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Analytical skills",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Systems thinking skills",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Systems thinking skills",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Learning skills",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Learning skills",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Facilitation / Simplification skills",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Facilitation / Simplification skills",
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 6,
+          "name": "Content Placeholder 2",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 8.231,
+            "top": 2.338,
+            "width": 3.952,
+            "height": 4.301
+          },
+          "text": "Leadership skills\nObservational skills\nCommunication skills\nOrganizational skills\nModelling skills\nInterpersonal skills\nCreativity",
+          "paragraphs": [
+            {
+              "text": "Leadership skills",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Leadership skills",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Observational skills",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Observational skills",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Communication skills",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Communication skills",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Organizational skills",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Organizational skills",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Modelling skills",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Modelling skills",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Interpersonal skills",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Interpersonal skills",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Creativity",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Creativity",
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "shape_id": 7,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 12",
+          "paragraphs": [
+            {
+              "text": "Slide - 12",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 12",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Essential analyst skills",
+      "all_text": "Essential analyst skills\nListening skills\nInterviewing and questioning skills\nThinking on your feet\nAnalytical skills\nSystems thinking skills\nLearning skills\nFacilitation / Simplification skills\nLeadership skills\nObservational skills\nCommunication skills\nOrganizational skills\nModelling skills\nInterpersonal skills\nCreativity\nSlide - 12",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 12,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Essential analyst knowledge",
+          "paragraphs": [
+            {
+              "text": "Essential analyst knowledge",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.621,
+            "top": 2.327,
+            "width": 12.062,
+            "height": 1.987
+          },
+          "text": "In addition to having specific capabilities and personal characteristics, business analysts need \na breadth of knowledge, much of which is gained through experience. \nto understand contemporary requirements engineering practices and how to apply them in the context of various software development life cycles.",
+          "paragraphs": [
+            {
+              "text": "In addition to having specific capabilities and personal characteristics, business analysts need ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "In addition to having specific capabilities and personal characteristics, business analysts need ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "a breadth of knowledge, much of which is gained through experience. ",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "a breadth of knowledge, much of which is gained through experience. ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "to understand contemporary requirements engineering practices and how to apply them in the context of various software development life cycles.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "to understand contemporary requirements engineering practices and how to apply them in the context of various software development life cycles.",
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 13",
+          "paragraphs": [
+            {
+              "text": "Slide - 13",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 13",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Essential analyst knowledge",
+      "all_text": "Essential analyst knowledge\nIn addition to having specific capabilities and personal characteristics, business analysts need \na breadth of knowledge, much of which is gained through experience. \nto understand contemporary requirements engineering practices and how to apply them in the context of various software development life cycles.\nSlide - 13",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 13,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "The making of a business analyst",
+          "paragraphs": [
+            {
+              "text": "The making of a business analyst",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.385,
+            "width": 5.379,
+            "height": 2.901
+          },
+          "text": "The former user\nThe former developer or tester\nThe former (or concurrent) project manager\nThe subject matter (domain) expert",
+          "paragraphs": [
+            {
+              "text": "The former user",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "The former user",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "The former developer or tester",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "The former developer or tester",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "The former (or concurrent) project manager",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "The former (or concurrent) project manager",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "The subject matter (domain) expert",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "The subject matter (domain) expert",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Picture 4",
+          "type": "PICTURE (13)",
+          "position_inches": {
+            "left": 5.9,
+            "top": 2.129,
+            "width": 7.229,
+            "height": 5.043
+          },
+          "image": {
+            "filename": "image.emf",
+            "content_type": "image/x-wmf",
+            "size_bytes": 3112448,
+            "px": [
+              1051,
+              740
+            ],
+            "ocr_text_lines": [
+              "Skills Experience",
+              "Practice the",
+              "tasks",
+              "The well-rounded BA",
+              "FIGURE 4-2 Knowledge, skills, and experience feed into creating an effective business analyst."
+            ],
+            "ocr_note": "Diagram/figure is a raster image with no text layer; text below recovered by OCR and may contain recognition errors."
+          }
+        },
+        {
+          "order": 4,
+          "shape_id": 6,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 14",
+          "paragraphs": [
+            {
+              "text": "Slide - 14",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 14",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "The making of a business analyst",
+      "all_text": "The making of a business analyst\nThe former user\nThe former developer or tester\nThe former (or concurrent) project manager\nThe subject matter (domain) expert\nSlide - 14",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 14,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "References",
+          "paragraphs": [
+            {
+              "text": "References",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.071,
+            "width": 12.062,
+            "height": 1.871
+          },
+          "text": "Wiegers, K., & Beatty, J. (2013). Software requirements. Pearson Education.",
+          "paragraphs": [
+            {
+              "text": "Wiegers, K., & Beatty, J. (2013). Software requirements. Pearson Education.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Wiegers",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": ", K., & Beatty, J. (2013). ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "Software requirements",
+                  "italic": true,
+                  "size_pt": 20.0
+                },
+                {
+                  "text": ". Pearson Education.",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 15",
+          "paragraphs": [
+            {
+              "text": "Slide - 15",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 15",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "References",
+      "all_text": "References\nWiegers, K., & Beatty, J. (2013). Software requirements. Pearson Education.\nSlide - 15",
+      "speaker_notes": null
+    }
+  ]
+}

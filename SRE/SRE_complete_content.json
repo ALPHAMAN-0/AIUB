@@ -1,0 +1,860 @@
+{
+  "title": "Software Requirements Engineering (SRE)",
+  "chapters": {
+    "chapter_1": {
+      "chapter_number": 1,
+      "total_slides": 30,
+      "slides": [
+        {
+          "slide_number": 1,
+          "title": "Notes:",
+          "content": "Software requirement engineering (Undergraduate)"
+        },
+        {
+          "slide_number": 2,
+          "title": "The current common problems",
+          "content": "Slide - 2\nThe project’s business objectives, vision, and scope were never clearly defined.\nLack of communication - customers were too busy to spend time working with analysts or developers on the requirements (what users needed to accomplish with the software)\nCustomers claimed that all requirements were critical, so they didn’t prioritize them.\nDevelopers encountered ambiguities and missing information when coding, so they had\u000b to guess.\nYour customers never approved the requirements."
+        },
+        {
+          "slide_number": 3,
+          "title": "The current common problems (CNTD.)",
+          "content": "Slide - 3\nYour customers approved the requirements for a release or iteration and then changed them continually.\nThe project scope increased as requirements changes were accepted, but the schedule slipped because no additional resources were provided and no functionality was removed.\nRequested requirements changes got lost; no one knew the status of a particular change request.\nCustomers requested certain functionality and developers built it, but no one ever uses it.\nAt the end of the project, the specification was satisfied but the customer or the business objectives were not."
+        },
+        {
+          "slide_number": 4,
+          "title": "What is “REQUIREMENT”?",
+          "content": "Slide - 4\nA requirement is a property that a product must have to provide value to a stakeholder\nRequirements are a specification of what should be implemented. They are descriptions of a system property or attribute or how the system should behave. They may be a constraint on the development process of the system.\nRequirements encompass\nthe user’s view of the external system behaviour\nthe developer’s view of some internal characteristics\nSoftware requirements include a time dimension\nThey could be present tense, describing the current system’s capabilities\nnear-term (high priority) or hypothetical (low priority) future\nThey could even be past tense, referring to needs that were once specified and then discarded"
+        },
+        {
+          "slide_number": 5,
+          "title": "Business requirements",
+          "content": "Slide - 5\nBusiness requirements describe why the organization is implementing the system — the business benefits the organization hopes to achieve\nThe focus is on the business objectives of the organization or the customer who requests the system (business requirements collected from multiple sources might conflict)\nSuppose an airline wants to reduce airport counter staff costs by 25 percent. This goal might lead to the idea of building a kiosk that passengers can use to check in for their flights at the airport.\nSelf-service technologies (SSTs) have been applied to many areas of business\nBusiness requirements typically come from the funding sponsor for a project, the acquiring customer, the manager of the actual users, the marketing department, or a product visionary"
+        },
+        {
+          "slide_number": 6,
+          "title": "User Requirements",
+          "content": "Slide - 6\nUser requirements describe goals or tasks the users must be able to perform with the product that will provide value to someone\nIncludes descriptions of product attributes or characteristics that are important to user satisfaction\nRepresent user requirements include use cases and user stories\nUser representatives will provide this information\nDescribes what the user will be able to do with the system\nAn example of a use case is “Check in for a flight” using an airline’s website or a kiosk at the airport. Written as a user story, the same user requirement might read: “As a passenger, \u000bI want to check in for a flight so I can board my airplane.”"
+        },
+        {
+          "slide_number": 7,
+          "title": "Functional Requirements",
+          "content": "Slide - 7\nFunctional requirements specify the behaviours the product will exhibit under specific conditions\nThey describe what the developers must implement to enable users to accomplish their tasks (user requirements), thereby satisfying the business requirements\nFunctional requirements often are written in the form of the traditional “shall” statements:\n\t“The Passenger shall be able to print boarding passes for all flight segments for which he has  \u000b    checked in” or “If the Passenger’s profile does not indicate a seating preference, the reservation \u000b    system shall assign a seat.”\nA restriction that is imposed on the choices available to the developer for the design and construction of a product, is a CONSTRAINT\n\t“The system shall be developed using open source tools and shall run on Linux OS”"
+        },
+        {
+          "slide_number": 8,
+          "title": "Levels of requirements",
+          "content": "Slide - 8\nSoftware requirements include three distinct levels:\nBusiness requirements\nUser requirements\nFunctional requirements\nThis alignment among the three levels of requirements is essential for project success"
+        },
+        {
+          "slide_number": 9,
+          "title": "Working with the three levels",
+          "content": "Slide - 9\n![](Picture4.jpg)"
+        },
+        {
+          "slide_number": 10,
+          "title": "System Requirements",
+          "content": "Slide - 10\nSystem requirements describe the requirements for a product that is composed of multiple components or subsystems.\nA system can be all software or it can include both software and hardware subsystems (e.g. biometric)\nPeople and processes are part of a system, so certain system functions might be allocated to human\nA good example of a “system” is the cashier’s workstation in a supermarket. There’s a bar code scanner integrated with a scale, as well as a hand-held bar code scanner. The cashier has a keyboard, a display, \u000band a cash drawer\nThe requirements for the system or product as a whole, then, lead the business analyst to derive specific functionality that must be allocated to one or another of those component subsystems, \u000bas well as demanding an understanding of the interfaces between them"
+        },
+        {
+          "slide_number": 11,
+          "title": "Non-Functional Requirements",
+          "content": "Slide - 11\nNon-functional requirement are also known as quality attributes, product requirements that describes a service or performance characteristic of a product (“– ity, ilities.”)\nDescribe the product’s characteristics in various dimensions that are important either to users or to developers and maintainers, such as performance, safety, availability, and portability (chances of conflicts within non-functional requirements are fairly high)\nOther classes of non-functional requirements describe external interfaces between the system and the outside world (usefulness, flexibility, reliability)\nThese include connections to other software systems, hardware components, and users, as well as communication interfaces (interoperability)\nDesign and implementation constraints impose restrictions on the options available to the developer during construction of the product (security)"
+        },
+        {
+          "slide_number": 12,
+          "title": "Business Rules",
+          "content": "Slide - 12\nBusiness rules include corporate policies, government regulations, industry standards, and computational algorithms\nBusiness rules are not themselves software requirements because they have an existence beyond the boundaries of any specific software application\nThey often dictate that the system must contain functionality to comply with the relevant  rules (e.g. online purchase limit)\nA restriction that is imposed on the choices available to the developer for the design and construction of a product (e.g. no red colour in webpage – Inverse requirements)\nSometimes, as with corporate security policies, business rules are the origin of specific quality attributes that are then implemented in functionality (e.g. firewall)\nTherefore, you can trace the origin of certain functional requirements back to a particular business rule"
+        },
+        {
+          "slide_number": 13,
+          "title": "Feature",
+          "content": "Slide - 13\n![](Picture4.jpg)\nA feature consists of one or more logically related system capabilities that provide value to a user and are described by a set of functional requirements\nA feature can encompass multiple user requirements, each of which implies that certain functional requirements must be implemented to allow the user to perform the task described by each user requirement"
+        },
+        {
+          "slide_number": 14,
+          "title": "Relationships",
+          "content": "Slide - 14\n![](Picture4.jpg)"
+        },
+        {
+          "slide_number": 15,
+          "title": "Product vs. Project Requirements",
+          "content": "Slide - 15\nRequirements that describe properties of a software system to be built are called product requirements.\nProjects certainly do have other expectations and deliverables that are not a part of the software the team implements, but that are necessary to the successful completion of the project as a whole. These are project requirements but not product requirements.  (maintain schedule deadline of task)\nAn SRS houses the product requirements, but it should not include design or implementation details (other than known constraints), project plans, test plans, or similar information.\nSeparate out such items so that requirements development activities can focus on understanding what the team intends to build."
+        },
+        {
+          "slide_number": 16,
+          "title": "Project Requirements",
+          "content": "Slide - 16\nPhysical resources the development team needs, such as workstations, special hardware devices, testing labs, testing tools and equipment, team rooms, and videoconferencing equipment.\nStaff training (User documentation, including training materials, tutorials, reference manuals, and release notes)\nInfrastructure changes needed in the operating environment.\nRequirements and procedures for releasing the product, installing it in the operating environment, configuring it, and testing the installation.\nBeta testing, manufacturing, packaging, marketing, and distribution requirements.\nCustomer service-level agreements.\nRequirements for obtaining legal protection (patents, trademarks, or copyrights) for intellectual property related to the software."
+        },
+        {
+          "slide_number": 17,
+          "title": "Requirements Development and management",
+          "content": "Slide - 17\n![](Picture4.jpg)"
+        },
+        {
+          "slide_number": 18,
+          "title": "Requirements Development: ELICITATION",
+          "content": "Slide - 18\nIdentifying the product’s expected user classes and other stakeholders.\nUnderstanding user tasks and goals and the business objectives with which those tasks align.\nLearning about the environment in which the new product will be used.\nWorking with individuals who represent each user class to understand their functionality needs and their quality expectations."
+        },
+        {
+          "slide_number": 19,
+          "title": "Requirements Development: ANALYSIS",
+          "content": "Slide - 19\nModel the application environment\nAnalysing the information received from users to distinguish their task goals into functional requirements, quality expectations, business rules, suggested solutions, etc.\nDecomposing high-level requirements into an appropriate level of detail\nAllocating requirements to software components defined in the system architecture\nNegotiating requirements priority and their implementation priorities"
+        },
+        {
+          "slide_number": 20,
+          "title": "Requirements Development: Specification",
+          "content": "Slide - 20\nThe business analyst documents requirements in a software requirements specification (SRS).\nTranscribing the collected user needs into written requirements and diagrams suitable for comprehension, review, and use by their intended audiences.\nThe SRS describes as fully as necessary the expected behaviour of the software system.\nThe SRS is used in development, testing, quality assurance, project management, and related project functions.\nAdopt requirement document templates (well defined standard of writing requirements)\nIdentify requirement origins\nUniquely label each requirement (cross-cutting requirements)"
+        },
+        {
+          "slide_number": 21,
+          "title": "Requirements Development: Validation",
+          "content": "Slide - 21\nReviewing the documented requirements (SRS) to correct any problems before the development group accepts them (feasible, consistent, complete)\nConsistency means that no requirements should be contradictory; Completeness means that no services or constraints which are needed have been missed out. Also, discard unnecessary requirements\nDeveloping acceptance tests and criteria to confirm that a product based on the requirements would meet customer needs and achieve the business objectives.\nSimulate the requirements (e.g. wareframming) to find errors."
+        },
+        {
+          "slide_number": 22,
+          "title": "A  requirements  development  process  framework",
+          "content": "Slide - 22\n![](Picture4.jpg)"
+        },
+        {
+          "slide_number": 23,
+          "title": "A  requirements  development  process  framework",
+          "content": "Slide - 23\n![](Picture4.jpg)\nexpand"
+        },
+        {
+          "slide_number": 24,
+          "title": "Requirements Management",
+          "content": "Slide - 24\nEstablish a requirements change control process\nPerform impact analysis on requirements changes\nTrack the status of each requirement;  Track requirements issues\nMaintain a history of requirements changes\nMaintain a requirements traceability matrix\nDefining the relationships and dependencies that exist between requirements\nTracing individual requirements to their corresponding designs, source code, and tests"
+        },
+        {
+          "slide_number": 25,
+          "title": "Requirements Management (cntd.)",
+          "content": "Slide - 25\n![](Picture4.jpg)"
+        },
+        {
+          "slide_number": 26,
+          "title": "A  requirements  development  process  framework",
+          "content": "Slide - 26\n![](Picture4.jpg)\nTime box – 1month\n26"
+        },
+        {
+          "slide_number": 27,
+          "title": "Role of Requirements",
+          "content": "Slide - 27\n“The hardest single part of building a software system is deciding precisely what to build. No other part of the conceptual work is as difficult as establishing the detailed technical requirements, including all the interfaces to people, to machines, and to other software systems. No other part of the work so cripples the resulting system if done wrong. No other part is more difficult to rectify later.”"
+        },
+        {
+          "slide_number": 28,
+          "title": "Reasons Behind Bad Requirements",
+          "content": "Slide - 28\nInsufficient user involvement\nInaccurate planning\nCreeping (gradually increase, changing) user requirements\nAmbiguous requirements (e.g. response to a request as soon as possible)\nGold plating (extra functionality beyond the specification)\nOverlooked stakeholders"
+        },
+        {
+          "slide_number": 29,
+          "title": "Benefits of a high quality requirements process",
+          "content": "Slide - 29\nFewer defects in requirements and in the delivered product\nReduced development rework\nFaster development and delivery\nFewer unnecessary and unused features\nLower enhancement costs\nFewer miscommunications\nReduced scope creep\nReduced project chaos\nHigher customer and team member satisfaction\nProducts that do what they’re supposed to do"
+        },
+        {
+          "slide_number": 30,
+          "title": "References",
+          "content": "Slide - 30\nWiegers, K., & Beatty, J. (2013). Software requirements. Pearson Education.\nhttp://www.cs.ccsu.edu/~stan/classes/CS530/notes14/04-Requirements.html"
+        }
+      ]
+    },
+    "chapter_2": {
+      "chapter_number": 2,
+      "total_slides": 14,
+      "slides": [
+        {
+          "slide_number": 1,
+          "title": "Notes:",
+          "content": "Software requirement engineering (Undergraduate)"
+        },
+        {
+          "slide_number": 2,
+          "title": "The expectation  gap",
+          "content": "Slide - 2\n![](Picture4.jpg)"
+        },
+        {
+          "slide_number": 3,
+          "title": "Stakeholder",
+          "content": "Slide - 3\n![](Picture6.jpg)\nA stakeholder is a person, group, or organization that is actively involved in a project, is affected by its process or outcome, or can influence its process or outcome.\nStakeholders can be internal or external to the project team and to the developing organization."
+        },
+        {
+          "slide_number": 4,
+          "title": "Who  is  the  customer?",
+          "content": "Slide - 5\nCustomers are a subset of stakeholders.\nA customer is an individual or organization that derives either direct or indirect benefit from a product.\nSoftware customers could request, pay for, select, specify, use, or receive the output generated by a software product.\nUser requirements should come from people who will actually use the product, either directly or indirectly. These users (often called end users) are a subset of customers.\nDirect users will operate the product hands-on.\nIndirect users might receive outputs from the system without touching it themselves, such as a warehouse manager who receives an automatic report of daily warehouse activities by email.\nUsers can describe the tasks they need to perform with the product, the outputs they need, and the quality characteristics they expect the product to exhibit."
+        },
+        {
+          "slide_number": 5,
+          "title": "The  customer-development  partnership",
+          "content": "Slide - 6\nRights: expectations that customers can legitimately hold regarding their interactions with BAs and \u000b            developers during the project’s requirements engineering activities (BA responsibility, obligation)\nExpect BAs to speak your language\nExpect BAs to learn about your business and your objectives\nReceive explanations of requirements practices and deliverables\nChange your requirements\nExpect an environment of mutual respect\nHear ideas and alternatives for your requirements and for their solution\nDescribe characteristics that will make the product easy to use\nHear about ways to adjust requirements to accelerate development through reuse (early exp.)\nReceive a system that meets your functional needs and quality expectations"
+        },
+        {
+          "slide_number": 6,
+          "title": "The  customer-development  partnership",
+          "content": "Slide - 7\nResponsibilities: responsibilities that the customer has to BAs and developers during the requirements \u000b                            process (BA rights)\nEducate BAs and developers about your business\nDedicate the time that it takes to provide and clarify requirements\nBe specific and precise when providing input about requirements\nMake timely decisions about requirements when asked (user-friendliness, security)\nRespect a developer’s assessment of the cost and feasibility of requirements\nSet realistic requirement priorities in collaboration with developers\nReview requirements and evaluate prototypes (after iteration)\nEstablish acceptance criteria; promptly communicate changes to the requirements\nRespect the requirements development process (SDLC)"
+        },
+        {
+          "slide_number": 7,
+          "title": "Identifying  Decision  Makers",
+          "content": "Slide - 8\nThe decision leader makes the choice, either with or without discussion with others.\nThe group votes and the majority rules.\nThe group votes, but the result must be unanimous (agreed) to approve the decision.\nThe group discusses and negotiates to reach a consensus. Everyone can live with the decision and commits to supporting it.\nReaching  Agreement  on  requirements\nCustomers agree that the requirements address their needs.\nDevelopers agree that they understand the requirements and that they are feasible.\nTesters agree that the requirements are verifiable.\nManagement agrees that the requirements will achieve their business objectives."
+        },
+        {
+          "slide_number": 8,
+          "title": "The  Requirements  Baseline",
+          "content": "Slide - 9\nA requirements baseline is a set of requirements that has been reviewed and agreed upon and serves as the basis for further development.\nA meaningful baselining process gives all the major stakeholders confidence in the following ways:\nCustomer management or marketing is confident that the project scope won’t explode out of control, because customers manage the scope change decisions.\nUser representatives have confidence that the development team will work with them to deliver the right solution, even if they didn’t think of every requirement before construction began.\nDevelopment management has confidence because the development team has a business partner who will keep the project focused on achieving its objectives and will work with development to balance schedule, \u000bcost, functionality, and quality.\nBusiness analysts and project managers are confident that they can manage changes to the project in a way that will keep chaos to a minimum.\nQuality assurance and test teams can confidently develop their test scripts and be fully prepared for their project activities."
+        },
+        {
+          "slide_number": 9,
+          "title": "The Business Analyst Role",
+          "content": "Slide - 10\n![](Picture4.jpg)"
+        },
+        {
+          "slide_number": 10,
+          "title": "The business analyst’s tasks",
+          "content": "Slide - 11\nDefine business requirements\nPlan the requirements approach\nIdentify project stakeholders and user classes\nElicit requirements\nAnalyse requirements\nDocument requirements\nCommunicate requirements\nLead requirements validation\nFacilitate requirements prioritization\nManage requirements"
+        },
+        {
+          "slide_number": 11,
+          "title": "Essential analyst skills",
+          "content": "Slide - 12\nListening skills\nInterviewing and questioning skills\nThinking on your feet\nAnalytical skills\nSystems thinking skills\nLearning skills\nFacilitation / Simplification skills\nLeadership skills\nObservational skills\nCommunication skills\nOrganizational skills\nModelling skills\nInterpersonal skills\nCreativity"
+        },
+        {
+          "slide_number": 12,
+          "title": "Essential analyst knowledge",
+          "content": "Slide - 13\nIn addition to having specific capabilities and personal characteristics, business analysts need\na breadth of knowledge, much of which is gained through experience.\nto understand contemporary requirements engineering practices and how to apply them in the context of various software development life cycles."
+        },
+        {
+          "slide_number": 13,
+          "title": "The making of a business analyst",
+          "content": "Slide - 14\n![](Picture4.jpg)\nThe former user\nThe former developer or tester\nThe former (or concurrent) project manager\nThe subject matter (domain) expert"
+        },
+        {
+          "slide_number": 14,
+          "title": "References",
+          "content": "Slide - 15\nWiegers, K., & Beatty, J. (2013). Software requirements. Pearson Education."
+        }
+      ]
+    },
+    "chapter_3": {
+      "chapter_number": 3,
+      "total_slides": 39,
+      "slides": [
+        {
+          "slide_number": 1,
+          "title": "Notes:",
+          "content": "Software  requirement  engineering - SRE (Undergraduate)"
+        },
+        {
+          "slide_number": 2,
+          "title": "Business Requirements: Product  vision  and  project  scope",
+          "content": "Slide-2\n“Business requirements” refers to a set of information that describes a need that leads to one or  \u000b more projects to deliver a solution and the desired ultimate business outcomes.\nBusiness opportunities, business objectives, success metrics, and a vision statement make up the business requirements.\nOrganizations should not initiate any project without a clear understanding of the value it will add to the business.\nTwo core elements of the business requirements\nThe product vision briefly describes the ultimate product that will achieve the business objectives.\nThe vision describes what the product is about and what it ultimately could become.\nThe project scope identifies what portion of the ultimate product vision the current project or development iteration will address.\nThe statement of scope draws the boundary between what’s in and what’s out for this project."
+        },
+        {
+          "slide_number": 3,
+          "title": "Product  vision  and  project  scope",
+          "content": "Slide-3\n![](Picture4.jpg)"
+        },
+        {
+          "slide_number": 4,
+          "title": "Vision  and  scope  document",
+          "content": "Slide-4\nThe vision and scope document collects the business requirements into a single deliverable that sets the stage for the subsequent development work.\nSome organizations create a project charter (agreement) or a business case document that serves a similar purpose.\nOrganizations that build commercial software often create a market (or marketing) requirements document (MRD).\nThe owner of the vision and scope document is\nthe project’s executive sponsor, funding authority, or\nsomeone in a similar role."
+        },
+        {
+          "slide_number": 5,
+          "title": "Vision  and  scope  document",
+          "content": "Slide-5\n![](Picture4.jpg)\nKeeping the scope in focus\nUsing business objectives to make\u000b scoping decisions\nAssessing the impact of scope changes"
+        },
+        {
+          "slide_number": 6,
+          "title": "Scope  representation  techniques",
+          "content": "Slide-6\nContext diagram (Context-Level Data-Flow Diagram)\nshows the system under consideration as a single high-level process and then shows the relationship that the system has with other external entities (systems, organizational groups, external data stores, etc.).\n![](Picture8.jpg)\n![A sample Context Diagram](Picture2.jpg)"
+        },
+        {
+          "slide_number": 7,
+          "title": "Scope  representation  techniques",
+          "content": "Slide-7\nEcosystem map\nshows which systems interact with each other\u000band the nature of the relationship \u000b(ATM to Transaction DB)\n![](Picture5.jpg)"
+        },
+        {
+          "slide_number": 8,
+          "title": "Scope  representation  techniques",
+          "content": "Slide-8\n![](Picture6.jpg)\n![](Picture4.jpg)\n![](Picture5.jpg)\nFeature tree"
+        },
+        {
+          "slide_number": 9,
+          "title": "Event  list",
+          "content": "Slide-9\nAn event list identifies external events that could trigger behaviour in the system.\nThe event list depicts the scope boundary for the system by naming possible business events triggered by users,  time-triggered (temporal) events, or signal events received from external components, such as hardware devices.\nYou can check the event list against the\u000bcontext diagram and ecosystem map for\u000bcorrectness and completeness for\u000bany missing elements\n![](Picture4.jpg)"
+        },
+        {
+          "slide_number": 10,
+          "title": "Vision  and  scope  on  agile  projects",
+          "content": "Slide-10\nIn an agile project, development is performed in a series of fixed timebox iterations.\nThe scope of each iteration consists of user stories selected from a dynamic product backlog, \u000bbased on their relative priority and the estimated delivery capacity of the team for each timebox.\nThe number of iterations (the overall project duration) still depends on the total amount of functionality to be implemented, but the scope of each iteration is controlled to ensure timely completion.\nAlternatively, some agile projects fix the overall project duration, yet are willing to modify the scope.\nThe number of iterations might remain the same, but the scope addressed in remaining iterations changes according to the relative priorities of existing and newly defined user stories."
+        },
+        {
+          "slide_number": 11,
+          "title": "Finding the voice of user",
+          "content": "Slide-11\nTo find the voice of the user, take the following steps:\nIdentify the different classes of users for your product\nSelect and work with individuals who represent each user class and other\u000b stakeholder groups\nAgree on who the requirements decision makers are for your project"
+        },
+        {
+          "slide_number": 12,
+          "title": "User  classes",
+          "content": "Slide-12\nA product’s users might differ in the following respects:\nTheir access privilege or security levels (such as ordinary user, guest user, administrator)\nThe tasks they perform during their business operations\nThe features they use\nThe frequency with which they use the product\nTheir application domain experience and computer systems expertise\nThe platforms they will be using (desktop PCs, laptop PCs, tablets, smartphones, specialized devices)\nTheir native language\nWhether they will interact with the system directly or indirectly"
+        },
+        {
+          "slide_number": 13,
+          "title": "Classifying  users",
+          "content": "Slide-13\nStakeholder\nCustomer\nDirect and Indirect Users\n Favored user class:  satisfaction is aligned to business goal\n Disfavored user class:  not to give access to the user (user privilege)\n Ignored user: class  product is not suit for them"
+        },
+        {
+          "slide_number": 14,
+          "title": "Identifying  your  user  classes",
+          "content": "Slide-14\nWhile performing stakeholder and user analysis, study the organization chart to look for:\nDepartments that participate in the business process (e.g. BP - pizza delivery system)\nDepartments that are affected by the business process\nDepartments or role names in which either direct or indirect users might be found\nUser classes that span multiple departments\nDepartments that might have an interface to external stakeholders outside the company"
+        },
+        {
+          "slide_number": 15,
+          "title": "User  personas",
+          "content": "Slide-15\nA persona is a description of a hypothetical (fictional character), generic person who serves as a stand-in for a group of users having similar characteristics and needs.\nHere’s an example of a persona for one user class on the Chemical Tracking System:\nFred, 41, has been a chemist at Contoso Pharmaceuticals since he received his Ph.D. 14 years ago. He doesn’t have much patience with computers. Fred usually works on two projects at a time in related chemical areas. His lab contains approximately 300 bottles of chemicals and gas cylinders. On an average day, he’ll need four new chemicals from the stockroom. Two of these will be commercial chemicals in stock, one will need to be ordered, and one will come from the supply of proprietary Contoso chemical samples. On occasion, Fred will need a hazardous chemical that requires special training for safe handling. When he buys a chemical for the first time, Fred wants the material safety data sheet emailed to him automatically. Each year, Fred will synthesize about 20 new proprietary chemicals to go into the stockroom. Fred wants a report of his chemical usage for the previous month to be generated automatically and sent to him by email so that he can monitor his chemical exposure."
+        },
+        {
+          "slide_number": 16,
+          "title": "The  product  champion",
+          "content": "Slide-16\nProduct Champions are key members of the user community who provide\u000b the requirements\nEach product champion serves as the primary interface between members\u000b of a single user class and the project’s business analyst\nThe best product champions have a clear vision of the new system\nThe product champion approach works best if each champion is fully empowered\u000b to make binding decisions on behalf of the user class he represents\nKnown as Product owner in Agile Development"
+        },
+        {
+          "slide_number": 17,
+          "title": "product  champion  activities",
+          "content": "Slide-17\n| Category | Activities |\n| --- | --- |\n| Planning | Refine the scope and limitations of the product Identify other systems with which to interact Evaluate the impact of the new system on business operations Define a transition path from current applications or manual operations Identify relevant standards and certification requirements |\n| Requirements | Collect input on requirements from other users Develop usage scenarios, use cases, and user stories Resolve conflicts between proposed requirements within the user class Define implementation priorities Provide input regarding performance and other quality requirements Work with other decision makers to resolve conflicts among requirements from different stakeholders Provide specialized algorithms |"
+        },
+        {
+          "slide_number": 18,
+          "title": "product champion activities (cntd.)",
+          "content": "Slide-18\n| Category | Activities |\n| --- | --- |\n| Validation and verification | Review requirements specifications Define acceptance criteria Develop user acceptance tests from usage scenarios Provide test data sets from the business Perform beta testing or user acceptance testing (evaluate prototypes) |\n| User aids | Write portions of user documentation and help text Contribute to training materials or tutorials Demonstrate the system to peers |\n| Change management | Evaluate and prioritize defect corrections and enhancement requests Dynamically adjust the scope of future releases or iterations Evaluate the impact of proposed changes on users and business processes Participate in making change decisions |"
+        },
+        {
+          "slide_number": 19,
+          "title": "Product  champion  traps  to  avoid",
+          "content": "Slide-19\nManagers override the decisions that a qualified and duly authorized product champion makes. \u000bPerhaps a manager has a wild new idea at the last minute, or thinks he knows what the users need. This behaviour often results in dissatisfied users and frustrated product champions who feel that management doesn’t trust them.\nA product champion forgets that he is representing other customers and presents only his own requirements won’t do a good job. He might be happy with the outcome, but others likely won’t be.\nA product champion who lacks a clear vision of the new system might defer decisions to the BA.\u000b If all of the BA’s ideas are fine with the champion, the champion isn’t providing much help.\nA senior user might nominate a less experienced user as champion because she doesn’t have time to do the job herself. This can lead to backseat driving from the senior user who still wishes to strongly influence the project’s direction."
+        },
+        {
+          "slide_number": 20,
+          "title": "Resolving  conflicting  requirements",
+          "content": "Slide-20\n![](Picture4.jpg)"
+        },
+        {
+          "slide_number": 21,
+          "title": "Requirements  Elicitation",
+          "content": "Slide-21\n![](ContentPlaceholder4.jpg)"
+        },
+        {
+          "slide_number": 22,
+          "title": "Elicitation  Activities",
+          "content": "Slide-22\n![](Picture4.jpg)"
+        },
+        {
+          "slide_number": 23,
+          "title": "Requirements  elicitation  techniques",
+          "content": "Slide-23\nInterviews\nEstablish rapport (understand each-other)\nStay in scope\nPrepare questions\nSuggest ideas\nListen actively\nWorkshops\nEstablish and enforce ground rules\nFill all of the team roles\nPlan an agenda\nStay in scope\nUse flipcharts to capture items for later consideration\nTimebox discussions\nKeep the team small but include the right stakeholders\nKeep everyone engaged\nObservations\nEthnography\nSystem interface analysis\nUser interface analysis\nDocument analysis"
+        },
+        {
+          "slide_number": 24,
+          "title": "Requirements  elicitation  techniques",
+          "content": "Slide-24\nQuestionnaires\nProvide answer options that cover the full set of possible responses (open & closed question)\nMake answer choices both mutually exclusive (no overlaps in numerical ranges, 1-5 &5-10)\nDon’t phrase a question in a way that implies a “correct” answer\nIf you use scales, use them consistently throughout the questionnaire (e.g. 1-9)\nConsider consulting with an expert in questionnaire design and administration to ensure that you ask the right questions of the right people\nAlways test a questionnaire before distributing it. It’s frustrating to discover too late that a question was phrased ambiguously or to realize that an important question was omitted\nDon’t ask too many questions or people won’t respond"
+        },
+        {
+          "slide_number": 25,
+          "title": "Elicitation techniques",
+          "content": "Slide-25\n![](Picture4.jpg)"
+        },
+        {
+          "slide_number": 26,
+          "title": "Elicitation  Process",
+          "content": "Slide-26\n Preparing for Elicitation\nPlan session scope and agenda\nPrepare resources\nLearn about the stakeholders\nPrepare questions\nPrepare straw man models (brain storming, business jargon)\n Performing Elicitation Activities\nEducate stakeholders\nTake good notes\nExploit the physical space\nFollowing Up after Elicitation\nOrganizing and sharing the notes (check with the customer again)\nDocumenting open issues"
+        },
+        {
+          "slide_number": 27,
+          "title": "Classifying  customer  input",
+          "content": "Slide-27\n![](ContentPlaceholder4.jpg)"
+        },
+        {
+          "slide_number": 28,
+          "title": "Classifying customer input",
+          "content": "Slide-28\nAnything that doesn’t fit into the classified categories might be:\nA project requirement not related to the software product, \u000bsuch as the need to train users on the new system\nA project constraint, such as a cost or schedule restriction\u000b(as opposed to the design or implementation constraints)\nAdditional information of a historical, context-setting, or descriptive nature\nExtraneous information that does not add value"
+        },
+        {
+          "slide_number": 29,
+          "title": "How  do  you  know  when  you’re  done?",
+          "content": "Slide-29\nThe users can’t think of any more use cases or user stories. Users tend to identify\u000b user requirements in sequence of decreasing importance.\nUsers propose new scenarios, but they don’t lead to any new functional requirements. \u000bA “new” use case might really be an alternative flow for a use case you’ve already captured.\nUsers repeat issues they already covered in previous discussions.\nSuggested new features, user requirements, or functional requirements are all deemed\u000b to be out of scope.\nThe users are proposing capabilities that might be included “sometime in the lifetime of the product” rather than “in the specific product we’re talking about right now.”"
+        },
+        {
+          "slide_number": 30,
+          "title": "Some  cautions  about  elicitation",
+          "content": "Slide-30\nBalance stakeholder\nCollect input from too few representatives\nHearing the voice of the loudest (most opinionated customer)\nDefine scope appropriately\nProject scope is improperly defined\nRequirements should specify ‘what’ the system do (requirements) but not ‘how’ to do (process)\nResearch within reason\n Exploratory research sometimes disrupts elicitation (but extensive research)"
+        },
+        {
+          "slide_number": 31,
+          "title": "Assumed  and  implied  requirements",
+          "content": "Slide-31\nAssumed requirements\nare those that people expect without having explicitly expressed them\nwhat you assume as being obvious might not be the same as assumptions\u000bthat various developers make\nImplied requirements\nare necessary because of another requirement but aren’t explicitly stated (dependency)\nDevelopers can’t implement functionality they don’t know about"
+        },
+        {
+          "slide_number": 32,
+          "title": "Finding missing requirements",
+          "content": "Slide-32\nDecompose high-level requirements into enough detail to reveal exactly what is being requested\nEnsure that all user classes have provided input\nTrace system requirements, user requirements, and business rules to their corresponding functional requirements to make sure that all the necessary functionality was derived\nSets of requirements with complex Boolean logic (ANDs, ORs, and NOTs) often are incomplete\nCreate a checklist of common functional areas to consider for your projects\nA data model can reveal missing functionality (ER diagram)"
+        },
+        {
+          "slide_number": 33,
+          "title": "Use Cases  &  User Stories",
+          "content": "Slide-33\nA use case\nDescribes a sequence of interactions between a system and an external actor that results in the actor being able to achieve some outcome of value.\nThe names of use cases are always written in the form of a verb followed by an object.\nUser stories\nOften are written according to the following template, although other styles also are used:\nAs a <type of user>, I want <some goal> so that <some reason>"
+        },
+        {
+          "slide_number": 34,
+          "title": "Use Cases  &  User Stories",
+          "content": "Slide-34\n    Sample Use Cases\n    Sample User Story\n| Application | Sample use case |\n| --- | --- |\n| Online bookstore | Update Customer Profile Search for an Item Buy an Item Track a Shipped Package Cancel an Unshipped Order |\n| Application | Sample use case | Corresponding user story |\n| --- | --- | --- |\n| Online bookstore | Update Customer Profile | As a customer, I want to update my customer profile so that future purchases are billed to a new credit card number. |"
+        },
+        {
+          "slide_number": 35,
+          "title": "The  use case  approach",
+          "content": "Slide-35\nThe essential elements of a use case are the following:\nA unique identifier and a concise name that states the user goal\nA brief textual description that describes the purpose of the use case\nA trigger condition that initiates execution of the use case\nZero or more preconditions that must be satisfied before the use case can begin\nOne or more post-conditions that describe the state of the system after the use case\u000b is successfully completed\nA numbered list of steps that shows the sequence of interactions between the actor and the system—a dialog—that leads from the preconditions to the post-conditions"
+        },
+        {
+          "slide_number": 36,
+          "title": "Identify Actors of use-case",
+          "content": "Slide-36\nFollowing are some questions you might ask to help user representatives identify actors:\nWho (or what) is notified when something occurs within the system?\nWho (or what) provides information or services to the system?\nWho (or what) helps the system respond to and complete a task?"
+        },
+        {
+          "slide_number": 37,
+          "title": "Identifying Use Cases",
+          "content": "Slide-37\nIdentify the actors first, then lay out the business processes being supported by the system,\u000band define the use cases for activities where actors and systems interact.\nCreate a specific scenario to illustrate each business process, then generalize the scenarios into use cases and identify the actors involved in each one.\nUsing a business process description, ask, “What tasks must the system perform to complete this process or convert the inputs into outputs?” Those tasks might be use cases.\nIdentify the external events to which the system must respond, then relate these events to participating actors and specific use cases.\nUse a CRUD analysis to identify data entities that require use cases to Create, Read, Update, Delete, or otherwise manipulate them.\nExamine the context diagram and ask, “What objectives do each of these external entities want to achieve with the help of the system?”"
+        },
+        {
+          "slide_number": 38,
+          "title": "Use Case  Traps  To  Avoid",
+          "content": "Slide-38\nToo many use cases\nHighly complex use cases\nIncluding data definitions in the use cases\nUse cases that users don’t understand"
+        },
+        {
+          "slide_number": 39,
+          "title": "references",
+          "content": "Slide-39\nWiegers, K., & Beatty, J. (2013). Software requirements. Pearson Education"
+        }
+      ]
+    },
+    "chapter_4": {
+      "chapter_number": 4,
+      "total_slides": 36,
+      "slides": [
+        {
+          "slide_number": 1,
+          "title": "Notes:",
+          "content": "Software requirement engineering (Undergraduate)"
+        },
+        {
+          "slide_number": 2,
+          "title": "Influence of Business Rules",
+          "content": "Slide-2\n![](Picture4.jpg)"
+        },
+        {
+          "slide_number": 3,
+          "title": "A business rules taxonomy",
+          "content": "Slide-3\n![](Picture4.jpg)"
+        },
+        {
+          "slide_number": 4,
+          "title": "Facts",
+          "content": "Slide-4\nFacts are simply statements that are true about the business at a specified point in time.\nA fact describes associations or relationships between important business terms.\nFacts about data entities that are important to the system might appear in data models.\nExamples of facts include the following:\nEvery chemical container has a unique bar code identifier.\nEvery order has a shipping charge.\nNon-refundable airline tickets incur a fee when the purchaser changes the route.\nBooks taller than 16 inches are shelved in the library’s Oversize section."
+        },
+        {
+          "slide_number": 5,
+          "title": "Constraints",
+          "content": "Slide-5\nA constraint is a statement that restricts the actions that the system or its users\u000b are allowed to perform.\nSomeone describing a constraining business rule might say that certain actions must or must not or\u000bmay not be performed, or that only certain people or roles can perform particular actions.\nFollowing are some examples of constraints with various origins.\nOrganizational policies\nA loan applicant who is less than 18 years old must have a parent or a legal guardian as co-signer on the loan.\nGovernment regulations\nAll software applications must comply with government regulations for usage by visually impaired persons.\nIndustry standards\nMortgage loan applicants must satisfy the Federal Housing Authority qualification standards."
+        },
+        {
+          "slide_number": 6,
+          "title": "Action enablers",
+          "content": "Slide-6\n A rule that triggers some activity if specific conditions are true is an action enabler.\n Following are some examples of action-enabling business rules:\nIf the customer ordered a book by an author who has written multiple books, then offer the author’s other books to the customer before completing the order.\nAfter a customer places a book into the shopping cart, display related books that other customers also bought when they bought this one."
+        },
+        {
+          "slide_number": 7,
+          "title": "Inferences",
+          "content": "Slide-7\nSometimes called inferred knowledge or a derived fact, an inference creates a new fact from other facts.\nInferences are often written in the “if/then” pattern also found in action-enabling business rules, but the “then” clause of an inference simply provides a piece of knowledge, not an\u000baction to be taken.\nSome examples of inferences are:\nIf a payment is not received within 30 calendar days after it is due, then the account is inactive.\nIf the vendor cannot ship an ordered item within five days of receiving the order, then the item is considered back-ordered."
+        },
+        {
+          "slide_number": 8,
+          "title": "Computations",
+          "content": "Slide-8\nComputations transform existing data into new data by using specific mathematical formulas or algorithms.\nMany computations follow rules that are external to the enterprise, such as income tax\u000b withholding formulas.\nFollowing are a few examples of computational business rules written in text form:\nThe total price for an order is the sum of the price of the items ordered, less any volume discounts, plus state and county sales taxes for the location to which the order is being shipped, plus the shipping charge, plus an optional insurance charge."
+        },
+        {
+          "slide_number": 9,
+          "title": "Documenting business rules",
+          "content": "Slide-9\n![](Picture4.jpg)"
+        },
+        {
+          "slide_number": 10,
+          "title": "Documenting business rules",
+          "content": "Slide-10\n![](Picture4.jpg)\nAmerican with Disability Act."
+        },
+        {
+          "slide_number": 11,
+          "title": "Discovering business rules/practice",
+          "content": "Slide-11\n![](Picture5.jpg)"
+        },
+        {
+          "slide_number": 12,
+          "title": "The Software Requirements Specification [SRS]",
+          "content": "Slide-12\nSometimes also called\nBusiness requirements document (BRD)\nFunctional specification\nProduct specification\nSystem specification\nRequirements document"
+        },
+        {
+          "slide_number": 13,
+          "title": "SRS",
+          "content": "Slide-13\nThe SRS states\nthe functions and capabilities that a software system must provide\nits characteristics\nthe constraints that it must respect\nIt should describe as completely as necessary the system’s behaviours under various conditions, \u000bas well as desired system qualities such as performance, security, usability, etc.\nThe SRS is the basis for subsequent project planning, design, and coding, as well as the foundation for system testing and user documentation.\nIt should not contain design, construction, testing, or project management details other than known design and implementation constraints."
+        },
+        {
+          "slide_number": 14,
+          "title": "Audience",
+          "content": "Slide-14\nCustomers, the marketing department, and sales staff need to know what product they can expect\u000b to be delivered.\nProject managers base their estimates of schedule, effort, and resources on the requirements.\nSoftware development teams need to know what to build.\nTesters use it to develop requirements-based tests, test plans, and test procedures.\nMaintenance and support staff use it to understand what each part of the product is supposed to do.\nDocumentation writers base user manuals and help screens on the SRS and the user interface design.\nTraining personnel use the SRS and user documentation to develop educational materials.\nLegal staff ensures that the requirements comply with applicable laws and regulations.\nSubcontractors base their work on—and can be legally held to—the specified requirements."
+        },
+        {
+          "slide_number": 15,
+          "title": "Readability Suggestions",
+          "content": "Slide-15\nUse an appropriate template to organize all the necessary information.\nLabel and style sections, subsections, and individual requirements consistently.\nUse visual emphasis (bold, underline, italics, colour, and fonts) consistently and judiciously. Remember that colour highlighting might not be visible to people with colour blindness or when printed in grayscale.\nCreate a table of contents to help readers find the information they need.\nNumber all figures and tables, give them captions, and refer to them by number.\nIf you are storing requirements in a document, define your word processor’s cross-reference facility rather than hard-coded page or section numbers to refer to other locations within a document.\nIf you are using documents, define hyperlinks to let the reader jump to related sections in the SRS or in other files.\nIf you are storing requirements in a tool, use links to let the reader navigate to related information.\nInclude visual representations of information when possible to facilitate understanding.\nEnlist a skilled editor to make sure the document is coherent and uses a consistent vocabulary and layout."
+        },
+        {
+          "slide_number": 16,
+          "title": "Labelling requirements",
+          "content": "Slide-16\nEvery requirement needs a unique and persistent identifier.\nallows to refer to specific requirements in a change request, modification history, cross-reference, or requirements traceability matrix.\nenables reusing the requirements in multiple projects.\nUniquely identified requirements facilitate collaboration between team members when they’re discussing requirements, as in a peer review meeting.\nSimple numbered or bulleted lists aren’t adequate for these purposes."
+        },
+        {
+          "slide_number": 17,
+          "title": "Label :  Sequence number",
+          "content": "Slide-17\nThe simplest approach gives every requirement a unique sequence number, such as UC-9 or FR-26.\nMake it easy to retain a unique identifier if you move requirements around in a document. <Pros]\nA number is not reused if a requirement is deleted. <Cons]\nDoesn’t provide any logical or hierarchical grouping of related requirements. <Cons]\nDoesn’t imply any kind of ordering. <Cons]\nGives no clue as to what each requirement is about. <Cons]"
+        },
+        {
+          "slide_number": 18,
+          "title": "Label :  Hierarchical numbering",
+          "content": "Slide-18\nMost commonly used convention.\nIf the functional requirements appear in section 3.2 of your SRS, they will all have labels that\u000b begin with 3.2.\nMore digits indicate a more detailed, lower-level requirement.\n3.2.4.3 is a child requirement of 3.2.4.\nThis method is simple, compact, and familiar. <Pros]\nThe labels can grow to many digits in even a medium-sized SRS. <Cons]\nNumeric labels tell you nothing about the intent of a requirement. <Cons]\nDelete, insert, merge, or move whole sections, and a lot of labels change. <Cons]\nThese changes disrupt any references to those requirements elsewhere in the system."
+        },
+        {
+          "slide_number": 19,
+          "title": "Label :  Hierarchical Textual Tags",
+          "content": "Slide-19\n![](Picture4.jpg)\nExample:\nCan simplify the scheme by combining the hierarchical naming technique with a sequence number suffix for small sets of requirements: Product.Cart.01, Product.Cart.02, and so on. <Pros]\nTags are longer and you do have to think of meaningful names for them. <Cons]"
+        },
+        {
+          "slide_number": 20,
+          "title": "Dealing with incompleteness",
+          "content": "Slide-20\nSometimes you may lack a piece of information about a specific requirement.\nUse the notation TBD (to be determined) to flag these knowledge gaps.\nPlan to resolve all TBDs before implementing a set of requirements.\nAny uncertainties that remain increase the risk of a developer or a tester making errors and having to perform rework."
+        },
+        {
+          "slide_number": 21,
+          "title": "Conceptual User Interfaces (sketches)",
+          "content": "Slide-21\n![](Picture4.jpg)"
+        },
+        {
+          "slide_number": 22,
+          "title": "User Interfaces & The SRS",
+          "content": "Slide-22\nPROS:\nExploring possible user interfaces (product’s look and feel) with paper prototypes, working mock-ups, wireframes, or simulation tools makes the requirements tangible to both users and developers.\nCONS:\nDelaying baselining of the SRS until the UI design is complete can slow down development\nIncluding UI design in the requirements can result in the visual design driving the requirements,\u000bwhich often leads to functional gaps.\nScreen layouts don’t replace written user and functional requirements. Don’t expect developers to deduce the underlying functionality and data relationships from screen shots."
+        },
+        {
+          "slide_number": 23,
+          "title": "SRS Template",
+          "content": "Slide-23\n1. Introduction\n\t1.1  Purpose – identify the product whose requirements are specified in this document, and its readers\n\t1.2  Document Convention – meaning of specific formatted text, style, highlighting, or notations\n\t1.3  Project Scope – a short description of the software being specified\n\t1.4  References – list any documents or other resources to which this SRS refers\n2. Overall Description\n\t2.1  Productive perspective – describe the product’s context and origin\n\t2.2  User classes and characteristics – various users classes who use this product\n\t2.3  Operating Environment – describe the environment (h/w, OS, versions, organization, geographical \u000b             location) in which the software will operate\n\t2.4  Design and implementation constraints – certain PL must be used"
+        },
+        {
+          "slide_number": 24,
+          "title": "SRS Template",
+          "content": "Slide-24\n3. System Features\n\t3.1  Description of feature\n       3.2  Functional requirements\n\t3.3  Cross-reference\n4. External Interface Requirements\n\t4.1  User interface\n\t4.2  Software interface\n\t4.3  Hardware interface\n\t4.4  Communication interface\n\t4.5  Cross-reference"
+        },
+        {
+          "slide_number": 25,
+          "title": "SRS Template",
+          "content": "Slide-25\n5. Quality Attributes\n\t5.1  Usability\n\t5.2  Performance\n\t5.4  [others]\n\t5.5 Cross-references\n6. Data Requirements\n\t6.1 Logical data model – UML diagrams\n\t6.2  Data dictionary - data type, length, format, and allowed values fro data elements\nAppendix A: Glossary"
+        },
+        {
+          "slide_number": 26,
+          "title": "Characteristics of requirement statements",
+          "content": "Slide-26\nComplete\nCorrect\nFeasible\nNecessary\nPrioritized\nUnambiguous\nVerifiable"
+        },
+        {
+          "slide_number": 27,
+          "title": "Guidelines for writing requirements",
+          "content": "Slide-27\nTwo important goals of writing requirements are that:\nAnyone who reads the requirement comes to the same interpretation as any other reader.\nEach reader’s interpretation matches what the author intended to communicate.\nSystem or user perspective\nYou can write functional requirements from the perspective of either something the system does or something the user can do.\nState requirements in a consistent fashion, such as “The system shall” or “The user shall,” followed by an action verb, followed by the observable result.\nSpecify the trigger action or condition that causes the system to perform the specified behavior.\nA generic template for a requirement written from the system’s perspective is:\n[optional precondition] [optional trigger event] the system shall [expected system response]."
+        },
+        {
+          "slide_number": 28,
+          "title": "Guidelines for writing requirements",
+          "content": "Slide-28\nWriting style\nClarity and conciseness\nThe keyword “shall”\nActive voice\nIndividual requirements"
+        },
+        {
+          "slide_number": 29,
+          "title": "Guidelines for writing requirements",
+          "content": "Slide-29\nLevel of detail :  Appropriate detail\nYou should include more detail when:\nThe work is being done for an external client\nDevelopment or testing will be outsourced\nProject team members are geographically dispersed\nSystem testing will be based on requirements\nAccurate estimates are needed\nRequirements traceability is needed\nIt’s safe to include less detail when:\nThe work is being done internally for your company\nCustomers are extensively involved\nDevelopers have considerable domain experience\nPatterns are available, as when a previous application is being replaced\nA package solution will be used"
+        },
+        {
+          "slide_number": 30,
+          "title": "Representation techniques",
+          "content": "Slide-30\nSome alternatives to the natural language requirements that we’re used to are lists, tables, visual analysis models, charts, mathematical formulas, photographs, sound clips, and video clips.\nThese won’t suffice as substitutes for written requirements in many cases, but they serve as excellent supplemental information to enhance the reader’s understanding."
+        },
+        {
+          "slide_number": 31,
+          "title": "Avoiding ambiguity",
+          "content": "Slide-31\nFuzzy words – vague words\nThe A/B construct (related or synonymous, opposite terms)\nBoundary values\u000bVacation requests of up to 5 days do not require approval. Vacation requests of 5 to 10 days require supervisor approval. Vacation requests of 10 days or longer require management approval.\n\tThis phrasing makes it unclear as to which category vacation requests of exactly 5 days and exactly 10 days belong.\nNegative requirements\n\tPrevent the user from activating the contract if the contract is not in balance.\n\tConsider rephrasing this double negative (“prevent” and “not in balance”) as a positive statement:\n\tThe system shall allow the user to activate the contract only if the contract is in balance."
+        },
+        {
+          "slide_number": 32,
+          "title": "Avoiding incompleteness",
+          "content": "Slide-32\nComplex logic – possible alternative options are missing\u000bIf the Premium plan is not selected and proof of insurance is not provided, the customer should automatically default in the Basic plan. [Premium plan is selected and proof of insurance is not provided]\nSymmetry – “save the information in the document” but retrieval part is missing if didn’t save it\nMissing exceptions\n\tIf the user is working in an existing file and chooses to save the file, the system shall save it with the same name\n\tThis requirement alone does not indicate what the system should do if it’s unable to save the file with the same name. An appropriate second requirement to go with the first might be:\n\tIf the system is unable to save a file using a specific name, the system shall give the user the option to save it with a different name or to cancel the save operation."
+        },
+        {
+          "slide_number": 33,
+          "title": "Modeling The Requirements",
+          "content": "Slide-33\nData flow diagram (DFD)\nProcess flow diagram such as Swimlane diagram\nState-transition diagram (STD) and state tables\nDialog map\nDecision table and decision tree\nEvent-response table\nFeature tree\nUse case diagram\nActivity diagram\nEntity-relationship diagram (ERD), Class Diagram"
+        },
+        {
+          "slide_number": 34,
+          "title": "Data dictionary",
+          "content": "Slide-34\nA set of information describing the contents, format, and structure of a database and the relationship between its elements, used to control access to and manipulation of the database\n![](Picture5.jpg)"
+        },
+        {
+          "slide_number": 35,
+          "title": "Specifying reports",
+          "content": "Slide-35\nA dashboard is a screen display or printed report that uses multiple textual and/or graphical representations of data to provide a consolidated, multidimensional view of what is going on in an organization or a process."
+        },
+        {
+          "slide_number": 36,
+          "title": "references",
+          "content": "Slide-36\nWiegers, K., & Beatty, J. (2013). Software requirements. Pearson Education"
+        }
+      ]
+    },
+    "chapter_5": {
+      "chapter_number": 5,
+      "total_slides": 46,
+      "slides": [
+        {
+          "slide_number": 1,
+          "title": "Notes:",
+          "content": "Software requirement engineering (Undergraduate)"
+        },
+        {
+          "slide_number": 2,
+          "title": "Purposes of Prototypes",
+          "content": "Slide-2\nClarify, complete, and validate requirements\nExplore design alternatives\nCreate a subset that will grow into the ultimate product"
+        },
+        {
+          "slide_number": 3,
+          "title": "Paper Prototypes",
+          "content": "Slide-3\nA paper prototype is a cheap, fast, and low-tech way to explore how a portion of an implemented system might look\nhelps to test whether users and developers hold a shared understanding of the requirements\ninvolve tools no more sophisticated than paper, index cards, sticky notes, and whiteboards\nfacilitates rapid iteration, and iteration is a key success factor in requirements development\nis an excellent technique for refining the requirements prior to designing detailed user interfaces, constructing an evolutionary prototype, or undertaking traditional design and construction activities\nIt also helps the development team manage customer expectations"
+        },
+        {
+          "slide_number": 4,
+          "title": "Mock-ups",
+          "content": "Slide-4\nA mock-up is also called a horizontal prototype (User interface Design)\nSuch a prototype focuses on a portion of the user interface; it doesn’t deisgn into all the architectural layers or into detailed functionality\nThis type of prototype lets you explore some specific behaviours of the intended system, with the goal of refining the requirements"
+        },
+        {
+          "slide_number": 5,
+          "title": "Mock-ups",
+          "content": "Slide-5\nThe mock-up helps users judge whether a system based on the prototype will let them do  \u000b their job in a reasonable way\nA mock-up implies behaviour without actually implementing it\nMock-ups can demonstrate the functional options the user will have available, the look and feel of the user interface (colours, layout, graphics, controls), and the navigation structure\nWhen working with a throwaway mock-up prototype, the user should focus on broad requirements and workflow issues without becoming distracted by the precise appearance\u000bof screen elements"
+        },
+        {
+          "slide_number": 6,
+          "title": "Wireframe",
+          "content": "Slide-6\nA wireframe is a particular approach to throwaway prototyping commonly used for custom user interface design and website design\nA better understanding of three aspects of a website:\nThe conceptual requirements (are used to understand a subject matter, is useful for working\u000b with users to understand the types of activities they might want to perform at the screen)\nThe information architecture or navigation design\nThe high-resolution, detailed design of the pages\n![https://upload.wikimedia.org/wikipedia/commons/4/47/Profilewireframe.png](Picture2.jpg)\n![https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSQXkQhttWJSts-LTvQDBN8AKDvsinieemIaS84iLSojnWXxD2B](Picture4.jpg)"
+        },
+        {
+          "slide_number": 7,
+          "title": "proofs of concept",
+          "content": "Slide-7\nA proof of concept is also known as a vertical prototype (architecture design)\nImplements a slice of application functionality from the user interface through all the technical services layers\nA proof-of-concept prototype works like the real system is supposed to work because it touches on all levels of the system implementation"
+        },
+        {
+          "slide_number": 8,
+          "title": "Throwaway vs. Evolutionary",
+          "content": "Slide-8\n![](Picture4.jpg)"
+        },
+        {
+          "slide_number": 9,
+          "title": "Classes of Prototype Attributes",
+          "content": "Slide-9\nScope\nA mock-up prototype (sample functionality) focuses on the user experience; a proof-of-concept prototype explores the technical soundness of a proposed approach (e.g. ATM)\nFuture use\nA throwaway prototype is discarded after it has been used to generate feedback, whereas an evolutionary prototype grows into the final product through a series of iterations\nForm\nA paper prototype is a simple sketch drawn on paper, a whiteboard, or in a drawing tool. \u000bAn electronic prototype consists of working software for just part of the solution"
+        },
+        {
+          "slide_number": 10,
+          "title": "Possible ways of incorporating prototypes into SDLC",
+          "content": "Slide-10\n![](Picture4.jpg)"
+        },
+        {
+          "slide_number": 11,
+          "title": "Working with prototypes",
+          "content": "Slide-11\n![](Picture4.jpg)\nDialog Map is a user interface modelled in the form of a state-transition diagram representing different interaction and navigation map (page 235-237)"
+        },
+        {
+          "slide_number": 12,
+          "title": "Risks of prototyping",
+          "content": "Slide-12\nPressure to release the prototype\nDistraction by details (user becomes obsessed, not cover all the options user wanted)\nUnrealistic performance expectations\nInvesting excessive effort in prototypes"
+        },
+        {
+          "slide_number": 13,
+          "title": "Prototyping success factors",
+          "content": "Slide-13\nInclude prototyping tasks in your project plan. Schedule time and resources to develop, evaluate, and modify the prototypes\nState purpose of each prototype before you build it, and explain what will happen with  outcome: either discard (or archive) the prototype, retaining the knowledge it provided, or build upon it to\u000bgrow it into the ultimate solution\nPlan to develop multiple prototypes. You’ll rarely get them right on the first try, which is the whole point of prototyping\nCreate throwaway prototypes as quickly and cheaply as possible. Invest the minimum amount of effort that will answer questions or resolve requirements uncertainties\nDon’t prototype requirements that you already understand, except to explore design alternatives\nDon’t expect a prototype to replace written requirements"
+        },
+        {
+          "slide_number": 14,
+          "title": "Why prioritize requirements?",
+          "content": "Slide-14\nWhen customer expectations are high and timelines are short, you need to make sure the product delivers the most critical or valuable functionality as early as possible\nPrioritization is a way to deal with competing demands for limited resources"
+        },
+        {
+          "slide_number": 15,
+          "title": "prioritization pragmatics",
+          "content": "Slide-15\nSuccessful prioritization requires an understanding of six issues:\nThe needs of the customers\nThe relative importance of requirements to the customers\nThe timing at which capabilities need to be delivered\nRequirements that serve as predecessors for other requirements\nWhich requirements must be implemented as a group\nThe cost to satisfy each requirement (hard/soft satisfaction)"
+        },
+        {
+          "slide_number": 16,
+          "title": "prioritization techniques",
+          "content": "Slide-16\nIn or out\nThe simplest of all prioritization methods is to have a group of stakeholders work down a list of requirements and make a binary decision: is it in, or is it out?\nPairwise comparison and rank ordering\nPeople sometimes try to assign a unique priority sequence number to each requirement\nRank ordering a list of requirements involves making pairwise comparisons between all of them so you can judge which member of each pair has higher priority"
+        },
+        {
+          "slide_number": 17,
+          "title": "prioritization techniques",
+          "content": "Slide-17\nThe four capitalized letters in the MoSCoW prioritization scheme stand for four possible priority classifications for the requirements in a set:\nMust: the requirement must be satisfied for the solution to be considered a success\nShould: the requirement is important and should be included in the solution if possible, but it’s not mandatory to success\nCould: it’s a desirable capability, but one that could be deferred or eliminated. Implement it only if time and resources permit\nWon’t: this indicates a requirement that will not be implemented at this time but could be included in a future release"
+        },
+        {
+          "slide_number": 18,
+          "title": "prioritization techniques",
+          "content": "Slide-18\nThree-level scale\nHigh-priority requirements are both important (customers need the capability) and urgent (customers need it in the next release)\nMedium-priority requirements are important (customers need the capability) but not urgent (they can wait for a later release)\nLow-priority requirements are neither important (customers can live without the capability if necessary) nor urgent (customers can wait, perhaps forever)\n| Importance of Requirements |  |  |  |\n| --- | --- | --- | --- |\n| Urgency\u000b of \u000bRequirements | Low/Low | Medium/Low | High/Low |\n|  | Low/Medium | Medium/Medium | High/Medium |\n|  | Low/High | Medium/High | High/High |"
+        },
+        {
+          "slide_number": 19,
+          "title": "Multipass prioritization",
+          "content": "Slide-19\nWhen performing a prioritization analysis with the three-level scale, you need to be aware\u000b of requirement dependencies\nYou’ll run into problems if a high-priority requirement is dependent on another that is ranked lower in priority and hence planned for implementation later on"
+        },
+        {
+          "slide_number": 20,
+          "title": "Prioritization : Resource Allocation",
+          "content": "Slide-20\nPrioritization is about thoughtfully allocating limited resources to achieve the maximum benefit from the investment an organization makes in a project.\nOne way to make prioritization more tangible is to cast it in terms of an actual resource: money, in this case, it’s just play with money."
+        },
+        {
+          "slide_number": 21,
+          "title": "Example of $100 in prioritization",
+          "content": "Slide-21\nGive the prioritization team 100 imaginary dollars to work with.\nTeam members allocate these dollars to “buy” items that they would like to have implemented from the complete set of candidate requirements.\nThey weight the higher-priority requirements more heavily by allocating more dollars to them.\nIf one requirement is three times as important to a stakeholder as another requirement, she would assign perhaps nine dollars to the first requirement and three dollars to the second.\nBut 100 dollars is all the prioritizers get—when they are out of money, nothing else can be implemented, at least not in the release they are currently focusing on.\nOne approach is to have different participants in the prioritization process perform their own dollar allocations, then add up the total number of dollars assigned to each requirement to see which ones collectively come out as having the highest priority."
+        },
+        {
+          "slide_number": 22,
+          "title": "Prioritization based on value, cost, and risk",
+          "content": "Slide-22\nTypical participants in the prioritization process include:\nThe project manager or business analyst who leads the process, arbitrates conflicts,\u000b and adjusts prioritization data received from the other participants if necessary\nCustomer representatives such as product champions, a product manager, or a product owner, who supply the benefit and penalty ratings\nDevelopment representatives who provide the cost and risk ratings"
+        },
+        {
+          "slide_number": 23,
+          "title": "steps to use prioritization model",
+          "content": "Slide-23\nList in the spreadsheet all the features, use cases, user stories, or functional requirements that you want to prioritize against each other.\nHave the customer representatives estimate the relative benefit each feature would provide to the customer or to the business on a scale of 1 to 9.  A rating of 1 indicates that no one would find it useful; 9 means that it would be extremely valuable.\nEstimate the relative penalty that the customer or the business would suffer if each feature were not included.  Again, use a scale of 1 to 9.  A rating of 1 means that no one will be upset if it’s absent; \u000b9 indicates a serious downside. Requirements with both a low benefit and a low penalty add\u000bcost but little value.\nThe spreadsheet calculates the total value for each feature as the sum of its benefit and penalty scores."
+        },
+        {
+          "slide_number": 24,
+          "title": "steps to use prioritization model",
+          "content": "Slide-24\nHave developers estimate the relative cost of implementing each feature, again on a scale of 1 (quick and easy) to 9 (time-consuming and expensive). The spreadsheet will calculate the percentage of the total cost that each feature contributes.\nDevelopers rate the relative technical (not business) risk associated with each feature on a scale of 1 to 9.  Technical risk is the probability of not getting the feature right on the first try.  A rating of 1 means you can program it in your sleep. A 9 indicates serious concerns about feasibility, the lack of necessary expertise on the team, the use of unfamiliar tools and technologies, or concern about the amount of complexity hidden within the requirement.  The spreadsheet will calculate the percentage\u000bof the total risk that comes from each feature.\n                  value%\u000bPriority = --------------\u000b              cost% + Risk"
+        },
+        {
+          "slide_number": 25,
+          "title": "steps to use prioritization model (cntd.)",
+          "content": "Slide-25\n![](Picture2.jpg)\n0.91\n1.0\n0.68"
+        },
+        {
+          "slide_number": 26,
+          "title": "Validation and verification",
+          "content": "Slide-26\nVerification determines whether the product of some development activity meets its requirements (doing the thing right).\nValidation assesses whether a product satisfies customer needs (doing the right thing). Requirements validation activities attempt to ensure that:\nThe software requirements accurately describe the intended system capabilities and properties that will satisfy the various stakeholders’ needs.\nThe software requirements are correctly derived from the business requirements, system requirements, business rules, and other sources.\nThe requirements are complete, feasible, and verifiable.\nAll requirements are necessary, and the entire set is sufficient to meet the business objectives.\nAll requirements representations are consistent with each other (no conflicts).\nThe requirements provide an adequate basis to proceed with design and construction."
+        },
+        {
+          "slide_number": 27,
+          "title": "Reviewing requirements",
+          "content": "Slide-27\nInformal review approaches include:\nPeer desk check, in which you ask one colleague to look over your work product.\nPass around, in which you invite several colleagues to examine a deliverable concurrently.\nWalkthrough, during which the author describes a deliverable and solicits (asks) comments on it.\nFormal peer reviews follow a well-defined process. A formal requirements review produces a report that identifies the material examined, the reviewers, and the review team’s judgment as to whether the requirements are acceptable.\nThe best-established type of formal peer review is called an inspection. Inspection of requirements documents is one of the highest-leverage software quality techniques available."
+        },
+        {
+          "slide_number": 28,
+          "title": "The inspection process",
+          "content": "Slide-28\nParticipants\nThe author of the work product and perhaps peers (similar competence) of the author (Analyst)\nPeople who are the sources of information that fed into the item being inspected (Customer)\nPeople who will do work based on the item being inspected (Developer)\nPeople who are responsible for interfacing systems that will be affected by the item being inspected\nInspection roles\nAuthor\nModerator\nReader\nRecorder"
+        },
+        {
+          "slide_number": 29,
+          "title": "The inspection process",
+          "content": "Slide-29\nEntry criteria\nThe document conforms to the standard template and doesn’t have obvious spelling, grammatical, or formatting issues (manuscript’s initial review).\nLine numbers or other unique identifiers are printed on the document to facilitate referring to specific locations.\nAll open issues are marked as TBD (to be determined) or accessible in an issue-tracking tool.\nThe moderator didn’t find more than three major defects in a ten-minute examination of a representative sample of the document."
+        },
+        {
+          "slide_number": 30,
+          "title": "The inspection process",
+          "content": "Slide-30\n![](Picture4.jpg)\nInspection stages"
+        },
+        {
+          "slide_number": 31,
+          "title": "The inspection process",
+          "content": "Exit criteria\nAll issues raised during the inspection have been addressed.\nAny changes made in the requirements and related work products were made correctly.\nAll open issues have been resolved, or each open issue’s resolution process, target date, \u000band owner have been documented."
+        },
+        {
+          "slide_number": 32,
+          "title": "Defect checklist",
+          "content": "Completeness\nDo the requirements address all known customer or system needs?\nIs any needed information missing? If so, is it identified as TBD?\nHave algorithms inherently needed and specified to deliver the functional requirements?\nAre all external h/w, s/w, and communication interfaces defined?\nIs the expected behaviour documented for all anticipated error condition?\nDo the requirements provide an adequate basis for design and test?\nIs the implementation priority of each requirements included?\nIs each requirements in scope for the project release, or iteration?\nIs the requirements necessary for the product?"
+        },
+        {
+          "slide_number": 33,
+          "title": "Defect checklist",
+          "content": "Correctness\nDo any requirements conflict with or duplicate other requirements?\nIs each requirement written in clear, concise, unambiguous, and grammatically correct language?\nAre any specified error messages clear and meaningful?\nAre the requirements technically feasible and implementable within known constraints?\nQuality Attributes\nAre all the quality attributes objectives properly specified and documented also quantified with the acceptable trade-offs specified?\nAre all the quality requirements measurable and verifiable?"
+        },
+        {
+          "slide_number": 34,
+          "title": "Requirements review tips",
+          "content": "Slide-34\nPlan the examination – focus on specific section of document rather read the whole\nStart early – detecting major defect early\nAllocate sufficient time – specific hours in calendar time besides other tasks\nProvide context – give reviewers context for the document if they are not working on the same project\nSet review scope – tell reviewers what material to examine, where to focus their attention, \u000band what issue to look for\nLimit re-reviews – don’t ask anyone to review the same material more than three times\nPrioritize review areas – prioritize for review those portions of the requirements that are of risk\u000bor have functionality that will be used frequently"
+        },
+        {
+          "slide_number": 35,
+          "title": "Requirements review challenges",
+          "content": "Slide-35\nLarge requirements documents\nLarge inspection teams\nGeographically separated reviewers\nUnprepared reviewers"
+        },
+        {
+          "slide_number": 36,
+          "title": "Prototyping in requirements validation",
+          "content": "Slide-36\nPrototypes are validation tools that make the requirements real\nAll kinds of prototypes allow you to find missing requirements before more expensive activities like development and testing take place\nPrototypes also help confirm that stakeholders have a shared understanding of the requirements\nProof-of-concept prototypes can demonstrate that the requirements are feasible"
+        },
+        {
+          "slide_number": 37,
+          "title": "Testing The Requirements",
+          "content": "Slide-37\n![](Picture4.jpg)\n![http://cdn2.softwaretestinghelp.com/wp-content/qa/uploads/2012/12/Test-case-example.jpg](Picture2.jpg)"
+        },
+        {
+          "slide_number": 38,
+          "title": "Acceptance criteria",
+          "content": "Slide-38\nSpecific high-priority functionality that must be present and operating properly before the product could be accepted and used\nEssential non-functional criteria or quality metrics that must be satisfied\nRemaining major open issues and defects are resolved\nSpecific legal, regulatory, or contractual conditions are fully satisfied\nSupporting transition, infrastructure, or other project requirements (e.g. training materials) are available\nACCEPTANCE TESTS\nFocus on testing the normal flows of the use cases and their corresponding exceptions, devoting less attention to the less frequently used alternative flows"
+        },
+        {
+          "slide_number": 39,
+          "title": "Why reuse requirements?",
+          "content": "Slide-39\nFaster delivery & Higher team productivity\nFewer defects & Lower development costs\nReduced rework & Save review time\nAccelerate the approval cycle\nSpeed up other project activities, such as testing\nImprove your ability to estimate implementation effort if you have data available from implementing the same requirements on a previous project\nImprove functional consistency across related members of a product line or among a set of business applications (a set of products in a family is called software product line)\nSaves time for stakeholders, who then will not need to specify similar requirements repeatedly"
+        },
+        {
+          "slide_number": 40,
+          "title": "Dimensions of requirements reuse",
+          "content": "Slide-40\nExtend of Reuse\nIndividual requirements statement\nA set of requirements and their associated design, code, and test elements\nExtent of Modification\nAssociated requirements attributes (priority, rationale, origin, etc.)\nRelated information (test, design, constraints, data definition, etc.)\nReuse Mechanism\nCopy-and-paste from another specification\nCopy from a library of reusable requirements"
+        },
+        {
+          "slide_number": 41,
+          "title": "Requirement Evolution",
+          "content": "Slide-41\n![](Picture4.jpg)"
+        },
+        {
+          "slide_number": 42,
+          "title": "Requirement patterns",
+          "content": "Slide-42\nGuidance of writing requirements (situation to which it is applicable)\nContent of the requirements (details modifications)\nTemplate of requirements (fill in the blanks)\nExample (illustrative requirements of this type)\nConsideration for development and testing (factors for developer/tester to keep in mind)"
+        },
+        {
+          "slide_number": 43,
+          "title": "Reuse barriers",
+          "content": "Slide-43\nMissing or poor requirements\nNIH and NAH:\nNIH means “not invented here” – less effort need to write new requirements than to understand and fix existing generic requirements from other organizations.\nNAH, or “not applicable here”\nWriting style\nInconsistent organization – organize the requirements in different ways:  product feature, process\nProject type – requirements that are tightly coupled to specific implementation environment or platform\nOwnership – copyright of intellectual properties of requirements in other system development"
+        },
+        {
+          "slide_number": 44,
+          "title": "Reuse success factors",
+          "content": "Slide-44\nRepository\nA single network folder that contains previous requirements documents\nA collection of requirements stored in a requirements management tool that can be searched across projects\nA database that stores sets of requirements selected from projects for their reuse potential and enhanced with keywords to help future BAs know their origin, judge their suitability, and learn about their limitations\nInteractions – use traceability links in a tool to identify the dependencies of reusable requirements\nTerminology – establish common terminology in reusing requirements\nOrganizational culture – encourage requirements reuse"
+        },
+        {
+          "slide_number": 45,
+          "title": "USE of Requirements",
+          "content": "Slide-45\n![](Picture4.jpg)\n45"
+        },
+        {
+          "slide_number": 46,
+          "title": "references",
+          "content": "Slide-46\nWiegers, K., & Beatty, J. (2013). Software requirements. Pearson Education"
+        }
+      ]
+    }
+  }
+}

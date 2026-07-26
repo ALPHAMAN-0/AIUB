@@ -1,0 +1,3916 @@
+{
+  "schema": {
+    "decks[]": "one entry per PPTX file, in chapter order",
+    "decks[].core_properties": "PowerPoint document metadata (author, dates, revision)",
+    "decks[].slides[]": "one entry per slide, in presentation order",
+    "slides[].title": "text of the title placeholder (null if none)",
+    "slides[].all_text": "every text string on the slide joined with newlines - convenient flat field",
+    "slides[].layout": "name of the slide layout used",
+    "slides[].speaker_notes": "notes-pane text (null if the slide has no notes slide)",
+    "slides[].shapes[]": "every shape on the slide in z-order ('order' field)",
+    "shapes[].text": "full text of the shape",
+    "shapes[].paragraphs[]": "paragraph-by-paragraph text with bullet indent 'level' (0 = top level)",
+    "shapes[].paragraphs[].runs[]": "run-level text with bold/italic/underline/size_pt/hyperlink when set",
+    "shapes[].paragraphs[].fields[]": "auto-fields such as slide numbers, with their cached value",
+    "shapes[].table": "n_rows, n_cols and full 'rows' grid; merged cells appear as empty strings",
+    "shapes[].image": "filename, content_type, size_bytes, pixel dimensions",
+    "shapes[].image.ocr_text_lines": "text recovered by OCR from figures that are raster images with no text layer - may contain recognition errors",
+    "shapes[].position_inches": "left/top/width/height on the slide, in inches",
+    "shapes[].placeholder": "placeholder type and index, for placeholder shapes"
+  },
+  "source_file": "SRE_chapter_1.pptx",
+  "slide_width_inches": 13.333,
+  "slide_height_inches": 7.5,
+  "slide_count": 30,
+  "core_properties": {
+    "title": "1. SOFTWARE REQUIREMENTS: WHAT, WHY, & WHO 1.1 The Essential software requirement",
+    "author": "Syed Ishteaque Ahmed",
+    "subject": "",
+    "keywords": "",
+    "comments": "",
+    "last_modified_by": "student",
+    "created": "2015-08-31T11:09:01",
+    "modified": "2017-01-24T07:56:39",
+    "revision": 189
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "layout": "Title Slide",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "CENTER_TITLE (3)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.745,
+            "width": 12.023,
+            "height": 1.198
+          },
+          "text": "1. SOFTWARE REQUIREMENTS: WHAT, WHY, & WHO\n1.1 The Essential software requirement",
+          "paragraphs": [
+            {
+              "text": "1. SOFTWARE REQUIREMENTS: WHAT, WHY, & WHO\n1.1 The Essential software requirement",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "1. SOFTWARE REQUIREMENTS: WHAT, WHY, & WHO"
+                },
+                {
+                  "text": "1.1 The Essential software requirement",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Subtitle 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "SUBTITLE (4)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.578,
+            "top": 2.7,
+            "width": 12.023,
+            "height": 0.646
+          },
+          "text": "Software requirement engineering (Undergraduate)",
+          "paragraphs": [
+            {
+              "text": "Software requirement engineering (Undergraduate)",
+              "level": 0
+            }
+          ]
+        }
+      ],
+      "title": "1. SOFTWARE REQUIREMENTS: WHAT, WHY, & WHO\n1.1 The Essential software requirement",
+      "all_text": "1. SOFTWARE REQUIREMENTS: WHAT, WHY, & WHO\n1.1 The Essential software requirement\nSoftware requirement engineering (Undergraduate)",
+      "speaker_notes": ""
+    },
+    {
+      "slide_number": 2,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "The current common problems",
+          "paragraphs": [
+            {
+              "text": "The current common problems",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.55,
+            "top": 2.143,
+            "width": 12.062,
+            "height": 4.306
+          },
+          "text": "The project’s business objectives, vision, and scope were never clearly defined. \nLack of communication - customers were too busy to spend time working with analysts or developers on the requirements (what users needed to accomplish with the software)\nCustomers claimed that all requirements were critical, so they didn’t prioritize them. \nDevelopers encountered ambiguities and missing information when coding, so they had\n to guess.\nYour customers never approved the requirements. \n",
+          "paragraphs": [
+            {
+              "text": "The project’s business objectives, vision, and scope were never clearly defined. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "The project’s business objectives, vision, and scope were never clearly defined. ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Lack of communication - customers were too busy to spend time working with analysts or developers on the requirements (what users needed to accomplish with the software)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Lack of communication - customers were too busy to spend time working with analysts or developers on the requirements (what users needed to accomplish with the software)",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Customers claimed that all requirements were critical, so they didn’t prioritize them. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Customers claimed that all requirements were critical, so they didn’t prioritize them. ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Developers encountered ambiguities and missing information when coding, so they had\n to guess.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Developers encountered ambiguities and missing information when coding, so they had",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": " to guess.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Your customers never approved the requirements. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Your customers never approved the requirements",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": ". ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 2",
+          "paragraphs": [
+            {
+              "text": "Slide - 2",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 2",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "The current common problems",
+      "all_text": "The current common problems\nThe project’s business objectives, vision, and scope were never clearly defined. \nLack of communication - customers were too busy to spend time working with analysts or developers on the requirements (what users needed to accomplish with the software)\nCustomers claimed that all requirements were critical, so they didn’t prioritize them. \nDevelopers encountered ambiguities and missing information when coding, so they had\n to guess.\nYour customers never approved the requirements. \n\nSlide - 2",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 3,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "The current common problems (CNTD.)",
+          "paragraphs": [
+            {
+              "text": "The current common problems (CNTD.)",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.17,
+            "width": 12.062,
+            "height": 5.13
+          },
+          "text": "Your customers approved the requirements for a release or iteration and then changed them continually. \nThe project scope increased as requirements changes were accepted, but the schedule slipped because no additional resources were provided and no functionality was removed. \nRequested requirements changes got lost; no one knew the status of a particular change request.\nCustomers requested certain functionality and developers built it, but no one ever uses it.\nAt the end of the project, the specification was satisfied but the customer or the business objectives were not.\n",
+          "paragraphs": [
+            {
+              "text": "Your customers approved the requirements for a release or iteration and then changed them continually. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Your customers approved the requirements for a release or iteration and then changed them continually. ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "The project scope increased as requirements changes were accepted, but the schedule slipped because no additional resources were provided and no functionality was removed. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "The project scope increased as requirements changes were accepted, but the schedule slipped because no additional resources were provided and no functionality was removed. ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Requested requirements changes got lost; no one knew the status of a particular change request.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Requested requirements changes got lost; no one knew the status of a particular change request.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Customers requested certain functionality and developers built it, but no one ever uses it.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Customers requested certain functionality and developers built it, but no one ever uses it.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "At the end of the project, the specification was satisfied but the customer or the business objectives were not.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "At the end of the project, the specification was satisfied but the customer or the business objectives were not.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 6,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 3",
+          "paragraphs": [
+            {
+              "text": "Slide - 3",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 3",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "The current common problems (CNTD.)",
+      "all_text": "The current common problems (CNTD.)\nYour customers approved the requirements for a release or iteration and then changed them continually. \nThe project scope increased as requirements changes were accepted, but the schedule slipped because no additional resources were provided and no functionality was removed. \nRequested requirements changes got lost; no one knew the status of a particular change request.\nCustomers requested certain functionality and developers built it, but no one ever uses it.\nAt the end of the project, the specification was satisfied but the customer or the business objectives were not.\n\nSlide - 3",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 4,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "What is “REQUIREMENT”?",
+          "paragraphs": [
+            {
+              "text": "What is “REQUIREMENT”?",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.1,
+            "width": 12.062,
+            "height": 5.257
+          },
+          "text": "A requirement is a property that a product must have to provide value to a stakeholder\nRequirements are a specification of what should be implemented. They are descriptions of a system property or attribute or how the system should behave. They may be a constraint on the development process of the system.\nRequirements encompass \nthe user’s view of the external system behaviour \nthe developer’s view of some internal characteristics\nSoftware requirements include a time dimension\nThey could be present tense, describing the current system’s capabilities\nnear-term (high priority) or hypothetical (low priority) future\nThey could even be past tense, referring to needs that were once specified and then discarded",
+          "paragraphs": [
+            {
+              "text": "A requirement is a property that a product must have to provide value to a stakeholder",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "A requirement is a property that a product must have to provide value to a stakeholder",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Requirements are a specification of what should be implemented. They are descriptions of a system property or attribute or how the system should behave. They may be a constraint on the development process of the system.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Requirements are a specification of what should be implemented. They are descriptions of a system property or attribute or how the system should behave. They may be a constraint on the development process of the system.",
+                  "bold": true,
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Requirements encompass ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Requirements encompass ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "the user’s view of the external system behaviour ",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "the user’s view of the external system behaviour ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "the developer’s view of some internal characteristics",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "the developer’s view of some internal characteristics",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Software requirements include a time dimension",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Software requirements include a time dimension",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "They could be present tense, describing the current system’s capabilities",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "They could be present tense, describing the current system’s capabilities",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "near-term (high priority) or hypothetical (low priority) future",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "near-term (high priority) or hypothetical (low priority) future",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "They could even be past tense, referring to needs that were once specified and then discarded",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "They could even be past tense, referring to needs that were once specified and then discarded",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 4",
+          "paragraphs": [
+            {
+              "text": "Slide - 4",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 4",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "What is “REQUIREMENT”?",
+      "all_text": "What is “REQUIREMENT”?\nA requirement is a property that a product must have to provide value to a stakeholder\nRequirements are a specification of what should be implemented. They are descriptions of a system property or attribute or how the system should behave. They may be a constraint on the development process of the system.\nRequirements encompass \nthe user’s view of the external system behaviour \nthe developer’s view of some internal characteristics\nSoftware requirements include a time dimension\nThey could be present tense, describing the current system’s capabilities\nnear-term (high priority) or hypothetical (low priority) future\nThey could even be past tense, referring to needs that were once specified and then discarded\nSlide - 4",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 5,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Business requirements",
+          "paragraphs": [
+            {
+              "text": "Business requirements",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.514,
+            "top": 2.171,
+            "width": 12.294,
+            "height": 4.543
+          },
+          "text": "Business requirements describe why the organization is implementing the system — the business benefits the organization hopes to achieve\nThe focus is on the business objectives of the organization or the customer who requests the system (business requirements collected from multiple sources might conflict)\nSuppose an airline wants to reduce airport counter staff costs by 25 percent. This goal might lead to the idea of building a kiosk that passengers can use to check in for their flights at the airport. \nSelf-service technologies (SSTs) have been applied to many areas of business\nBusiness requirements typically come from the funding sponsor for a project, the acquiring customer, the manager of the actual users, the marketing department, or a product visionary",
+          "paragraphs": [
+            {
+              "text": "Business requirements describe why the organization is implementing the system — the business benefits the organization hopes to achieve",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Business requirements describe why the organization is implementing the system — the business benefits the organization hopes to achieve",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "The focus is on the business objectives of the organization or the customer who requests the system (business requirements collected from multiple sources might conflict)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "The focus is on the business objectives of the organization or the customer who requests the system (",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "business requirements collected from multiple sources might conflict)",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Suppose an airline wants to reduce airport counter staff costs by 25 percent. This goal might lead to the idea of building a kiosk that passengers can use to check in for their flights at the airport. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Suppose an airline wants to reduce airport counter staff costs by 25 percent. This goal might lead to the idea of building a kiosk that passengers can use to check in for their flights at the airport. ",
+                  "italic": true,
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Self-service technologies (SSTs) have been applied to many areas of business",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Self-service technologies (SSTs) have been applied to many areas of business",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Business requirements typically come from the funding sponsor for a project, the acquiring customer, the manager of the actual users, the marketing department, or a product visionary",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Business requirements typically come from the funding sponsor for a project, the acquiring customer, the manager of the actual users, the marketing department, or a product visionary",
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 5",
+          "paragraphs": [
+            {
+              "text": "Slide - 5",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 5",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Business requirements",
+      "all_text": "Business requirements\nBusiness requirements describe why the organization is implementing the system — the business benefits the organization hopes to achieve\nThe focus is on the business objectives of the organization or the customer who requests the system (business requirements collected from multiple sources might conflict)\nSuppose an airline wants to reduce airport counter staff costs by 25 percent. This goal might lead to the idea of building a kiosk that passengers can use to check in for their flights at the airport. \nSelf-service technologies (SSTs) have been applied to many areas of business\nBusiness requirements typically come from the funding sponsor for a project, the acquiring customer, the manager of the actual users, the marketing department, or a product visionary\nSlide - 5",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 6,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "User Requirements",
+          "paragraphs": [
+            {
+              "text": "User Requirements",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.157,
+            "width": 12.062,
+            "height": 4.757
+          },
+          "text": "User requirements describe goals or tasks the users must be able to perform with the product that will provide value to someone\nIncludes descriptions of product attributes or characteristics that are important to user satisfaction\nRepresent user requirements include use cases and user stories\nUser representatives will provide this information\nDescribes what the user will be able to do with the system\nAn example of a use case is “Check in for a flight” using an airline’s website or a kiosk at the airport. Written as a user story, the same user requirement might read: “As a passenger, \nI want to check in for a flight so I can board my airplane.”",
+          "paragraphs": [
+            {
+              "text": "User requirements describe goals or tasks the users must be able to perform with the product that will provide value to someone",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "User requirements describe goals or tasks the users must be able to perform with the product that will provide value to someone",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Includes descriptions of product attributes or characteristics that are important to user satisfaction",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Includes descriptions of product attributes or characteristics that are important to user satisfaction",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Represent user requirements include use cases and user stories",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Represent user requirements include use cases and user stories",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "User representatives will provide this information",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "User representatives will provide this information",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Describes what the user will be able to do with the system",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Describes what the user will be able to do with the system",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "An example of a use case is “Check in for a flight” using an airline’s website or a kiosk at the airport. Written as a user story, the same user requirement might read: “As a passenger, \nI want to check in for a flight so I can board my airplane.”",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "An example of a use case is “Check in for a flight” using an airline’s website or a kiosk at the airport. Written as a user story, the same user requirement might read: “",
+                  "italic": true,
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "As a passenger, ",
+                  "bold": true,
+                  "italic": true,
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "I want to check in for a flight so I can board my airplane.”",
+                  "bold": true,
+                  "italic": true,
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 6",
+          "paragraphs": [
+            {
+              "text": "Slide - 6",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 6",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "User Requirements",
+      "all_text": "User Requirements\nUser requirements describe goals or tasks the users must be able to perform with the product that will provide value to someone\nIncludes descriptions of product attributes or characteristics that are important to user satisfaction\nRepresent user requirements include use cases and user stories\nUser representatives will provide this information\nDescribes what the user will be able to do with the system\nAn example of a use case is “Check in for a flight” using an airline’s website or a kiosk at the airport. Written as a user story, the same user requirement might read: “As a passenger, \nI want to check in for a flight so I can board my airplane.”\nSlide - 6",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 7,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Functional Requirements",
+          "paragraphs": [
+            {
+              "text": "Functional Requirements",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.607,
+            "top": 2.156,
+            "width": 12.201,
+            "height": 4.96
+          },
+          "text": "Functional requirements specify the behaviours the product will exhibit under specific conditions\nThey describe what the developers must implement to enable users to accomplish their tasks (user requirements), thereby satisfying the business requirements\nFunctional requirements often are written in the form of the traditional “shall” statements: \n\t“The Passenger shall be able to print boarding passes for all flight segments for which he has  \n    checked in” or “If the Passenger’s profile does not indicate a seating preference, the reservation \n    system shall assign a seat.”\nA restriction that is imposed on the choices available to the developer for the design and construction of a product, is a CONSTRAINT\n\t“The system shall be developed using open source tools and shall run on Linux OS”",
+          "paragraphs": [
+            {
+              "text": "Functional requirements specify the behaviours the product will exhibit under specific conditions",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Functional requirements specify the behaviours the product will exhibit under specific conditions",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "They describe what the developers must implement to enable users to accomplish their tasks (user requirements), thereby satisfying the business requirements",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "They describe what the developers must implement to enable users to accomplish their tasks (user requirements), thereby satisfying the business requirements",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Functional requirements often are written in the form of the traditional “shall” statements: ",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Functional requirements often are written in the form of the traditional “shall” statements: ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "\t“The Passenger shall be able to print boarding passes for all flight segments for which he has  \n    checked in” or “If the Passenger’s profile does not indicate a seating preference, the reservation \n    system shall assign a seat.”",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "\t“The Passenger shall be able to print boarding passes for all flight segments for which he has  ",
+                  "italic": true,
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "    checked in” or “If the Passenger’s profile does not indicate a seating preference, the reservation ",
+                  "italic": true,
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "    system shall assign a seat.”",
+                  "italic": true,
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "A restriction that is imposed on the choices available to the developer for the design and construction of a product, is a CONSTRAINT",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "A restriction that is imposed on the choices available to the developer for the design and construction of a product, is a CONSTRAINT",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "\t“The system shall be developed using open source tools and shall run on Linux OS”",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\t“",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "The system shall be developed using open source tools and shall run on Linux OS",
+                  "italic": true,
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "”",
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 7",
+          "paragraphs": [
+            {
+              "text": "Slide - 7",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 7",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Functional Requirements",
+      "all_text": "Functional Requirements\nFunctional requirements specify the behaviours the product will exhibit under specific conditions\nThey describe what the developers must implement to enable users to accomplish their tasks (user requirements), thereby satisfying the business requirements\nFunctional requirements often are written in the form of the traditional “shall” statements: \n\t“The Passenger shall be able to print boarding passes for all flight segments for which he has  \n    checked in” or “If the Passenger’s profile does not indicate a seating preference, the reservation \n    system shall assign a seat.”\nA restriction that is imposed on the choices available to the developer for the design and construction of a product, is a CONSTRAINT\n\t“The system shall be developed using open source tools and shall run on Linux OS”\nSlide - 7",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 8,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Levels of requirements",
+          "paragraphs": [
+            {
+              "text": "Levels of requirements",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.215,
+            "width": 11.464,
+            "height": 3.958
+          },
+          "text": "Software requirements include three distinct levels:\nBusiness requirements\nUser requirements\nFunctional requirements\n\nThis alignment among the three levels of requirements is essential for project success \n",
+          "paragraphs": [
+            {
+              "text": "Software requirements include three distinct levels:",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Software requirements include three distinct levels:",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Business requirements",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Business requirements",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "User requirements",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "User requirements",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Functional requirements",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Functional requirements",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "",
+              "level": 1
+            },
+            {
+              "text": "This alignment among the three levels of requirements is essential for project success ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "This alignment among the three levels of requirements is essential for project success ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "",
+              "level": 1
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 8",
+          "paragraphs": [
+            {
+              "text": "Slide - 8",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 8",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Levels of requirements",
+      "all_text": "Levels of requirements\nSoftware requirements include three distinct levels:\nBusiness requirements\nUser requirements\nFunctional requirements\n\nThis alignment among the three levels of requirements is essential for project success \n\nSlide - 8",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 9,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Working with the three levels",
+          "paragraphs": [
+            {
+              "text": "Working with the three levels",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 5,
+          "name": "Picture 4",
+          "type": "PICTURE (13)",
+          "position_inches": {
+            "left": 2.643,
+            "top": 1.939,
+            "width": 8.471,
+            "height": 5.412
+          },
+          "image": {
+            "filename": "image.emf",
+            "content_type": "image/x-wmf",
+            "size_bytes": 1665208,
+            "px": [
+              687,
+              604
+            ],
+            "ocr_text_lines": [
+              "Corporate Roles Commercial Roles",
+              "Business Analyst Product Manager",
+              "and User Reps",
+              "User",
+              "Requirements",
+              "Business Analyst or",
+              "Business Analyst Product Manager",
+              "Functional",
+              "Requirements",
+              "Developer, Tester",
+              "FIGURE 1-3 An example of how different stakeholders participate in requirements development.",
+              "Business 2 Market Needor",
+              "Need S Concept",
+              "Manager Marketing",
+              "Business",
+              "Requirements"
+            ],
+            "ocr_note": "Diagram/figure is a raster image with no text layer; text below recovered by OCR and may contain recognition errors."
+          }
+        },
+        {
+          "order": 3,
+          "shape_id": 6,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 9",
+          "paragraphs": [
+            {
+              "text": "Slide - 9",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 9",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Working with the three levels",
+      "all_text": "Working with the three levels\nSlide - 9",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 10,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "System Requirements",
+          "paragraphs": [
+            {
+              "text": "System Requirements",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.072,
+            "width": 12.062,
+            "height": 4.756
+          },
+          "text": "System requirements describe the requirements for a product that is composed of multiple components or subsystems. \nA system can be all software or it can include both software and hardware subsystems (e.g. biometric)\nPeople and processes are part of a system, so certain system functions might be allocated to human\nA good example of a “system” is the cashier’s workstation in a supermarket. There’s a bar code scanner integrated with a scale, as well as a hand-held bar code scanner. The cashier has a keyboard, a display, \nand a cash drawer\nThe requirements for the system or product as a whole, then, lead the business analyst to derive specific functionality that must be allocated to one or another of those component subsystems, \nas well as demanding an understanding of the interfaces between them",
+          "paragraphs": [
+            {
+              "text": "System requirements describe the requirements for a product that is composed of multiple components or subsystems. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "System requirements describe the requirements for a product that is composed of multiple components or subsystems. ",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "A system can be all software or it can include both software and hardware subsystems (e.g. biometric)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "A system can be all software or it can include both software and hardware subsystems (e.g. biometric)",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "People and processes are part of a system, so certain system functions might be allocated to human",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "People and processes are part of a system, so certain system functions might be allocated to human",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "A good example of a “system” is the cashier’s workstation in a supermarket. There’s a bar code scanner integrated with a scale, as well as a hand-held bar code scanner. The cashier has a keyboard, a display, \nand a cash drawer",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "A good example of a “system” is the cashier’s workstation in a supermarket. There’s a bar code scanner integrated with a scale, as well as a hand-held bar code scanner. The cashier has a keyboard, a display, ",
+                  "italic": true,
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "and a cash drawer",
+                  "italic": true,
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "The requirements for the system or product as a whole, then, lead the business analyst to derive specific functionality that must be allocated to one or another of those component subsystems, \nas well as demanding an understanding of the interfaces between them",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "The requirements for the system or product as a whole, then, lead the business analyst to derive specific functionality that must be allocated to one or another of those component subsystems, ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "as well as demanding an understanding of the interfaces between them",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 10",
+          "paragraphs": [
+            {
+              "text": "Slide - 10",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 10",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "System Requirements",
+      "all_text": "System Requirements\nSystem requirements describe the requirements for a product that is composed of multiple components or subsystems. \nA system can be all software or it can include both software and hardware subsystems (e.g. biometric)\nPeople and processes are part of a system, so certain system functions might be allocated to human\nA good example of a “system” is the cashier’s workstation in a supermarket. There’s a bar code scanner integrated with a scale, as well as a hand-held bar code scanner. The cashier has a keyboard, a display, \nand a cash drawer\nThe requirements for the system or product as a whole, then, lead the business analyst to derive specific functionality that must be allocated to one or another of those component subsystems, \nas well as demanding an understanding of the interfaces between them\nSlide - 10",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 11,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Non-Functional Requirements",
+          "paragraphs": [
+            {
+              "text": "Non-Functional Requirements",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.113,
+            "width": 12.062,
+            "height": 5.073
+          },
+          "text": "Non-functional requirement are also known as quality attributes, product requirements that describes a service or performance characteristic of a product (“– ity, ilities.”)\nDescribe the product’s characteristics in various dimensions that are important either to users or to developers and maintainers, such as performance, safety, availability, and portability (chances of conflicts within non-functional requirements are fairly high)\nOther classes of non-functional requirements describe external interfaces between the system and the outside world (usefulness, flexibility, reliability)\nThese include connections to other software systems, hardware components, and users, as well as communication interfaces (interoperability) \nDesign and implementation constraints impose restrictions on the options available to the developer during construction of the product (security)",
+          "paragraphs": [
+            {
+              "text": "Non-functional requirement are also known as quality attributes, product requirements that describes a service or performance characteristic of a product (“– ity, ilities.”)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Non-functional requirement are also known as quality attributes, product requirements that describes a service or performance characteristic of a product (“– ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "ity",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": ", ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "ilities",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": ".”)",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Describe the product’s characteristics in various dimensions that are important either to users or to developers and maintainers, such as performance, safety, availability, and portability (chances of conflicts within non-functional requirements are fairly high)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Describe the product’s characteristics in various dimensions that are important either to users or to developers and maintainers, such as performance, safety, availability, and portability (",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "chances of conflicts within non-functional requirements are fairly high)",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Other classes of non-functional requirements describe external interfaces between the system and the outside world (usefulness, flexibility, reliability)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Other classes of non-functional requirements describe external interfaces between the system and the outside world (usefulness, flexibility, reliability)",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "These include connections to other software systems, hardware components, and users, as well as communication interfaces (interoperability) ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "These include connections to other software systems, hardware components, and users, as well as communication interfaces (interoperability) ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Design and implementation constraints impose restrictions on the options available to the developer during construction of the product (security)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Design and implementation constraints impose restrictions on the options available to the developer during construction of the product (security)",
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 11",
+          "paragraphs": [
+            {
+              "text": "Slide - 11",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 11",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Non-Functional Requirements",
+      "all_text": "Non-Functional Requirements\nNon-functional requirement are also known as quality attributes, product requirements that describes a service or performance characteristic of a product (“– ity, ilities.”)\nDescribe the product’s characteristics in various dimensions that are important either to users or to developers and maintainers, such as performance, safety, availability, and portability (chances of conflicts within non-functional requirements are fairly high)\nOther classes of non-functional requirements describe external interfaces between the system and the outside world (usefulness, flexibility, reliability)\nThese include connections to other software systems, hardware components, and users, as well as communication interfaces (interoperability) \nDesign and implementation constraints impose restrictions on the options available to the developer during construction of the product (security)\nSlide - 11",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 12,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Business Rules",
+          "paragraphs": [
+            {
+              "text": "Business Rules",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.493,
+            "top": 2.0,
+            "width": 12.062,
+            "height": 5.3
+          },
+          "text": "Business rules include corporate policies, government regulations, industry standards, and computational algorithms\nBusiness rules are not themselves software requirements because they have an existence beyond the boundaries of any specific software application\nThey often dictate that the system must contain functionality to comply with the relevant  rules (e.g. online purchase limit) \nA restriction that is imposed on the choices available to the developer for the design and construction of a product (e.g. no red colour in webpage – Inverse requirements)\nSometimes, as with corporate security policies, business rules are the origin of specific quality attributes that are then implemented in functionality (e.g. firewall) \nTherefore, you can trace the origin of certain functional requirements back to a particular business rule",
+          "paragraphs": [
+            {
+              "text": "Business rules include corporate policies, government regulations, industry standards, and computational algorithms",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Business rules include corporate policies, government regulations, industry standards, and computational algorithms",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Business rules are not themselves software requirements because they have an existence beyond the boundaries of any specific software application",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Business rules are not themselves software requirements because they have an existence beyond the boundaries of any specific software application",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "They often dictate that the system must contain functionality to comply with the relevant  rules (e.g. online purchase limit) ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "They often dictate that the system must contain functionality to comply with the relevant  rules (e.g. online purchase limit) ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "A restriction that is imposed on the choices available to the developer for the design and construction of a product (e.g. no red colour in webpage – Inverse requirements)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "A restriction that is imposed on the choices available to the developer for the design and construction of a product (e.g. no red colour in webpage – Inverse requirements)",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Sometimes, as with corporate security policies, business rules are the origin of specific quality attributes that are then implemented in functionality (e.g. firewall) ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Sometimes, as with corporate security policies, business rules are the origin of specific quality attributes that are then implemented in functionality (e.g. firewall) ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Therefore, you can trace the origin of certain functional requirements back to a particular business rule",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Therefore, you can trace the origin of certain functional requirements back to a particular business rule",
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 12",
+          "paragraphs": [
+            {
+              "text": "Slide - 12",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 12",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Business Rules",
+      "all_text": "Business Rules\nBusiness rules include corporate policies, government regulations, industry standards, and computational algorithms\nBusiness rules are not themselves software requirements because they have an existence beyond the boundaries of any specific software application\nThey often dictate that the system must contain functionality to comply with the relevant  rules (e.g. online purchase limit) \nA restriction that is imposed on the choices available to the developer for the design and construction of a product (e.g. no red colour in webpage – Inverse requirements)\nSometimes, as with corporate security policies, business rules are the origin of specific quality attributes that are then implemented in functionality (e.g. firewall) \nTherefore, you can trace the origin of certain functional requirements back to a particular business rule\nSlide - 12",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 13,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Feature",
+          "paragraphs": [
+            {
+              "text": "Feature",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.385,
+            "width": 5.25,
+            "height": 4.023
+          },
+          "text": "A feature consists of one or more logically related system capabilities that provide value to a user and are described by a set of functional requirements\nA feature can encompass multiple user requirements, each of which implies that certain functional requirements must be implemented to allow the user to perform the task described by each user requirement",
+          "paragraphs": [
+            {
+              "text": "A feature consists of one or more logically related system capabilities that provide value to a user and are described by a set of functional requirements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "A feature consists of one or more logically related system capabilities that provide value to a user and are described by a set of functional requirements",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "A feature can encompass multiple user requirements, each of which implies that certain functional requirements must be implemented to allow the user to perform the task described by each user requirement",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "A feature can encompass multiple user requirements, each of which implies that certain functional requirements must be implemented to allow the user to perform the task described by each user requirement",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Picture 4",
+          "type": "PICTURE (13)",
+          "position_inches": {
+            "left": 5.886,
+            "top": 2.002,
+            "width": 6.236,
+            "height": 5.26
+          },
+          "image": {
+            "filename": "image.emf",
+            "content_type": "image/x-wmf",
+            "size_bytes": 624872,
+            "px": [
+              431,
+              363
+            ],
+            "ocr_text_lines": [
+              "The user shall be able to modify a bookmark’s",
+              "name, URL, and description. Key",
+              "User",
+              "Functional Requirement",
+              "FIGURE 1-2 Relationships among features, user requirements, and functional requirements.",
+              "Add a Bookmark",
+              "Export Bookmarks",
+              "Go to a Bookmarked Location",
+              "The system shall display bookmarks as a",
+              "and expandable hierarchical tree.",
+              "The user shall be able to resequence bookmarks.",
+              "The system shall display bookmark properties."
+            ],
+            "ocr_note": "Diagram/figure is a raster image with no text layer; text below recovered by OCR and may contain recognition errors."
+          }
+        },
+        {
+          "order": 4,
+          "shape_id": 6,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 13",
+          "paragraphs": [
+            {
+              "text": "Slide - 13",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 13",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Feature",
+      "all_text": "Feature\nA feature consists of one or more logically related system capabilities that provide value to a user and are described by a set of functional requirements\nA feature can encompass multiple user requirements, each of which implies that certain functional requirements must be implemented to allow the user to perform the task described by each user requirement\nSlide - 13",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 14,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Relationships",
+          "paragraphs": [
+            {
+              "text": "Relationships",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 5,
+          "name": "Picture 4",
+          "type": "PICTURE (13)",
+          "position_inches": {
+            "left": 2.3,
+            "top": 2.029,
+            "width": 9.029,
+            "height": 5.471
+          },
+          "image": {
+            "filename": "image.emf",
+            "content_type": "image/x-wmf",
+            "size_bytes": 603712,
+            "px": [
+              483,
+              312
+            ],
+            "ocr_text_lines": [
+              "Business Business",
+              "User Quality",
+              "Requirements Attributes",
+              "User Requirements Document",
+              "External",
+              "Requirements Rules",
+              "4 Interfaces",
+              "System Functional",
+              "Requirements Requirements",
+              "Software Requirements Specification",
+              "FIGURE 1-1 Relationships among several types of requirements information. Solid arrows mean “are stored",
+              "dotted arrows mean “are the origin of* or “influence.”",
+              "Vision and Scope Document"
+            ],
+            "ocr_note": "Diagram/figure is a raster image with no text layer; text below recovered by OCR and may contain recognition errors."
+          }
+        },
+        {
+          "order": 3,
+          "shape_id": 6,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 14",
+          "paragraphs": [
+            {
+              "text": "Slide - 14",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 14",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Relationships",
+      "all_text": "Relationships\nSlide - 14",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 15,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Product vs. Project Requirements",
+          "paragraphs": [
+            {
+              "text": "Product vs. Project Requirements",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.171,
+            "width": 12.062,
+            "height": 4.236
+          },
+          "text": "Requirements that describe properties of a software system to be built are called product requirements. \nProjects certainly do have other expectations and deliverables that are not a part of the software the team implements, but that are necessary to the successful completion of the project as a whole. These are project requirements but not product requirements.  (maintain schedule deadline of task)\nAn SRS houses the product requirements, but it should not include design or implementation details (other than known constraints), project plans, test plans, or similar information. \nSeparate out such items so that requirements development activities can focus on understanding what the team intends to build.",
+          "paragraphs": [
+            {
+              "text": "Requirements that describe properties of a software system to be built are called product requirements. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Requirements that describe properties of a software system to be built are called product requirements. ",
+                  "size_pt": 21.0
+                }
+              ]
+            },
+            {
+              "text": "Projects certainly do have other expectations and deliverables that are not a part of the software the team implements, but that are necessary to the successful completion of the project as a whole. These are project requirements but not product requirements.  (maintain schedule deadline of task)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Projects certainly do have other expectations and deliverables that are not a part of the software the team implements, but that are necessary to the successful completion of the project as a whole. These are project requirements but not product requirements.  (maintain schedule deadline of task)",
+                  "size_pt": 21.0
+                }
+              ]
+            },
+            {
+              "text": "An SRS houses the product requirements, but it should not include design or implementation details (other than known constraints), project plans, test plans, or similar information. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "An SRS houses the product requirements, but it should not include design or implementation details (other than known constraints), project plans, test plans, or similar information. ",
+                  "size_pt": 21.0
+                }
+              ]
+            },
+            {
+              "text": "Separate out such items so that requirements development activities can focus on understanding what the team intends to build.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Separate out such items so that requirements development activities can focus on understanding what the team intends to build.",
+                  "size_pt": 21.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 15",
+          "paragraphs": [
+            {
+              "text": "Slide - 15",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 15",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Product vs. Project Requirements",
+      "all_text": "Product vs. Project Requirements\nRequirements that describe properties of a software system to be built are called product requirements. \nProjects certainly do have other expectations and deliverables that are not a part of the software the team implements, but that are necessary to the successful completion of the project as a whole. These are project requirements but not product requirements.  (maintain schedule deadline of task)\nAn SRS houses the product requirements, but it should not include design or implementation details (other than known constraints), project plans, test plans, or similar information. \nSeparate out such items so that requirements development activities can focus on understanding what the team intends to build.\nSlide - 15",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 16,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Project Requirements",
+          "paragraphs": [
+            {
+              "text": "Project Requirements",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.607,
+            "top": 2.057,
+            "width": 12.062,
+            "height": 5.243
+          },
+          "text": "Physical resources the development team needs, such as workstations, special hardware devices, testing labs, testing tools and equipment, team rooms, and videoconferencing equipment.\nStaff training (User documentation, including training materials, tutorials, reference manuals, and release notes)\nInfrastructure changes needed in the operating environment.\nRequirements and procedures for releasing the product, installing it in the operating environment, configuring it, and testing the installation.\nBeta testing, manufacturing, packaging, marketing, and distribution requirements.\nCustomer service-level agreements.\nRequirements for obtaining legal protection (patents, trademarks, or copyrights) for intellectual property related to the software.",
+          "paragraphs": [
+            {
+              "text": "Physical resources the development team needs, such as workstations, special hardware devices, testing labs, testing tools and equipment, team rooms, and videoconferencing equipment.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Physical resources the development team needs, such as workstations, special hardware devices, testing labs, testing tools and equipment, team rooms, and videoconferencing equipment.",
+                  "size_pt": 21.0
+                }
+              ]
+            },
+            {
+              "text": "Staff training (User documentation, including training materials, tutorials, reference manuals, and release notes)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Staff training (User documentation, including training materials, tutorials, reference manuals, and release notes)",
+                  "size_pt": 21.0
+                }
+              ]
+            },
+            {
+              "text": "Infrastructure changes needed in the operating environment.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Infrastructure changes needed in the operating environment.",
+                  "size_pt": 21.0
+                }
+              ]
+            },
+            {
+              "text": "Requirements and procedures for releasing the product, installing it in the operating environment, configuring it, and testing the installation.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Requirements and procedures for releasing the product, installing it in the operating environment, configuring it, and testing the installation.",
+                  "size_pt": 21.0
+                }
+              ]
+            },
+            {
+              "text": "Beta testing, manufacturing, packaging, marketing, and distribution requirements.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Beta testing, manufacturing, packaging, marketing, and distribution requirements.",
+                  "size_pt": 21.0
+                }
+              ]
+            },
+            {
+              "text": "Customer service-level agreements.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Customer service-level agreements.",
+                  "size_pt": 21.0
+                }
+              ]
+            },
+            {
+              "text": "Requirements for obtaining legal protection (patents, trademarks, or copyrights) for intellectual property related to the software.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Requirements for obtaining legal protection (patents, trademarks, or copyrights) for intellectual property related to the software.",
+                  "size_pt": 21.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 16",
+          "paragraphs": [
+            {
+              "text": "Slide - 16",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 16",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Project Requirements",
+      "all_text": "Project Requirements\nPhysical resources the development team needs, such as workstations, special hardware devices, testing labs, testing tools and equipment, team rooms, and videoconferencing equipment.\nStaff training (User documentation, including training materials, tutorials, reference manuals, and release notes)\nInfrastructure changes needed in the operating environment.\nRequirements and procedures for releasing the product, installing it in the operating environment, configuring it, and testing the installation.\nBeta testing, manufacturing, packaging, marketing, and distribution requirements.\nCustomer service-level agreements.\nRequirements for obtaining legal protection (patents, trademarks, or copyrights) for intellectual property related to the software.\nSlide - 16",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 17,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Requirements Development and management",
+          "paragraphs": [
+            {
+              "text": "Requirements Development and management",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 5,
+          "name": "Picture 4",
+          "type": "PICTURE (13)",
+          "position_inches": {
+            "left": 2.643,
+            "top": 2.385,
+            "width": 7.855,
+            "height": 4.023
+          },
+          "image": {
+            "filename": "image.emf",
+            "content_type": "image/x-wmf",
+            "size_bytes": 977288,
+            "px": [
+              691,
+              353
+            ],
+            "ocr_text_lines": [
+              "Requirements Engineering",
+              "Requirements Development Requirements Management",
+              "Elicitation Specification Validation",
+              "FIGURE 1-4 Subdisciplines of software requirements engineering."
+            ],
+            "ocr_note": "Diagram/figure is a raster image with no text layer; text below recovered by OCR and may contain recognition errors."
+          }
+        },
+        {
+          "order": 3,
+          "shape_id": 7,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 17",
+          "paragraphs": [
+            {
+              "text": "Slide - 17",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 17",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Requirements Development and management",
+      "all_text": "Requirements Development and management\nSlide - 17",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 18,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Requirements Development: ELICITATION",
+          "paragraphs": [
+            {
+              "text": "Requirements Development: ELICITATION",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Requirements Development: "
+                },
+                {
+                  "text": "ELICITATION",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.621,
+            "top": 2.113,
+            "width": 12.062,
+            "height": 2.858
+          },
+          "text": "Identifying the product’s expected user classes and other stakeholders.\nUnderstanding user tasks and goals and the business objectives with which those tasks align.\nLearning about the environment in which the new product will be used.\nWorking with individuals who represent each user class to understand their functionality needs and their quality expectations.",
+          "paragraphs": [
+            {
+              "text": "Identifying the product’s expected user classes and other stakeholders.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Identifying the product’s expected user classes and other stakeholders.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Understanding user tasks and goals and the business objectives with which those tasks align.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Understanding user tasks and goals and the business objectives with which those tasks align.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Learning about the environment in which the new product will be used.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Learning about the environment in which the new product will be used.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Working with individuals who represent each user class to understand their functionality needs and their quality expectations.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Working with individuals who represent each user class to understand their functionality needs and their quality expectations.",
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 18",
+          "paragraphs": [
+            {
+              "text": "Slide - 18",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 18",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Requirements Development: ELICITATION",
+      "all_text": "Requirements Development: ELICITATION\nIdentifying the product’s expected user classes and other stakeholders.\nUnderstanding user tasks and goals and the business objectives with which those tasks align.\nLearning about the environment in which the new product will be used.\nWorking with individuals who represent each user class to understand their functionality needs and their quality expectations.\nSlide - 18",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 19,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Requirements Development: ANALYSIS",
+          "paragraphs": [
+            {
+              "text": "Requirements Development: ANALYSIS",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Requirements Development: "
+                },
+                {
+                  "text": "ANALYSIS",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.478,
+            "top": 2.056,
+            "width": 12.062,
+            "height": 3.858
+          },
+          "text": "Model the application environment\nAnalysing the information received from users to distinguish their task goals into functional requirements, quality expectations, business rules, suggested solutions, etc.\nDecomposing high-level requirements into an appropriate level of detail\nAllocating requirements to software components defined in the system architecture\nNegotiating requirements priority and their implementation priorities",
+          "paragraphs": [
+            {
+              "text": "Model the application environment",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Model the application environment",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Analysing the information received from users to distinguish their task goals into functional requirements, quality expectations, business rules, suggested solutions, etc.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Analysing the information received from users to distinguish their task goals into functional requirements, quality expectations, business rules, suggested solutions, etc.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Decomposing high-level requirements into an appropriate level of detail",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Decomposing high-level requirements into an appropriate level of detail",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Allocating requirements to software components defined in the system architecture",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Allocating requirements to software components defined in the system architecture",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Negotiating requirements priority and their implementation priorities",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Negotiating requirements ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "priority",
+                  "bold": true,
+                  "size_pt": 22.0
+                },
+                {
+                  "text": " and their ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "implementation",
+                  "bold": true,
+                  "size_pt": 22.0
+                },
+                {
+                  "text": " priorities",
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 19",
+          "paragraphs": [
+            {
+              "text": "Slide - 19",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 19",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Requirements Development: ANALYSIS",
+      "all_text": "Requirements Development: ANALYSIS\nModel the application environment\nAnalysing the information received from users to distinguish their task goals into functional requirements, quality expectations, business rules, suggested solutions, etc.\nDecomposing high-level requirements into an appropriate level of detail\nAllocating requirements to software components defined in the system architecture\nNegotiating requirements priority and their implementation priorities\nSlide - 19",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 20,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Requirements Development: Specification",
+          "paragraphs": [
+            {
+              "text": "Requirements Development: Specification",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Requirements Development: "
+                },
+                {
+                  "text": "Specification",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.17,
+            "width": 12.062,
+            "height": 4.901
+          },
+          "text": "The business analyst documents requirements in a software requirements specification (SRS). \nTranscribing the collected user needs into written requirements and diagrams suitable for comprehension, review, and use by their intended audiences.\nThe SRS describes as fully as necessary the expected behaviour of the software system. \nThe SRS is used in development, testing, quality assurance, project management, and related project functions.\nAdopt requirement document templates (well defined standard of writing requirements)\nIdentify requirement origins\nUniquely label each requirement (cross-cutting requirements)",
+          "paragraphs": [
+            {
+              "text": "The business analyst documents requirements in a software requirements specification (SRS). ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "The business analyst documents requirements in a software requirements specification (SRS). ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Transcribing the collected user needs into written requirements and diagrams suitable for comprehension, review, and use by their intended audiences.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Transcribing the collected user needs into ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "written requirements ",
+                  "bold": true,
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "and ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "diagrams",
+                  "bold": true,
+                  "size_pt": 22.0
+                },
+                {
+                  "text": " suitable for comprehension, review, and use by their intended audiences.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "The SRS describes as fully as necessary the expected behaviour of the software system. ",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "The SRS describes as fully as necessary the expected behaviour of the software system. ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "The SRS is used in development, testing, quality assurance, project management, and related project functions.",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "The SRS is used in development, testing, quality assurance, project management, and related project functions.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Adopt requirement document templates (well defined standard of writing requirements)",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Adopt requirement document templates (well defined standard of writing requirements)",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Identify requirement origins",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Identify requirement origins",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Uniquely label each requirement (cross-cutting requirements)",
+              "level": 1,
+              "runs": [
+                {
+                  "text": "Uniquely label each requirement (cross-cutting requirements)",
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 20",
+          "paragraphs": [
+            {
+              "text": "Slide - 20",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 20",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Requirements Development: Specification",
+      "all_text": "Requirements Development: Specification\nThe business analyst documents requirements in a software requirements specification (SRS). \nTranscribing the collected user needs into written requirements and diagrams suitable for comprehension, review, and use by their intended audiences.\nThe SRS describes as fully as necessary the expected behaviour of the software system. \nThe SRS is used in development, testing, quality assurance, project management, and related project functions.\nAdopt requirement document templates (well defined standard of writing requirements)\nIdentify requirement origins\nUniquely label each requirement (cross-cutting requirements)\nSlide - 20",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 21,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Requirements Development: Validation",
+          "paragraphs": [
+            {
+              "text": "Requirements Development: Validation",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Requirements Development: "
+                },
+                {
+                  "text": "Validation",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.156,
+            "width": 12.062,
+            "height": 4.501
+          },
+          "text": "Reviewing the documented requirements (SRS) to correct any problems before the development group accepts them (feasible, consistent, complete)\nConsistency means that no requirements should be contradictory; Completeness means that no services or constraints which are needed have been missed out. Also, discard unnecessary requirements\nDeveloping acceptance tests and criteria to confirm that a product based on the requirements would meet customer needs and achieve the business objectives.\nSimulate the requirements (e.g. wareframming) to find errors. \n",
+          "paragraphs": [
+            {
+              "text": "Reviewing the documented requirements (SRS) to correct any problems before the development group accepts them (feasible, consistent, complete)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Reviewing the documented requirements (SRS) to correct any problems before the development group accepts them (feasible, consistent, complete)",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Consistency means that no requirements should be contradictory; Completeness means that no services or constraints which are needed have been missed out. Also, discard unnecessary requirements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Consistency means that no requirements should be contradictory; Completeness means that no services or constraints which are needed have been missed out. Also, discard unnecessary requirements",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Developing acceptance tests and criteria to confirm that a product based on the requirements would meet customer needs and achieve the business objectives.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Developing acceptance tests and criteria to confirm that a product based on the requirements would meet customer needs and achieve the business objectives.",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Simulate the requirements (e.g. wareframming) to find errors. ",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Simulate the requirements (e.g. ",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": "wareframming",
+                  "size_pt": 22.0
+                },
+                {
+                  "text": ") to find errors. ",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 21",
+          "paragraphs": [
+            {
+              "text": "Slide - 21",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 21",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Requirements Development: Validation",
+      "all_text": "Requirements Development: Validation\nReviewing the documented requirements (SRS) to correct any problems before the development group accepts them (feasible, consistent, complete)\nConsistency means that no requirements should be contradictory; Completeness means that no services or constraints which are needed have been missed out. Also, discard unnecessary requirements\nDeveloping acceptance tests and criteria to confirm that a product based on the requirements would meet customer needs and achieve the business objectives.\nSimulate the requirements (e.g. wareframming) to find errors. \n\nSlide - 21",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 22,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "A  requirements  development  process  framework",
+          "paragraphs": [
+            {
+              "text": "A  requirements  development  process  framework",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 5,
+          "name": "Picture 4",
+          "type": "PICTURE (13)",
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.385,
+            "width": 12.062,
+            "height": 3.49
+          },
+          "image": {
+            "filename": "image.emf",
+            "content_type": "image/x-wmf",
+            "size_bytes": 631976,
+            "px": [
+              739,
+              213
+            ],
+            "ocr_text_lines": [
+              "Elicitation Specification Validation",
+              "clarify close gaps rewrite",
+              "re-evaluate",
+              "confirm and correct",
+              "FIGURE 3-1 Requirements development is an iterative process."
+            ],
+            "ocr_note": "Diagram/figure is a raster image with no text layer; text below recovered by OCR and may contain recognition errors."
+          }
+        },
+        {
+          "order": 3,
+          "shape_id": 6,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 22",
+          "paragraphs": [
+            {
+              "text": "Slide - 22",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 22",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "A  requirements  development  process  framework",
+      "all_text": "A  requirements  development  process  framework\nSlide - 22",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 23,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "A  requirements  development  process  framework",
+          "paragraphs": [
+            {
+              "text": "A  requirements  development  process  framework",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 5,
+          "name": "Picture 4",
+          "type": "PICTURE (13)",
+          "position_inches": {
+            "left": 2.443,
+            "top": 2.069,
+            "width": 8.086,
+            "height": 5.431
+          },
+          "image": {
+            "filename": "image.emf",
+            "content_type": "image/x-wmf",
+            "size_bytes": 1604648,
+            "px": [
+              699,
+              572
+            ],
+            "ocr_text_lines": [
+              "Flesh out user requirements",
+              "16. Develop tests from requirements",
+              "Plan elicitation",
+              "17. Validate user requirements,",
+              "Identify user requirements functional requirements,",
+              "nonfunctional requirements,",
+              "Prioritize user requirements analysis models, and prototypes",
+              "Repeat for iteration 2",
+              "Repeat for iteration 3",
+              "Repeat for iteration N",
+              "FIGURE 3-2 A representative requirements development process.",
+              "Derive functional requirements",
+              "10. Model the requirements",
+              "11. Specify nonfunctional requirements",
+              "Define business requirements 12. Review requirements",
+              "Identify user classes 13. Develop prototypes",
+              "Identify user representatives 14. Develop or evolve architecture",
+              "Identify requirements decision 15. Allocate requirements to components",
+              "makers"
+            ],
+            "ocr_note": "Diagram/figure is a raster image with no text layer; text below recovered by OCR and may contain recognition errors."
+          }
+        },
+        {
+          "order": 3,
+          "shape_id": 6,
+          "name": "Rectangle 5",
+          "type": "AUTO_SHAPE (1)",
+          "position_inches": {
+            "left": 9.043,
+            "top": 2.357,
+            "width": 0.9,
+            "height": 0.271
+          },
+          "text": "expand",
+          "paragraphs": [
+            {
+              "text": "expand",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "expand",
+                  "size_pt": 12.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "shape_id": 7,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 23",
+          "paragraphs": [
+            {
+              "text": "Slide - 23",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 23",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "A  requirements  development  process  framework",
+      "all_text": "A  requirements  development  process  framework\nexpand\nSlide - 23",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 24,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Requirements Management",
+          "paragraphs": [
+            {
+              "text": "Requirements Management",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.213,
+            "width": 12.062,
+            "height": 3.987
+          },
+          "text": "Establish a requirements change control process\nPerform impact analysis on requirements changes\nTrack the status of each requirement;  Track requirements issues\nMaintain a history of requirements changes\nMaintain a requirements traceability matrix\nDefining the relationships and dependencies that exist between requirements\nTracing individual requirements to their corresponding designs, source code, and tests",
+          "paragraphs": [
+            {
+              "text": "Establish a requirements change control process",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Establish a requirements change control process",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Perform impact analysis on requirements changes",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Perform impact analysis on requirements changes",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Track the status of each requirement;  Track requirements issues",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Track the status of each requirement;  Track requirements issues",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Maintain a history of requirements changes",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Maintain a history of requirements changes",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Maintain a requirements traceability matrix",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Maintain a requirements traceability matrix",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Defining the relationships and dependencies that exist between requirements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Defining the relationships and dependencies that exist between requirements",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Tracing individual requirements to their corresponding designs, source code, and tests",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Tracing individual requirements to their corresponding designs, source code, and tests",
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 24",
+          "paragraphs": [
+            {
+              "text": "Slide - 24",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 24",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Requirements Management",
+      "all_text": "Requirements Management\nEstablish a requirements change control process\nPerform impact analysis on requirements changes\nTrack the status of each requirement;  Track requirements issues\nMaintain a history of requirements changes\nMaintain a requirements traceability matrix\nDefining the relationships and dependencies that exist between requirements\nTracing individual requirements to their corresponding designs, source code, and tests\nSlide - 24",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 25,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Requirements Management (cntd.)",
+          "paragraphs": [
+            {
+              "text": "Requirements Management (cntd.)",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 5,
+          "name": "Picture 4",
+          "type": "PICTURE (13)",
+          "position_inches": {
+            "left": 2.108,
+            "top": 2.021,
+            "width": 8.672,
+            "height": 5.29
+          },
+          "image": {
+            "filename": "image.emf",
+            "content_type": "image/x-wmf",
+            "size_bytes": 1681460,
+            "px": [
+              831,
+              506
+            ],
+            "ocr_text_lines": [
+              "Marketing, Customers, Management",
+              "baseline baseline",
+              "Marketing, requirements Requirements project Project",
+              "Customers, Change Environment",
+              "Management Process",
+              "FIGURE 1-5 The boundary between requirements development and requirements management.",
+              "requirements",
+              "Analyze, Document,",
+              "Review, Negotiate",
+              "Requirements",
+              "Development",
+              "Baselined Requirements",
+              "Requirements",
+              "Management current revised"
+            ],
+            "ocr_note": "Diagram/figure is a raster image with no text layer; text below recovered by OCR and may contain recognition errors."
+          }
+        },
+        {
+          "order": 3,
+          "shape_id": 6,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 25",
+          "paragraphs": [
+            {
+              "text": "Slide - 25",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 25",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Requirements Management (cntd.)",
+      "all_text": "Requirements Management (cntd.)\nSlide - 25",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 26,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "A  requirements  development  process  framework",
+          "paragraphs": [
+            {
+              "text": "A  requirements  development  process  framework",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 4,
+          "name": "Slide Number Placeholder 3",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "SLIDE_NUMBER (13)",
+            "idx": 12
+          },
+          "position_inches": {
+            "left": 11.547,
+            "top": 6.514,
+            "width": 1.151,
+            "height": 0.399
+          },
+          "text": "26",
+          "paragraphs": [
+            {
+              "text": "26",
+              "level": 0,
+              "fields": [
+                {
+                  "type": "slidenum",
+                  "text": "26"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Picture 4",
+          "type": "PICTURE (13)",
+          "position_inches": {
+            "left": 2.013,
+            "top": 2.193,
+            "width": 8.508,
+            "height": 4.623
+          },
+          "image": {
+            "filename": "image.emf",
+            "content_type": "image/x-wmf",
+            "size_bytes": 1695608,
+            "px": [
+              883,
+              479
+            ],
+            "ocr_text_lines": [
+              "Waterfall",
+              "Iterative or",
+              "7 Phased Agile or",
+              "Incremental",
+              "2 or Sequential",
+              "2 Sh Se",
+              "Time",
+              "FIGURE 3-3 The distribution of requirements development effort over time varies for projects that follow",
+              "different development life cycles."
+            ],
+            "ocr_note": "Diagram/figure is a raster image with no text layer; text below recovered by OCR and may contain recognition errors."
+          }
+        },
+        {
+          "order": 4,
+          "shape_id": 6,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 26",
+          "paragraphs": [
+            {
+              "text": "Slide - 26",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 26",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "shape_id": 7,
+          "name": "Rectangle 6",
+          "type": "AUTO_SHAPE (1)",
+          "position_inches": {
+            "left": 6.84,
+            "top": 4.504,
+            "width": 1.972,
+            "height": 0.428
+          },
+          "text": "Time box – 1month",
+          "paragraphs": [
+            {
+              "text": "Time box – 1month",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Time box – 1month",
+                  "size_pt": 12.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "A  requirements  development  process  framework",
+      "all_text": "A  requirements  development  process  framework\n26\nSlide - 26\nTime box – 1month",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 27,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Role of Requirements",
+          "paragraphs": [
+            {
+              "text": "Role of Requirements",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.385,
+            "width": 12.062,
+            "height": 4.023
+          },
+          "text": "“The hardest single part of building a software system is deciding precisely what to build. No other part of the conceptual work is as difficult as establishing the detailed technical requirements, including all the interfaces to people, to machines, and to other software systems. No other part of the work so cripples the resulting system if done wrong. No other part is more difficult to rectify later.”",
+          "paragraphs": [
+            {
+              "text": "“The hardest single part of building a software system is deciding precisely what to build. No other part of the conceptual work is as difficult as establishing the detailed technical requirements, including all the interfaces to people, to machines, and to other software systems. No other part of the work so cripples the resulting system if done wrong. No other part is more difficult to rectify later.”",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "“The hardest single part of building a software system is deciding precisely what to build. No other part of the conceptual work is as difficult as establishing the detailed technical requirements, including all the interfaces to people, to machines, and to other software systems. No other part of the work so cripples the resulting system if done wrong. No other part is more difficult to rectify later.”",
+                  "italic": true,
+                  "size_pt": 32.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 27",
+          "paragraphs": [
+            {
+              "text": "Slide - 27",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 27",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Role of Requirements",
+      "all_text": "Role of Requirements\n“The hardest single part of building a software system is deciding precisely what to build. No other part of the conceptual work is as difficult as establishing the detailed technical requirements, including all the interfaces to people, to machines, and to other software systems. No other part of the work so cripples the resulting system if done wrong. No other part is more difficult to rectify later.”\nSlide - 27",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 28,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Reasons Behind Bad Requirements",
+          "paragraphs": [
+            {
+              "text": "Reasons Behind Bad Requirements",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.834,
+            "top": 2.315,
+            "width": 11.664,
+            "height": 3.201
+          },
+          "text": "Insufficient user involvement\nInaccurate planning\nCreeping (gradually increase, changing) user requirements\nAmbiguous requirements (e.g. response to a request as soon as possible)\nGold plating (extra functionality beyond the specification)\nOverlooked stakeholders",
+          "paragraphs": [
+            {
+              "text": "Insufficient user involvement",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Insufficient user involvement",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Inaccurate planning",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Inaccurate planning",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Creeping (gradually increase, changing) user requirements",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Creeping (gradually increase, changing) user requirements",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Ambiguous requirements (e.g. response to a request as soon as possible)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Ambiguous requirements (e.g. response to a request as soon as possible)",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Gold plating (extra functionality beyond the specification)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Gold plating (extra functionality beyond the specification)",
+                  "size_pt": 22.0
+                }
+              ]
+            },
+            {
+              "text": "Overlooked stakeholders",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Overlooked stakeholders",
+                  "size_pt": 22.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 28",
+          "paragraphs": [
+            {
+              "text": "Slide - 28",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 28",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Reasons Behind Bad Requirements",
+      "all_text": "Reasons Behind Bad Requirements\nInsufficient user involvement\nInaccurate planning\nCreeping (gradually increase, changing) user requirements\nAmbiguous requirements (e.g. response to a request as soon as possible)\nGold plating (extra functionality beyond the specification)\nOverlooked stakeholders\nSlide - 28",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 29,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "Benefits of a high quality requirements process",
+          "paragraphs": [
+            {
+              "text": "Benefits of a high quality requirements process",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.071,
+            "width": 12.062,
+            "height": 5.014
+          },
+          "text": "Fewer defects in requirements and in the delivered product\nReduced development rework\nFaster development and delivery\nFewer unnecessary and unused features\nLower enhancement costs\nFewer miscommunications\nReduced scope creep\nReduced project chaos\nHigher customer and team member satisfaction\nProducts that do what they’re supposed to do",
+          "paragraphs": [
+            {
+              "text": "Fewer defects in requirements and in the delivered product",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Fewer defects in requirements and in the delivered product",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Reduced development rework",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Reduced development rework",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Faster development and delivery",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Faster development and delivery",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Fewer unnecessary and unused features",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Fewer unnecessary and unused features",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Lower enhancement costs",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Lower enhancement costs",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Fewer miscommunications",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Fewer miscommunications",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Reduced scope creep",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Reduced scope creep",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Reduced project chaos",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Reduced project chaos",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Higher customer and team member satisfaction",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Higher customer and team member satisfaction",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "Products that do what they’re supposed to do",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Products that do what they’re supposed to do",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 29",
+          "paragraphs": [
+            {
+              "text": "Slide - 29",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 29",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Benefits of a high quality requirements process",
+      "all_text": "Benefits of a high quality requirements process\nFewer defects in requirements and in the delivered product\nReduced development rework\nFaster development and delivery\nFewer unnecessary and unused features\nLower enhancement costs\nFewer miscommunications\nReduced scope creep\nReduced project chaos\nHigher customer and team member satisfaction\nProducts that do what they’re supposed to do\nSlide - 29",
+      "speaker_notes": null
+    },
+    {
+      "slide_number": 30,
+      "layout": "Title and Content",
+      "shapes": [
+        {
+          "order": 1,
+          "shape_id": 2,
+          "name": "Title 1",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "TITLE (1)",
+            "idx": 0
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 0.768,
+            "width": 12.062,
+            "height": 1.109
+          },
+          "text": "References",
+          "paragraphs": [
+            {
+              "text": "References",
+              "level": 0
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "shape_id": 3,
+          "name": "Content Placeholder 2",
+          "type": "PLACEHOLDER (14)",
+          "placeholder": {
+            "type": "OBJECT (7)",
+            "idx": 1
+          },
+          "position_inches": {
+            "left": 0.636,
+            "top": 2.071,
+            "width": 12.062,
+            "height": 1.871
+          },
+          "text": "Wiegers, K., & Beatty, J. (2013). Software requirements. Pearson Education.\nhttp://www.cs.ccsu.edu/~stan/classes/CS530/notes14/04-Requirements.html",
+          "paragraphs": [
+            {
+              "text": "Wiegers, K., & Beatty, J. (2013). Software requirements. Pearson Education.",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Wiegers",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": ", K., & Beatty, J. (2013). ",
+                  "size_pt": 20.0
+                },
+                {
+                  "text": "Software requirements",
+                  "italic": true,
+                  "size_pt": 20.0
+                },
+                {
+                  "text": ". Pearson Education.",
+                  "size_pt": 20.0
+                }
+              ]
+            },
+            {
+              "text": "http://www.cs.ccsu.edu/~stan/classes/CS530/notes14/04-Requirements.html",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "http://www.cs.ccsu.edu/~stan/classes/CS530/notes14/04-Requirements.html",
+                  "size_pt": 20.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "shape_id": 5,
+          "name": "Slide Number Placeholder 3",
+          "type": "TEXT_BOX (17)",
+          "position_inches": {
+            "left": 12.373,
+            "top": 1.092,
+            "width": 1.219,
+            "height": 0.349
+          },
+          "text": "Slide - 30",
+          "paragraphs": [
+            {
+              "text": "Slide - 30",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Slide - 30",
+                  "bold": true,
+                  "size_pt": 16.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "References",
+      "all_text": "References\nWiegers, K., & Beatty, J. (2013). Software requirements. Pearson Education.\nhttp://www.cs.ccsu.edu/~stan/classes/CS530/notes14/04-Requirements.html\nSlide - 30",
+      "speaker_notes": null
+    }
+  ]
+}

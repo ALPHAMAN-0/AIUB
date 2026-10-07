@@ -32,7 +32,7 @@ void Display(){
     }
     cout << endl;
 }
-void main(){
+int main(){
     Insert(10);
     Insert(20);
     Insert(30);

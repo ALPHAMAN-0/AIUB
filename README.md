@@ -5,12 +5,15 @@ This repository contains academic materials, assignments, lab work, and study re
 ## Architecture / How it Works
 
 ```mermaid
-flowchart LR
-    A[User] --> B[AIUB]
-    B --> C{Logic}
-    C --> D[(Data)]
-    C --> E[Output]
-    D --> C
+flowchart TD
+    AIUB_COURSE[AIUB_COURSE]
+    AutoCAD[AutoCAD]
+    CSharp[CSharp]
+    DS_Lab[DS_Lab]
+    Lab_Task[Lab_Task]
+    Math[Math]
+    OOAD[OOAD]
+    SRE[SRE]
 ```
 
 

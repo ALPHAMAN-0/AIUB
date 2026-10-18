@@ -2,6 +2,18 @@
 
 This repository contains academic materials, assignments, lab work, and study resources collected from different courses at AIUB.
 
+## Architecture / How it Works
+
+```mermaid
+flowchart LR
+    A[User] --> B[AIUB]
+    B --> C{Logic}
+    C --> D[(Data)]
+    C --> E[Output]
+    D --> C
+```
+
+
 ## Overview
 
 The folder is organized by subject and includes:

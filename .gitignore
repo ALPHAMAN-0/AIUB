@@ -1,0 +1,2 @@
+# Runtime state written by local tools (logs, session files) - not project content
+.gstack/

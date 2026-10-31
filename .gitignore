@@ -1,4 +1,3 @@
 # Runtime state written by local tools (logs, session files) - not project content
 .gstack/
-config.bat
 node_modules
